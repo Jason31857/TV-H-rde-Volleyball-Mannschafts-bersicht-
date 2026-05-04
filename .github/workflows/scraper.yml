@@ -18,11 +18,10 @@ jobs:
       - name: 🟢 Node.js einrichten
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: '22'
 
       - name: 📦 Abhängigkeiten installieren
-        run: npm install
+        run: npm install --no-package-lock
 
       - name: 🌐 Playwright Browser installieren
         run: npx playwright install chromium --with-deps
