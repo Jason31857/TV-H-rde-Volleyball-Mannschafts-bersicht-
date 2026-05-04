@@ -1,0 +1,9 @@
+{
+  "damen2":  { "league": "Oberliga 2",      "rank": null, "rankTotal": null, "tabelle": [], "spiele": [], "kader": [] },
+  "damen3":  { "league": "Landesliga 6",    "rank": null, "rankTotal": null, "tabelle": [], "spiele": [], "kader": [] },
+  "damen4":  { "league": "Bezirksklasse 21","rank": null, "rankTotal": null, "tabelle": [], "spiele": [], "kader": [] },
+  "herren2": { "league": "Oberliga 2",      "rank": null, "rankTotal": null, "tabelle": [], "spiele": [], "kader": [] },
+  "herren3": { "league": "Landesliga 5",    "rank": null, "rankTotal": null, "tabelle": [], "spiele": [], "kader": [] },
+  "herren4": { "league": "Bezirksliga 10",  "rank": null, "rankTotal": null, "tabelle": [], "spiele": [], "kader": [] },
+  "herren5": { "league": "Bezirksklasse 18","rank": null, "rankTotal": null, "tabelle": [], "spiele": [], "kader": [] }
+}

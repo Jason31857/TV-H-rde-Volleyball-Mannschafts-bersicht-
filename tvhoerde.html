@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TV Hörde – Volleyball</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700;900&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #CC0000;
+    --red-dark: #990000;
+    --red-bright: #FF1111;
+    --black: #0A0A0A;
+    --black2: #111111;
+    --black3: #1A1A1A;
+    --black4: #222222;
+    --white: #F5F5F5;
+    --white2: #DEDEDE;
+    --grey: #888888;
+    --grey2: #555555;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ─────────────────────────────── */
+  #home-view {
+    display: block;
+  }
+  #team-view {
+    display: none;
+  }
+
+  .hero {
+    position: relative;
+    background: var(--black2);
+    border-bottom: 3px solid var(--red);
+    padding: 60px 40px 50px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 40px,
+      rgba(204,0,0,0.04) 40px,
+      rgba(204,0,0,0.04) 42px
+    );
+  }
+
+  .hero-emblem {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 24px;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 30px rgba(204,0,0,0.6));
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { filter: drop-shadow(0 0 20px rgba(204,0,0,0.5)); }
+    50% { filter: drop-shadow(0 0 40px rgba(204,0,0,0.9)); }
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 10vw, 96px);
+    letter-spacing: 6px;
+    color: var(--white);
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title span {
+    color: var(--red);
+  }
+
+  .hero-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    letter-spacing: 8px;
+    color: var(--grey);
+    text-transform: uppercase;
+    margin-top: 8px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── SECTION TITLE ─────────────────────── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 40px 40px 20px;
+  }
+
+  .section-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    letter-spacing: 3px;
+    color: var(--white);
+  }
+
+  .section-header .line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, var(--red), transparent);
+  }
+
+  /* ── TEAM GRID ─────────────────────────── */
+  .teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2px;
+    padding: 0 40px 60px;
+  }
+
+  .team-card {
+    background: var(--black3);
+    border: 1px solid var(--black4);
+    padding: 28px 32px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s ease;
+  }
+
+  .team-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--red);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.25s ease;
+  }
+
+  .team-card:hover {
+    background: var(--black4);
+    transform: translateX(6px);
+  }
+
+  .team-card:hover::before {
+    transform: scaleY(1);
+  }
+
+  .team-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+
+  .team-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+    background: rgba(204,0,0,0.12);
+    border: 1px solid rgba(204,0,0,0.3);
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  .team-rank {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: rgba(255,255,255,0.06);
+    line-height: 1;
+  }
+
+  .team-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  .team-league {
+    font-size: 14px;
+    color: var(--grey);
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .team-card-bottom {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .rank-display {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+
+  .rank-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: var(--red);
+    line-height: 1;
+  }
+
+  .rank-total {
+    font-size: 13px;
+    color: var(--grey2);
+  }
+
+  .rank-label {
+    font-size: 12px;
+    color: var(--grey);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .arrow-icon {
+    margin-left: auto;
+    color: var(--red);
+    font-size: 22px;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .team-card:hover .arrow-icon {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+
+  /* ── TEAM DETAIL VIEW ──────────────────── */
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--grey);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 30px 40px 10px;
+    transition: color 0.2s;
+  }
+
+  .back-btn:hover { color: var(--red); }
+
+  .team-hero {
+    background: var(--black2);
+    border-bottom: 3px solid var(--red);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .team-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      -45deg, transparent, transparent 40px,
+      rgba(204,0,0,0.03) 40px, rgba(204,0,0,0.03) 42px
+    );
+  }
+
+  .team-hero-emblem {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 20px rgba(204,0,0,0.5));
+    position: relative;
+    z-index: 1;
+  }
+
+  .team-hero-info {
+    position: relative;
+    z-index: 1;
+  }
+
+  .team-hero-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 6vw, 64px);
+    letter-spacing: 4px;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .team-hero-meta {
+    display: flex;
+    gap: 24px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .meta-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--grey);
+  }
+
+  .meta-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .meta-value.highlight {
+    color: var(--red);
+    font-size: 26px;
+  }
+
+  /* ── TABS ─────────────────────────────── */
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid var(--black4);
+    padding: 0 40px;
+    margin-top: 30px;
+  }
+
+  .tab {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--grey);
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 14px 0;
+    margin-right: 32px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: -1px;
+  }
+
+  .tab.active, .tab:hover {
+    color: var(--white);
+    border-bottom-color: var(--red);
+  }
+
+  .tab-content {
+    display: none;
+    padding: 30px 40px 60px;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  /* ── KADER TABLE ──────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .data-table thead tr {
+    border-bottom: 2px solid var(--red);
+  }
+
+  .data-table th {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--grey);
+    padding: 12px 16px;
+    text-align: left;
+  }
+
+  .data-table tbody tr {
+    border-bottom: 1px solid var(--black4);
+    transition: background 0.15s;
+  }
+
+  .data-table tbody tr:hover {
+    background: var(--black3);
+  }
+
+  .data-table td {
+    padding: 14px 16px;
+    font-size: 15px;
+    color: var(--white2);
+  }
+
+  .player-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: var(--red);
+    width: 50px;
+  }
+
+  .player-name {
+    font-weight: 700;
+    color: var(--white);
+    font-size: 16px;
+  }
+
+  .position-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: var(--black4);
+    color: var(--grey);
+    padding: 4px 10px;
+    border-radius: 2px;
+    border: 1px solid var(--black4);
+    display: inline-block;
+  }
+
+  /* ── SCHEDULE ─────────────────────────── */
+  .schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .match-card {
+    background: var(--black3);
+    border: 1px solid var(--black4);
+    border-left: 4px solid var(--red);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .match-date {
+    flex-shrink: 0;
+    text-align: center;
+    min-width: 80px;
+  }
+
+  .match-date-day {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px;
+    color: var(--red);
+    line-height: 1;
+  }
+
+  .match-date-month {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--grey);
+    text-transform: uppercase;
+  }
+
+  .match-vs {
+    flex: 1;
+  }
+
+  .match-opponent {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .match-location {
+    font-size: 13px;
+    color: var(--grey);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .match-home-away {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+
+  .match-home-away.home {
+    background: rgba(204,0,0,0.15);
+    color: var(--red);
+    border: 1px solid rgba(204,0,0,0.3);
+  }
+
+  .match-home-away.away {
+    background: rgba(255,255,255,0.05);
+    color: var(--grey);
+    border: 1px solid var(--black4);
+  }
+
+  /* ── LIGA TABLE ───────────────────────── */
+  .league-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .league-table thead tr {
+    border-bottom: 2px solid var(--red);
+  }
+
+  .league-table th {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--grey);
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  .league-table th:first-child,
+  .league-table th:nth-child(2) { text-align: left; }
+
+  .league-table tbody tr {
+    border-bottom: 1px solid var(--black4);
+    transition: background 0.15s;
+  }
+
+  .league-table tbody tr:hover { background: var(--black3); }
+
+  .league-table tbody tr.tvhoerde-row {
+    background: rgba(204,0,0,0.1);
+    border-left: 3px solid var(--red);
+  }
+
+  .league-table td {
+    padding: 13px 16px;
+    font-size: 14px;
+    color: var(--white2);
+    text-align: center;
+  }
+
+  .league-table td:first-child { text-align: left; }
+  .league-table td:nth-child(2) { text-align: left; font-weight: 600; color: var(--white); }
+
+  .league-rank {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: var(--grey2);
+    width: 40px;
+  }
+
+  .league-rank.top3 { color: var(--red); }
+  .league-rank.current { color: var(--red-bright); }
+
+  .pts {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--white);
+  }
+
+  .trend-up { color: #4CAF50; }
+  .trend-down { color: var(--red); }
+
+  /* ── FOOTER ───────────────────────────── */
+  footer {
+    background: var(--black2);
+    border-top: 1px solid var(--black4);
+    padding: 30px 40px;
+    text-align: center;
+    color: var(--grey2);
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+  }
+
+  footer span { color: var(--red); }
+
+  /* ── RESPONSIVE ───────────────────────── */
+  @media (max-width: 600px) {
+    .teams-grid { padding: 0 16px 40px; grid-template-columns: 1fr; }
+    .section-header { padding: 30px 16px 16px; }
+    .hero { padding: 40px 20px 36px; }
+    .team-hero { padding: 24px 16px; flex-direction: column; gap: 20px; text-align: center; }
+    .team-hero-meta { justify-content: center; }
+    .tabs { padding: 0 16px; overflow-x: auto; }
+    .tab-content { padding: 20px 16px 40px; }
+    .back-btn { padding: 20px 16px 0; }
+    footer { padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HOME VIEW ═════════════════════════ -->
+<div id="home-view">
+  <div class="hero">
+    <img class="hero-emblem" src="https://www.tvhoerde.de/wp-content/uploads/2024/09/Logo-TV-Hoerde-Final-Pfade-schwarz.svg"
+      onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='flex'"
+      alt="TV Hörde Logo">
+    <div id="logo-fallback" style="display:none; width:140px; height:140px; margin:0 auto 24px; align-items:center; justify-content:center; border:3px solid #CC0000; border-radius:50%;">
+      <span style="font-family:'Bebas Neue',sans-serif; font-size:38px; color:#CC0000;">TVH</span>
+    </div>
+    <div class="hero-title">TV <span>Hörde</span></div>
+    <div class="hero-sub">Volleyball · Gegründet 1964 · Dortmund</div>
+  </div>
+
+  <div class="section-header">
+    <h2>Mannschaften</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="teams-grid" id="teams-grid">
+    <!-- JS generated -->
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ TEAM VIEW ═════════════════════════ -->
+<div id="team-view">
+  <button class="back-btn" onclick="showHome()">← Alle Mannschaften</button>
+  <div class="team-hero">
+    <img class="team-hero-emblem" src="https://www.tvhoerde.de/wp-content/uploads/2024/09/Logo-TV-Hoerde-Final-Pfade-schwarz.svg"
+      onerror="this.style.display='none'" alt="TV Hörde">
+    <div class="team-hero-info">
+      <div class="team-hero-name" id="detail-name"></div>
+      <div class="team-hero-meta">
+        <div class="meta-item">
+          <span class="meta-label">Altersklasse</span>
+          <span class="meta-value" id="detail-age"></span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Liga</span>
+          <span class="meta-value" id="detail-league"></span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Platzierung</span>
+          <span class="meta-value highlight" id="detail-rank"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('kader', this)">Kader</button>
+    <button class="tab" onclick="switchTab('spiele', this)">Nächste Spiele</button>
+    <button class="tab" onclick="switchTab('tabelle', this)">Ligatabelle</button>
+  </div>
+
+  <div class="tab-content active" id="tab-kader"></div>
+  <div class="tab-content" id="tab-spiele"></div>
+  <div class="tab-content" id="tab-tabelle"></div>
+</div>
+
+<footer>
+  <span>TV Hörde</span> · Volleyball seit 1964 · Daten: tvhoerde.de &amp; volleyball.nrw · Stand: April 2026
+</footer>
+
+<script>
+const TEAMS = [
+  {
+    id: 'damen1',
+    name: '1. Damen',
+    age: 'Frauen',
+    league: '2. Bundesliga Pro',
+    rank: 14,
+    rankTotal: 15,
+    kader: [
+      { nr:'#1',  name:'Hannah Köster',        pos:'Zuspieler' },
+      { nr:'#2',  name:'Isabelle Rosmus',       pos:'Diagonal' },
+      { nr:'#3',  name:'Frauke Bartonitz',      pos:'Libera' },
+      { nr:'#4',  name:'Mayomi Lucia Olikagu',  pos:'Außenangriff' },
+      { nr:'#5',  name:'Joana Schmidt',         pos:'Diagonal' },
+      { nr:'#6',  name:'Wiebke Putzmann',       pos:'Außenangriff' },
+      { nr:'#7',  name:'Maren Mäss',            pos:'Mittelblocker' },
+      { nr:'#8',  name:'Sarah Jagst',           pos:'Libera' },
+      { nr:'#9',  name:'Emma Louisa Neukirchen',pos:'Mittelblocker' },
+      { nr:'#10', name:'Anna Böhm',             pos:'Zuspieler' },
+      { nr:'#12', name:'Lynn Kosina',           pos:'Diagonal' },
+      { nr:'#14', name:'Lara Spieß',            pos:'Außenangriff' },
+      { nr:'#14', name:'Svenja Mumm',           pos:'Außenangriff' },
+      { nr:'#15', name:'Annemarie Blome',       pos:'Libera' },
+      { nr:'#16', name:'Franziska Finke',       pos:'Mittelblocker' },
+      { nr:'#17', name:'Dana Kastrup',          pos:'Mittelblocker' },
+      { nr:'#19', name:'Vanessa Gorny',         pos:'Libera' },
+      { nr:'#19', name:'Samanta Gega',          pos:'Außenangriff' },
+    ],
+    trainer: [
+      { nr:'–', name:'Teee Slacanin',       pos:'Co-Trainerin' },
+      { nr:'–', name:'Drazen Slacanin',     pos:'Co-Trainer' },
+      { nr:'–', name:'Karlheinz Steinmann', pos:'Physio' },
+    ],
+    spiele: [
+      { datum:'25.04.2026', tag:'25', monat:'Apr', gegner:'NawaRo Straubing', ort:'Straubing (Auswärts)', heimAuswärts:'away' },
+      { datum:'26.04.2026', tag:'26', monat:'Apr', gegner:'TV Dingolfing',    ort:'Dingolfing (Auswärts)', heimAuswärts:'away' },
+    ],
+    tabelle: [
+      { rank:1,  name:'Rote Raben Vilsbiburg', sp:26, s:25, pkt:76, current:false },
+      { rank:2,  name:'NawaRo Straubing',      sp:26, s:22, pkt:66, current:false },
+      { rank:3,  name:'VfL Oythe',             sp:25, s:21, pkt:61, current:false },
+      { rank:4,  name:'TV Planegg-Krailling',  sp:27, s:21, pkt:60, current:false },
+      { rank:5,  name:'VCO Dresden',           sp:27, s:17, pkt:51, current:false },
+      { rank:6,  name:'DSHS SnowTrex Köln',    sp:26, s:14, pkt:42, current:false },
+      { rank:7,  name:'TSV Bayer Leverkusen',  sp:26, s:14, pkt:41, current:false },
+      { rank:8,  name:'TV Waldgirmes',         sp:26, s:12, pkt:36, current:false },
+      { rank:9,  name:'VV Grimma',             sp:26, s:13, pkt:34, current:false },
+      { rank:10, name:'Stralsunder Wildcats',  sp:26, s:9,  pkt:31, current:false },
+      { rank:11, name:'Eintracht Spontent',    sp:27, s:9,  pkt:26, current:false },
+      { rank:12, name:'TSG Markkleeberg',      sp:26, s:7,  pkt:21, current:false },
+      { rank:13, name:'TV Dingolfing',         sp:25, s:4,  pkt:16, current:false },
+      { rank:14, name:'TV Hörde',              sp:26, s:4,  pkt:15, current:true  },
+      { rank:15, name:'BBSC Berlin',           sp:27, s:4,  pkt:12, current:false },
+    ]
+  },
+  {
+    id: 'herren1',
+    name: '1. Herren',
+    age: 'Männer',
+    league: 'Regionalliga West',
+    rank: 6,
+    rankTotal: 12,
+    kader: [
+      { nr:'#1',  name:'Henrik Hester',      pos:'Libero/Zuspieler' },
+      { nr:'#3',  name:'Niklas Mielke',      pos:'Zuspieler/Diagonal' },
+      { nr:'#4',  name:'Kjell Machalowsky',  pos:'Mittelblocker' },
+      { nr:'#5',  name:'Jonathan Kühlmann',  pos:'Zuspieler/Diagonal' },
+      { nr:'#7',  name:'Alexander Herbort',  pos:'Libero/Zuspieler' },
+      { nr:'#9',  name:'Marlon Externbrink', pos:'Außenangriff' },
+      { nr:'#10', name:'Maksym Horelov',     pos:'Außenangriff' },
+      { nr:'#11', name:'Adrian Reutter',     pos:'Mittelblocker' },
+      { nr:'#12', name:'Sönke Frenz',        pos:'Mittelblocker' },
+      { nr:'#13', name:'Thies Lenzing',      pos:'Libero/Zuspieler' },
+      { nr:'#18', name:'Jan Pieper',         pos:'Zuspieler/Diagonal' },
+      { nr:'#22', name:'Frederik Woidneck',  pos:'Außenangriff' },
+      { nr:'#23', name:'Hendrik Lau',        pos:'Außenangriff' },
+    ],
+    trainer: [
+      { nr:'–', name:'Volker Schmidt-Brusche', pos:'Cheftrainer' },
+    ],
+    spiele: [
+      { tag:'–', monat:'–', gegner:'Saison beendet (11.04.2026)', ort:'Letztes Spiel: Eintracht Spontent 3:1', heimAuswärts:'away' },
+    ],
+    tabelle: [
+      { rank:1,  name:'Eintracht Spontent',      sp:22, s:22, pkt:66, current:false },
+      { rank:2,  name:'RHS Volleys Mondorf II',   sp:22, s:15, pkt:47, current:false },
+      { rank:3,  name:'VC 73 Freudenberg',        sp:22, s:15, pkt:41, current:false },
+      { rank:4,  name:'VV Humann Essen III',      sp:22, s:14, pkt:40, current:false },
+      { rank:5,  name:'MTV Köln',                 sp:22, s:13, pkt:37, current:false },
+      { rank:6,  name:'TV Hörde',                 sp:22, s:12, pkt:34, current:true  },
+      { rank:7,  name:'Kevelaerer SV',            sp:22, s:10, pkt:30, current:false },
+      { rank:8,  name:'TuS Saxonia Münster',      sp:22, s:9,  pkt:30, current:false },
+      { rank:9,  name:'Meckenheimer SV',          sp:22, s:7,  pkt:26, current:false },
+      { rank:10, name:'TB Osterfeld',             sp:22, s:8,  pkt:23, current:false },
+      { rank:11, name:'TSC Gievenbeck II',        sp:22, s:7,  pkt:21, current:false },
+      { rank:12, name:'FC Augustdorf',            sp:22, s:0,  pkt:1,  current:false },
+    ]
+  },
+  {
+    id: 'damen2',
+    name: '2. Damen',
+    age: 'Frauen',
+    league: 'Oberliga 2',
+    rank: null,
+    rankTotal: null,
+    kader: [],
+    trainer: [],
+    spiele: [],
+    tabelle: [],
+    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/oberligen/Ol_frauen/oberliga_2_frauen.xhtml',
+    note: 'Kaderdaten werden nicht öffentlich auf tvhoerde.de gepflegt. Spielplan & Tabelle über den WVV-Ergebnisdienst.'
+  },
+  {
+    id: 'damen3',
+    name: '3. Damen',
+    age: 'Frauen',
+    league: 'Landesliga 6',
+    rank: null,
+    rankTotal: null,
+    kader: [],
+    trainer: [],
+    spiele: [],
+    tabelle: [],
+    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/landesligen/landesligen_frauen/landesliga_6_frauen.xhtml',
+    note: 'Kaderdaten werden nicht öffentlich auf tvhoerde.de gepflegt. Spielplan & Tabelle über den WVV-Ergebnisdienst.'
+  },
+  {
+    id: 'damen4',
+    name: '4. Damen',
+    age: 'Frauen',
+    league: 'Bezirksklasse 21',
+    rank: null,
+    rankTotal: null,
+    kader: [],
+    trainer: [],
+    spiele: [],
+    tabelle: [],
+    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksklassen/bezirksklassen_frauen/bezirksklasse_21_frauen.xhtml',
+    note: 'Kaderdaten werden nicht öffentlich auf tvhoerde.de gepflegt. Spielplan & Tabelle über den WVV-Ergebnisdienst.'
+  },
+  {
+    id: 'herren2',
+    name: '2. Herren',
+    age: 'Männer',
+    league: 'Oberliga 2',
+    rank: null,
+    rankTotal: null,
+    kader: [],
+    trainer: [],
+    spiele: [],
+    tabelle: [],
+    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/oberligen/OL_maenner/oberliga_2_maenner.xhtml',
+    note: 'Kaderdaten werden nicht öffentlich auf tvhoerde.de gepflegt. Spielplan & Tabelle über den WVV-Ergebnisdienst.'
+  },
+  {
+    id: 'herren3',
+    name: '3. Herren',
+    age: 'Männer',
+    league: 'Landesliga 5',
+    rank: null,
+    rankTotal: null,
+    kader: [],
+    trainer: [],
+    spiele: [],
+    tabelle: [],
+    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/landesligen/landesligen_maenner/landesliga_5_maenner.xhtml',
+    note: 'Kaderdaten werden nicht öffentlich auf tvhoerde.de gepflegt. Spielplan & Tabelle über den WVV-Ergebnisdienst.'
+  },
+  {
+    id: 'herren4',
+    name: '4. Herren',
+    age: 'Männer',
+    league: 'Bezirksliga 10',
+    rank: null,
+    rankTotal: null,
+    kader: [],
+    trainer: [],
+    spiele: [],
+    tabelle: [],
+    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksligen/bezirksligen_maenner/bezirksliga_10_maenner.xhtml',
+    note: 'Kaderdaten werden nicht öffentlich auf tvhoerde.de gepflegt. Spielplan & Tabelle über den WVV-Ergebnisdienst.'
+  },
+  {
+    id: 'herren5',
+    name: '5. Herren',
+    age: 'Männer',
+    league: 'Bezirksklasse 18',
+    rank: null,
+    rankTotal: null,
+    kader: [],
+    trainer: [],
+    spiele: [],
+    tabelle: [],
+    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksklassen/bezirksklassen_maenner/bezirksklasse_18_maenner.xhtml',
+    note: 'Kaderdaten werden nicht öffentlich auf tvhoerde.de gepflegt. Spielplan & Tabelle über den WVV-Ergebnisdienst.'
+  },
+  {
+    id: 'jugend_w',
+    name: 'Weibl. Jugend',
+    age: 'Jugend weiblich',
+    league: 'U12 · U13 · U14 · U16 · U18 · U20',
+    rank: null,
+    rankTotal: null,
+    kader: [],
+    trainer: [],
+    spiele: [],
+    tabelle: [],
+    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/',
+    note: 'TV Hörde hat weibliche Jugendmannschaften in allen Altersklassen von U12 bis U20. Detaildaten über den WVV-Ergebnisdienst.'
+  },
+  {
+    id: 'jugend_m',
+    name: 'Männl. Jugend',
+    age: 'Jugend männlich',
+    league: 'U12 · U13 · U14 · U16 · U18 · U20',
+    rank: null,
+    rankTotal: null,
+    kader: [],
+    trainer: [],
+    spiele: [],
+    tabelle: [],
+    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/',
+    note: 'TV Hörde hat männliche Jugendmannschaften in allen Altersklassen von U12 bis U20. Detaildaten über den WVV-Ergebnisdienst.'
+  }
+];
+
+// ── RENDER HOME ─────────────────────────────────────────────────────────
+function renderHome() {
+  const grid = document.getElementById('teams-grid');
+  grid.innerHTML = TEAMS.map(t => `
+    <div class="team-card" onclick="showTeam('${t.id}')">
+      <div class="team-card-top">
+        <span class="team-badge">${t.age}</span>
+        ${t.rank ? `<span class="team-rank">${t.rank}</span>` : ''}
+      </div>
+      <div class="team-name">${t.name}</div>
+      <div class="team-league">${t.league}</div>
+      <div class="team-card-bottom">
+        ${t.rank ? `
+          <div class="rank-display">
+            <span class="rank-num">${t.rank}.</span>
+            <span class="rank-total">/ ${t.rankTotal}</span>
+          </div>
+          <span class="rank-label">Platz</span>
+        ` : `<span class="rank-label" style="color:#555">Keine Daten verfügbar</span>`}
+        <span class="arrow-icon">→</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── SHOW TEAM DETAIL ────────────────────────────────────────────────────
+function showTeam(id) {
+  const t = TEAMS.find(x => x.id === id);
+  if (!t) return;
+
+  document.getElementById('detail-name').textContent = t.name;
+  document.getElementById('detail-age').textContent = t.age;
+  document.getElementById('detail-league').textContent = t.league;
+  document.getElementById('detail-rank').textContent = t.rank ? `${t.rank}. Platz` : '–';
+
+  // Kader
+  const hasData = t.kader.length > 0;
+  const ergebnisBtn = t.ergebnisLink ? `<a href="${t.ergebnisLink}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;margin-top:16px;background:rgba(204,0,0,0.12);border:1px solid rgba(204,0,0,0.35);color:#CC0000;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:12px 20px;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='rgba(204,0,0,0.22)'" onmouseout="this.style.background='rgba(204,0,0,0.12)'">→ Spielplan &amp; Tabelle auf WVV-Ergebnisdienst</a>` : '';
+  document.getElementById('tab-kader').innerHTML = hasData ? `
+    <table class="data-table">
+      <thead><tr>
+        <th>#</th><th>Name</th><th>Position</th>
+      </tr></thead>
+      <tbody>
+        ${t.trainer.length ? t.trainer.map(p => `
+          <tr>
+            <td class="player-num">${p.nr}</td>
+            <td class="player-name">${p.name}</td>
+            <td><span class="position-tag" style="background:rgba(204,0,0,0.1);color:#CC0000;border-color:rgba(204,0,0,0.3)">${p.pos}</span></td>
+          </tr>`).join('') : ''}
+        ${t.kader.map(p => `
+          <tr>
+            <td class="player-num">${p.nr}</td>
+            <td class="player-name">${p.name}</td>
+            <td><span class="position-tag">${p.pos}</span></td>
+          </tr>`).join('')}
+      </tbody>
+    </table>
+  ` : `<p style="color:#888;padding:20px 0 12px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;font-size:15px;">${t.note || 'Keine Kaderdaten verfügbar.'}</p>${ergebnisBtn}`;
+
+  // Spiele
+  document.getElementById('tab-spiele').innerHTML = t.spiele.length > 0 ? `
+    <div class="schedule-list">
+      ${t.spiele.map(s => `
+        <div class="match-card">
+          <div class="match-date">
+            <div class="match-date-day">${s.tag}</div>
+            <div class="match-date-month">${s.monat}</div>
+          </div>
+          <div class="match-vs">
+            <div class="match-opponent">${s.gegner}</div>
+            <div class="match-location">📍 ${s.ort}</div>
+          </div>
+          <span class="match-home-away ${s.heimAuswärts}">${s.heimAuswärts === 'home' ? 'Heim' : 'Auswärts'}</span>
+        </div>
+      `).join('')}
+    </div>
+  ` : `<p style="color:#888;padding:20px 0 12px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;font-size:15px;">${t.note || 'Keine Spieldaten verfügbar.'}</p>${ergebnisBtn}`;
+
+  // Tabelle
+  document.getElementById('tab-tabelle').innerHTML = t.tabelle.length > 0 ? `
+    <table class="league-table">
+      <thead><tr>
+        <th>#</th><th>Mannschaft</th><th>Sp</th><th>S</th><th>Pkt</th>
+      </tr></thead>
+      <tbody>
+        ${t.tabelle.map(row => `
+          <tr class="${row.current ? 'tvhoerde-row' : ''}">
+            <td class="league-rank ${row.rank <= 3 ? 'top3' : ''} ${row.current ? 'current' : ''}">${row.rank}</td>
+            <td>${row.current ? '<strong>▶ TV Hörde</strong>' : row.name}</td>
+            <td>${row.sp}</td>
+            <td>${row.s}</td>
+            <td class="pts">${row.pkt}</td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  ` : `<p style="color:#888;padding:20px 0 12px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;font-size:15px;">${t.note || 'Keine Tabellendaten verfügbar.'}</p>${ergebnisBtn}`;
+
+  // Tabs reset
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tab')[0].classList.add('active');
+  document.getElementById('tab-kader').classList.add('active');
+
+  document.getElementById('home-view').style.display = 'none';
+  document.getElementById('team-view').style.display = 'block';
+  window.scrollTo(0, 0);
+}
+
+function showHome() {
+  document.getElementById('team-view').style.display = 'none';
+  document.getElementById('home-view').style.display = 'block';
+  window.scrollTo(0, 0);
+}
+
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
+}
+
+// ── SCRAPED DATEN LADEN & EINMERGEN ──────────────────────────────────────
+async function loadScrapedData() {
+  try {
+    const res = await fetch('tvhoerde-data.json');
+    if (!res.ok) { renderHome(); return; }
+    const data = await res.json();
+    const monate = ['','Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'];
+    for (const team of TEAMS) {
+      if (!data[team.id]) continue;
+      const d = data[team.id];
+      if (d.league)    team.league    = d.league;
+      if (d.rank)      team.rank      = d.rank;
+      if (d.rankTotal) team.rankTotal = d.rankTotal;
+      if (d.tabelle && d.tabelle.length > 0) team.tabelle = d.tabelle;
+      if (d.kader   && d.kader.length  > 0) { team.kader = d.kader; team.trainer = []; }
+      if (d.spiele  && d.spiele.length  > 0) {
+        team.spiele = d.spiele.map(s => {
+          const m = (s.datum || '').match(/(\d{1,2})\.(\d{2})\.(\d{2,4})/);
+          return {
+            tag: m ? m[1] : '–', monat: m ? (monate[parseInt(m[2])] || m[2]) : '–',
+            datum: s.datum || '', gegner: s.heim ? s.team2 : s.team1,
+            ort: s.halle || (s.heim ? 'Hörder Festung (Heim)' : 'Auswärts'),
+            heimAuswärts: s.heim ? 'home' : 'away'
+          };
+        });
+      }
+      if (d.tabelle?.length > 0 || d.kader?.length > 0) { team.note = null; team.ergebnisLink = null; }
+    }
+  } catch(e) {}
+  renderHome();
+}
+
+loadScrapedData();
+</script>
+</body>
+</html>

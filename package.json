@@ -1,0 +1,11 @@
+{
+  "name": "tvhoerde-volleyball",
+  "version": "1.0.0",
+  "description": "TV Hörde Volleyball Website mit automatischem WVV-Datenabruf",
+  "scripts": {
+    "scrape": "node scraper.js"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}
