@@ -1,57 +1,604 @@
 {
   "damen2": {
-    "league": "",
+    "league": "Oberliga 2 Frauen",
     "rank": null,
-    "rankTotal": null,
-    "tabelle": [],
+    "rankTotal": 10,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "USC Münster III",
+        "sp": "▲",
+        "s": "18",
+        "saetze": "16",
+        "pkt": "47",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "SV Blau-Weiß Sande",
+        "sp": "△",
+        "s": "18",
+        "saetze": "14",
+        "pkt": "41",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "SC Hennen",
+        "sp": "",
+        "s": "18",
+        "saetze": "11",
+        "pkt": "30",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "RC Sorpesee II",
+        "sp": "",
+        "s": "18",
+        "saetze": "9",
+        "pkt": "28",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "TB Höntrop",
+        "sp": "",
+        "s": "18",
+        "saetze": "8",
+        "pkt": "28",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "SC Halle",
+        "sp": "",
+        "s": "18",
+        "saetze": "9",
+        "pkt": "27",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "SSV Meschede",
+        "sp": "",
+        "s": "18",
+        "saetze": "7",
+        "pkt": "21",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "SG Sendenhorst",
+        "sp": "▽",
+        "s": "18",
+        "saetze": "6",
+        "pkt": "20",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "SV Blau-Weiß Aasee II",
+        "sp": "▼",
+        "s": "18",
+        "saetze": "6",
+        "pkt": "16",
+        "current": false
+      },
+      {
+        "rank": 10,
+        "name": "DJK Sportfreunde Datteln",
+        "sp": "▼",
+        "s": "18",
+        "saetze": "4",
+        "pkt": "12",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
   "damen3": {
-    "league": "",
+    "league": "Landesliga 6 Frauen",
     "rank": null,
-    "rankTotal": null,
-    "tabelle": [],
+    "rankTotal": 9,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "1. VV Holzwickede",
+        "sp": "▲",
+        "s": "16",
+        "saetze": "12",
+        "pkt": "37",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "VV Schwerte III",
+        "sp": "△",
+        "s": "16",
+        "saetze": "12",
+        "pkt": "36",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "VV Schwerte II",
+        "sp": "",
+        "s": "16",
+        "saetze": "10",
+        "pkt": "31",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "SC Hennen II",
+        "sp": "",
+        "s": "16",
+        "saetze": "10",
+        "pkt": "30",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "SuS Oberaden",
+        "sp": "",
+        "s": "16",
+        "saetze": "10",
+        "pkt": "27",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "Lüner SV",
+        "sp": "",
+        "s": "16",
+        "saetze": "8",
+        "pkt": "23",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "SuS Oestereiden",
+        "sp": "▽",
+        "s": "16",
+        "saetze": "6",
+        "pkt": "18",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "TV Eiche Grüne",
+        "sp": "▼",
+        "s": "16",
+        "saetze": "4",
+        "pkt": "13",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "TuS Bönen",
+        "sp": "▼",
+        "s": "16",
+        "saetze": "0",
+        "pkt": "1",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
   "damen4": {
-    "league": "",
+    "league": "Bezirksklasse 21 Frauen",
     "rank": null,
-    "rankTotal": null,
-    "tabelle": [],
+    "rankTotal": 6,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "TUS Weddinghofen",
+        "sp": "▲",
+        "s": "10",
+        "saetze": "8",
+        "pkt": "25",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "TV Asseln",
+        "sp": "△",
+        "s": "10",
+        "saetze": "7",
+        "pkt": "22",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "SLC Bockum-Hövel",
+        "sp": "",
+        "s": "10",
+        "saetze": "7",
+        "pkt": "21",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "Lüner SV III",
+        "sp": "",
+        "s": "10",
+        "saetze": "6",
+        "pkt": "16",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "SuS Oberaden III",
+        "sp": "",
+        "s": "10",
+        "saetze": "1",
+        "pkt": "4",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "TV Werne II",
+        "sp": "",
+        "s": "10",
+        "saetze": "1",
+        "pkt": "2",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
   "herren2": {
-    "league": "",
+    "league": "Oberliga 2 Männer",
     "rank": null,
-    "rankTotal": null,
-    "tabelle": [],
+    "rankTotal": 10,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "VV Humann Essen IV",
+        "sp": "▲",
+        "s": "18",
+        "saetze": "14",
+        "pkt": "40",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "SV Blau-Weiß Aasee",
+        "sp": "△",
+        "s": "18",
+        "saetze": "12",
+        "pkt": "38",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "SC Halle",
+        "sp": "",
+        "s": "18",
+        "saetze": "12",
+        "pkt": "34",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "Telekom Post SV Bielefeld II",
+        "sp": "",
+        "s": "18",
+        "saetze": "11",
+        "pkt": "33",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "1. VC Minden",
+        "sp": "",
+        "s": "18",
+        "saetze": "8",
+        "pkt": "24",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "SG Coesfeld 06",
+        "sp": "",
+        "s": "18",
+        "saetze": "8",
+        "pkt": "23",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "VV Humann Essen V",
+        "sp": "",
+        "s": "18",
+        "saetze": "7",
+        "pkt": "21",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "TuS Willebadessen",
+        "sp": "▽",
+        "s": "18",
+        "saetze": "8",
+        "pkt": "20",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "Spvg. Steinhagen",
+        "sp": "▼",
+        "s": "18",
+        "saetze": "5",
+        "pkt": "19",
+        "current": false
+      },
+      {
+        "rank": 10,
+        "name": "Hammer SportClub",
+        "sp": "▼",
+        "s": "18",
+        "saetze": "5",
+        "pkt": "15",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
   "herren3": {
-    "league": "",
+    "league": "Landesliga 5 Männer",
     "rank": null,
-    "rankTotal": null,
-    "tabelle": [],
+    "rankTotal": 9,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "TVE Vogelsang",
+        "sp": "▲",
+        "s": "16",
+        "saetze": "13",
+        "pkt": "38",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "VfL Telstar Bochum",
+        "sp": "△",
+        "s": "16",
+        "saetze": "12",
+        "pkt": "38",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "DJK Blau-Weiß Annen",
+        "sp": "",
+        "s": "16",
+        "saetze": "12",
+        "pkt": "36",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "TB Höntrop II",
+        "sp": "",
+        "s": "16",
+        "saetze": "12",
+        "pkt": "33",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "MTG Horst",
+        "sp": "",
+        "s": "16",
+        "saetze": "7",
+        "pkt": "22",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "MTG Horst II",
+        "sp": "",
+        "s": "16",
+        "saetze": "7",
+        "pkt": "20",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "Letmather TV",
+        "sp": "▽",
+        "s": "16",
+        "saetze": "6",
+        "pkt": "16",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "TuS Hattingen",
+        "sp": "▼",
+        "s": "16",
+        "saetze": "3",
+        "pkt": "11",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "VV Schwerte",
+        "sp": "▼",
+        "s": "16",
+        "saetze": "0",
+        "pkt": "2",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
   "herren4": {
-    "league": "",
-    "rank": null,
-    "rankTotal": null,
-    "tabelle": [],
+    "league": "Bezirksliga 10 Männer",
+    "rank": 6,
+    "rankTotal": 8,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "TB Höntrop III",
+        "sp": "▲",
+        "s": "14",
+        "saetze": "12",
+        "pkt": "36",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "EVC Massen II",
+        "sp": "△",
+        "s": "14",
+        "saetze": "11",
+        "pkt": "34",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "TSC Eintracht Dortmund II",
+        "sp": "",
+        "s": "14",
+        "saetze": "9",
+        "pkt": "29",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "PSV Bochum",
+        "sp": "",
+        "s": "14",
+        "saetze": "7",
+        "pkt": "20",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "VfL Telstar Bochum II",
+        "sp": "",
+        "s": "14",
+        "saetze": "6",
+        "pkt": "19",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "TV Hörde IV",
+        "sp": "",
+        "s": "14",
+        "saetze": "6",
+        "pkt": "14",
+        "current": true
+      },
+      {
+        "rank": 7,
+        "name": "Ruhrvolleys Stockum",
+        "sp": "▽",
+        "s": "14",
+        "saetze": "3",
+        "pkt": "9",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "TV Asseln",
+        "sp": "▼",
+        "s": "14",
+        "saetze": "2",
+        "pkt": "7",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
   "herren5": {
-    "league": "",
+    "league": "Bezirksklasse 18 Männer",
     "rank": null,
-    "rankTotal": null,
-    "tabelle": [],
+    "rankTotal": 8,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "TSC Eintracht Dortmund III",
+        "sp": "▲",
+        "s": "14",
+        "saetze": "13",
+        "pkt": "39",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "TuS Meinerzhagen II",
+        "sp": "△",
+        "s": "14",
+        "saetze": "12",
+        "pkt": "35",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "VV Schwerte II",
+        "sp": "",
+        "s": "14",
+        "saetze": "11",
+        "pkt": "34",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "DJK Sümmern II",
+        "sp": "",
+        "s": "14",
+        "saetze": "7",
+        "pkt": "19",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "TuS Iserlohn III",
+        "sp": "",
+        "s": "14",
+        "saetze": "6",
+        "pkt": "18",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "TV Hasperbach",
+        "sp": "",
+        "s": "14",
+        "saetze": "4",
+        "pkt": "13",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "SV Menden",
+        "sp": "",
+        "s": "14",
+        "saetze": "3",
+        "pkt": "9",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "TSV Hagen II",
+        "sp": "",
+        "s": "14",
+        "saetze": "0",
+        "pkt": "1",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   }
