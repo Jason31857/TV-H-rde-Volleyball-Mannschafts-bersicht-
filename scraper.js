@@ -1,310 +1,304 @@
-// TV Hörde – WVV Scraper
-// Startet mit: node scraper.js
- 
+// TV Hörde – WVV Scraper v3
 const { chromium } = require('playwright');
 const fs = require('fs');
- 
+
 const TEAMS = [
   {
     id: 'damen2',
     name: '2. Damen',
     age: 'Frauen',
     url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/oberligen/Ol_frauen/oberliga_2_frauen.xhtml',
-    searchName: 'Hörde',
   },
   {
     id: 'damen3',
     name: '3. Damen',
     age: 'Frauen',
     url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/landesligen/landesligen_frauen/landesliga_6_frauen.xhtml',
-    searchName: 'Hörde',
   },
   {
     id: 'damen4',
     name: '4. Damen',
     age: 'Frauen',
     url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksklassen/bezirksklassen_frauen/bezirksklasse_21_frauen.xhtml',
-    searchName: 'Hörde',
   },
   {
     id: 'herren2',
     name: '2. Herren',
     age: 'Männer',
     url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/oberligen/OL_maenner/oberliga_2_maenner.xhtml',
-    searchName: 'Hörde',
   },
   {
     id: 'herren3',
     name: '3. Herren',
     age: 'Männer',
     url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/landesligen/landesligen_maenner/landesliga_5_maenner.xhtml',
-    searchName: 'Hörde',
   },
   {
     id: 'herren4',
     name: '4. Herren',
     age: 'Männer',
     url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksligen/bezirksligen_maenner/bezirksliga_10_maenner.xhtml',
-    searchName: 'Hörde',
   },
   {
     id: 'herren5',
     name: '5. Herren',
     age: 'Männer',
     url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksklassen/bezirksklassen_maenner/bezirksklasse_18_maenner.xhtml',
-    searchName: 'Hörde',
   },
 ];
- 
-// ── Cookie-Banner wegklicken ───────────────────────────────────────────
+
+// Alle möglichen Schreibweisen von TV Hörde
+const SEARCH_TERMS = ['hörde', 'hoerde', 'tv h', 'tvh', 'horde'];
+
+function isHoerde(text) {
+  const t = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  return SEARCH_TERMS.some(s => t.includes(s.normalize('NFD').replace(/[\u0300-\u036f]/g, '')));
+}
+
 async function dismissCookieBanner(page) {
   try {
-    // Warte kurz ob Banner erscheint
-    await page.waitForSelector('.sams-cookie-modal', { timeout: 5000 });
-    console.log('      🍪 Cookie-Banner gefunden, wird geschlossen...');
- 
-    // Versuche den Akzeptieren-Button zu finden und per JavaScript zu klicken
-    // (nicht per Mausklick, da das Modal andere Elemente blockiert)
-    const clicked = await page.evaluate(() => {
-      // Suche alle Buttons im Modal
+    await page.waitForSelector('.sams-cookie-modal', { timeout: 4000 });
+    await page.evaluate(() => {
+      // Akzeptieren-Button klicken
       const modal = document.querySelector('.sams-cookie-modal');
-      if (!modal) return false;
-      const buttons = modal.querySelectorAll('button, a, input[type="button"]');
-      for (const btn of buttons) {
-        const txt = (btn.innerText || btn.value || '').toLowerCase();
-        if (txt.includes('akzept') || txt.includes('zustimm') || txt.includes('ok') || 
-            txt.includes('accept') || txt.includes('agree') || txt.includes('alle')) {
-          btn.click();
-          return true;
+      if (!modal) return;
+      const btns = modal.querySelectorAll('button, a');
+      for (const b of btns) {
+        const t = (b.innerText || '').toLowerCase();
+        if (t.includes('akzept') || t.includes('ok') || t.includes('zustimm') || t.includes('alle')) {
+          b.click(); return;
         }
       }
-      // Falls kein passender Button: Modal einfach ausblenden
-      modal.style.display = 'none';
-      const overlay = document.querySelector('.sams-cookie-modal-overlay, .cookie-overlay');
-      if (overlay) overlay.style.display = 'none';
-      // Body-Scroll wiederherstellen
-      document.body.style.overflow = '';
-      document.body.style.pointerEvents = '';
-      return true;
-    });
- 
-    if (clicked) {
-      await page.waitForTimeout(800);
-      // Sicherheitshalber: Modal per JS verstecken falls noch sichtbar
-      await page.evaluate(() => {
-        const modal = document.querySelector('.sams-cookie-modal');
-        if (modal) modal.style.display = 'none';
-        const overlay = document.querySelector('[class*="cookie"]');
-        if (overlay) overlay.style.display = 'none';
-        document.body.style.overflow = 'auto';
-        document.body.style.pointerEvents = 'auto';
+      // Fallback: Modal ausblenden
+      modal.remove();
+      document.querySelectorAll('[class*="cookie"], [class*="overlay"], [class*="modal"]').forEach(el => {
+        if (el.innerText && el.innerText.includes('Cookie')) el.remove();
       });
-    }
-  } catch(e) {
-    // Kein Banner – gut, weitermachen
-  }
+      document.body.style.overflow = 'auto';
+      document.body.style.pointerEvents = 'auto';
+    });
+    await page.waitForTimeout(600);
+    // Sicherheits-Cleanup
+    await page.evaluate(() => {
+      document.querySelectorAll('.sams-cookie-modal, .sams-cookie-modal-overlay').forEach(el => el.remove());
+      document.body.style.overflow = 'auto';
+      document.body.style.pointerEvents = 'auto';
+    });
+  } catch(e) { /* kein Banner */ }
 }
- 
-// ── HAUPT-FUNKTION ────────────────────────────────────────────────────
-async function scrapeAll() {
-  console.log('🏐 TV Hörde WVV-Scraper startet...\n');
- 
-  const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext({
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36'
-  });
- 
-  // Cookie einmal global setzen um Banner zu vermeiden
-  await context.addCookies([{
-    name: 'cookieConsent',
-    value: 'true',
-    domain: 'ergebnisdienst.volleyball.nrw',
-    path: '/',
-  }]);
- 
-  const results = {};
- 
-  for (const team of TEAMS) {
-    console.log(`📋 Lade ${team.name} (${team.age})...`);
-    try {
-      const data = await scrapeTeam(context, team);
-      results[team.id] = data;
-      console.log(`   ✅ Liga: "${data.league}" | Platz: ${data.rank}/${data.rankTotal} | Spiele: ${data.spiele.length} | Kader: ${data.kader.length}`);
-    } catch (e) {
-      console.log(`   ❌ Fehler bei ${team.name}: ${e.message.split('\n')[0]}`);
-      results[team.id] = { league: '', rank: null, rankTotal: null, tabelle: [], spiele: [], kader: [] };
+
+async function clickTabByText(page, keywords) {
+  return await page.evaluate((kws) => {
+    const links = document.querySelectorAll('a, button, li');
+    for (const el of links) {
+      const t = (el.innerText || el.textContent || '').toLowerCase().trim();
+      for (const kw of kws) {
+        if (t.includes(kw)) { el.click(); return t; }
+      }
     }
-    await new Promise(r => setTimeout(r, 2000));
-  }
- 
-  await browser.close();
- 
-  fs.writeFileSync('tvhoerde-data.json', JSON.stringify(results, null, 2), 'utf8');
-  console.log('\n✅ Fertig! Gespeichert in tvhoerde-data.json');
+    return null;
+  }, keywords);
 }
- 
-// ── TEAM SCRAPEN ──────────────────────────────────────────────────────
+
 async function scrapeTeam(context, team) {
   const page = await context.newPage();
   await page.goto(team.url, { waitUntil: 'domcontentloaded', timeout: 25000 });
-  await page.waitForTimeout(2000);
- 
-  // Cookie-Banner wegräumen
+  await page.waitForTimeout(2500);
   await dismissCookieBanner(page);
-  await page.waitForTimeout(500);
- 
+
+  // ── DEBUG: Alle Tabellen-Inhalte loggen ──────────────────────────
+  const pageInfo = await page.evaluate(() => {
+    const tables = document.querySelectorAll('table');
+    const info = { tableCount: tables.length, firstRows: [] };
+    if (tables.length > 0) {
+      const rows = tables[0].querySelectorAll('tr');
+      for (let i = 0; i < Math.min(5, rows.length); i++) {
+        info.firstRows.push(rows[i].innerText.replace(/\s+/g, ' ').trim().slice(0, 100));
+      }
+    }
+    // Alle Links
+    info.links = Array.from(document.querySelectorAll('a')).map(a => ({
+      text: (a.innerText || '').trim().slice(0, 40),
+      href: (a.href || '').slice(0, 100)
+    })).filter(l => l.text.length > 1).slice(0, 20);
+    return info;
+  });
+  console.log(`      Tabellen: ${pageInfo.tableCount}`);
+  if (pageInfo.firstRows.length) console.log(`      Erste Zeilen: ${pageInfo.firstRows.join(' | ')}`);
+
   // ── LIGA-NAME ─────────────────────────────────────────────────────
   const league = await page.evaluate(() => {
-    const h1 = document.querySelector('h1');
-    return h1 ? h1.innerText.trim() : '';
+    return (document.querySelector('h1,h2')?.innerText || '').trim();
   });
- 
+
   // ── TABELLE ───────────────────────────────────────────────────────
-  const tabelle = await page.evaluate((searchName) => {
-    const rows = [];
-    const allTables = document.querySelectorAll('table');
-    let mainTable = null;
-    for (const t of allTables) {
-      const txt = t.innerText || '';
-      if (txt.includes('Mannschaft') && (txt.includes('Punkte') || txt.includes('Pkt'))) {
-        mainTable = t;
-        break;
-      }
+  const tabelle = await page.evaluate((searchTerms) => {
+    function isHoerde(text) {
+      const t = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+      return searchTerms.some(s => t.includes(s.normalize('NFD').replace(/[\u0300-\u036f]/g,'')));
     }
-    if (!mainTable) return rows;
- 
-    const trs = mainTable.querySelectorAll('tbody tr');
-    let rank = 0;
-    for (const tr of trs) {
-      const tds = tr.querySelectorAll('td');
-      if (tds.length < 3) continue;
-      rank++;
-      const rankTd = parseInt((tds[0]?.innerText || '').trim());
-      const actualRank = rankTd || rank;
-      const rawName = (tds[1]?.innerText || '').trim();
-      const name = rawName.split('\n')[0].replace(/\s+/g, ' ').trim();
-      const sp  = (tds[2]?.innerText || '').trim();
-      const s   = (tds[3]?.innerText || '').trim();
-      const saetze = (tds[4]?.innerText || '').trim();
-      const pkt = (tds[tds.length - 1]?.innerText || '').trim();
-      const isCurrent = name.toLowerCase().includes(searchName.toLowerCase());
-      if (name) rows.push({ rank: actualRank, name, sp, s, saetze, pkt, current: isCurrent });
+    const rows = [];
+    for (const table of document.querySelectorAll('table')) {
+      const txt = table.innerText || '';
+      if (!txt.includes('Mannschaft') && !txt.includes('Team') && !txt.includes('Verein')) continue;
+      const trs = table.querySelectorAll('tbody tr, tr');
+      let rank = 0;
+      for (const tr of trs) {
+        const tds = tr.querySelectorAll('td');
+        if (tds.length < 3) continue;
+        rank++;
+        const name = (tds[1]?.innerText || tds[0]?.innerText || '').split('\n')[0].replace(/\s+/g,' ').trim();
+        if (!name || name.length < 2) continue;
+        const sp  = (tds[2]?.innerText || '').trim();
+        const s   = (tds[3]?.innerText || '').trim();
+        const pkt = (tds[tds.length-1]?.innerText || '').trim();
+        rows.push({ rank, name, sp, s, pkt, current: isHoerde(name) });
+      }
+      if (rows.length > 2) break;
     }
     return rows;
-  }, team.searchName);
- 
+  }, SEARCH_TERMS);
+
+  // TV Hörde in Tabelle gefunden?
   const ownRow = tabelle.find(r => r.current);
-  const rank = ownRow ? ownRow.rank : null;
-  const rankTotal = tabelle.length;
- 
+  if (ownRow) {
+    console.log(`      ✓ TV Hörde gefunden als: "${ownRow.name}" (Platz ${ownRow.rank})`);
+  } else if (tabelle.length > 0) {
+    console.log(`      ⚠ TV Hörde NICHT gefunden! Erste Teams: ${tabelle.slice(0,3).map(r=>r.name).join(', ')}`);
+  }
+
   // ── SPIELPLAN ─────────────────────────────────────────────────────
-  // Klicke auf Spiele-Tab per JavaScript
-  await page.evaluate(() => {
-    const links = document.querySelectorAll('a');
-    for (const a of links) {
-      if ((a.href || '').includes('view=matches') || (a.innerText || '').toLowerCase().includes('spiel')) {
-        a.click();
-        return;
-      }
+  const spieleTab = await clickTabByText(page, ['spiel', 'ergebnis', 'begegnung']);
+  if (spieleTab) {
+    await page.waitForTimeout(1500);
+    await dismissCookieBanner(page);
+  }
+
+  const spiele = await page.evaluate((searchTerms) => {
+    function isHoerde(text) {
+      const t = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+      return searchTerms.some(s => t.includes(s.normalize('NFD').replace(/[\u0300-\u036f]/g,'')));
     }
-  });
-  await page.waitForTimeout(1500);
-  await dismissCookieBanner(page);
- 
-  const spiele = await page.evaluate((searchName) => {
     const result = [];
-    const allTables = document.querySelectorAll('table');
-    for (const t of allTables) {
-      const txt = t.innerText || '';
-      if (!txt.includes('Datum') && !txt.includes('Team')) continue;
-      const rows = t.querySelectorAll('tbody tr');
-      for (const row of rows) {
-        const rowText = row.innerText || '';
-        if (!rowText.toLowerCase().includes(searchName.toLowerCase())) continue;
-        const tds = row.querySelectorAll('td');
+    for (const table of document.querySelectorAll('table')) {
+      const trs = table.querySelectorAll('tbody tr, tr');
+      for (const tr of trs) {
+        const txt = tr.innerText || '';
+        if (!isHoerde(txt)) continue;
+        const tds = tr.querySelectorAll('td');
         if (tds.length < 4) continue;
         const datum    = (tds[0]?.innerText || '').trim();
-        const team1    = (tds[2]?.innerText || tds[1]?.innerText || '').trim().split('\n')[0].trim();
-        const team2    = (tds[3]?.innerText || tds[2]?.innerText || '').trim().split('\n')[0].trim();
+        const uhrzeit  = (tds[1]?.innerText || '').trim();
+        const team1    = (tds[2]?.innerText || '').trim().split('\n')[0];
+        const team2    = (tds[3]?.innerText || '').trim().split('\n')[0];
         const ergebnis = (tds[4]?.innerText || '').trim();
-        const halle    = (tds[tds.length - 2]?.innerText || '').trim().split('\n')[0];
-        // Nur zukünftige Spiele (kein Ergebnis)
-        if (!ergebnis || ergebnis === '–' || ergebnis === '' || ergebnis.includes('–')) {
-          const isHeim = team1.toLowerCase().includes(searchName.toLowerCase());
-          result.push({ datum, team1, team2, heim: isHeim, halle });
+        const halle    = (tds[5]?.innerText || '').trim().split('\n')[0];
+        // Nur zukünftige (kein echtes Ergebnis)
+        if (!ergebnis || ergebnis.includes('–') || ergebnis === '') {
+          result.push({
+            datum, uhrzeit,
+            team1: team1 || '', team2: team2 || '',
+            heim: isHoerde(team1),
+            halle: halle || ''
+          });
         }
       }
     }
     return result.slice(0, 6);
-  }, team.searchName);
- 
+  }, SEARCH_TERMS);
+
   // ── KADER ─────────────────────────────────────────────────────────
   let kader = [];
   try {
     await page.goto(team.url, { waitUntil: 'domcontentloaded', timeout: 20000 });
-    await page.waitForTimeout(1500);
-    await dismissCookieBanner(page);
- 
-    // Klicke Mannschaften-Tab per JS
-    await page.evaluate(() => {
-      const links = document.querySelectorAll('a');
-      for (const a of links) {
-        if ((a.href || '').includes('view=teamOverview') || (a.innerText || '').toLowerCase().includes('mannschaft')) {
-          a.click();
-          return;
-        }
-      }
-    });
     await page.waitForTimeout(2000);
     await dismissCookieBanner(page);
- 
-    // Finde TV Hörde Link
-    const teamLink = await page.evaluate((searchName) => {
-      const links = Array.from(document.querySelectorAll('a'));
-      for (const a of links) {
-        if ((a.innerText || '').toLowerCase().includes(searchName.toLowerCase()) && 
-            (a.href || '').includes('teamDetails')) {
-          return a.href;
+
+    const mannTab = await clickTabByText(page, ['mannschaft', 'team', 'verein']);
+    if (mannTab) {
+      await page.waitForTimeout(2000);
+      await dismissCookieBanner(page);
+    }
+
+    // Finde Link der TV Hörde enthält UND zu teamDetails führt
+    const teamLink = await page.evaluate((searchTerms) => {
+      function isHoerde(text) {
+        const t = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+        return searchTerms.some(s => t.includes(s.normalize('NFD').replace(/[\u0300-\u036f]/g,'')));
+      }
+      for (const a of document.querySelectorAll('a')) {
+        const txt = a.innerText || a.title || '';
+        const href = a.href || '';
+        if (isHoerde(txt) && (href.includes('team') || href.includes('detail') || href.includes('popup'))) {
+          return href;
         }
       }
+      // Fallback: irgendein Link der Hörde enthält
+      for (const a of document.querySelectorAll('a')) {
+        if (isHoerde(a.innerText || '')) return a.href;
+      }
       return null;
-    }, team.searchName);
- 
+    }, SEARCH_TERMS);
+
     if (teamLink) {
+      console.log(`      Kader-Link: ${teamLink.slice(0, 80)}`);
       const popupPage = await context.newPage();
       await popupPage.goto(teamLink, { waitUntil: 'domcontentloaded', timeout: 15000 });
       await popupPage.waitForTimeout(1500);
       await dismissCookieBanner(popupPage);
- 
+
       kader = await popupPage.evaluate(() => {
         const players = [];
-        const rows = document.querySelectorAll('table tr');
-        for (const row of rows) {
+        for (const row of document.querySelectorAll('table tr')) {
           const tds = row.querySelectorAll('td');
           if (tds.length < 2) continue;
           const nr   = (tds[0]?.innerText || '').trim();
           const name = (tds[1]?.innerText || '').trim();
           const pos  = (tds[2]?.innerText || '').trim();
-          if (name && name.length > 2 && !/^(name|spieler|position|nr|#)/i.test(name)) {
+          if (name && name.length > 2 && !/^(name|spieler|pos|nr|#|trikot)/i.test(name)) {
             players.push({ nr: nr || '–', name, pos: pos || '–' });
           }
         }
         return players;
       });
- 
       await popupPage.close();
-    } else {
-      console.log(`      ℹ️  Kein Kader-Link gefunden`);
     }
-  } catch (e) {
-    console.log(`      ⚠️  Kader: ${e.message.split('\n')[0].slice(0, 80)}`);
+  } catch(e) {
+    console.log(`      ⚠ Kader-Fehler: ${e.message.split('\n')[0].slice(0,60)}`);
   }
- 
+
   await page.close();
-  return { league, rank, rankTotal, tabelle, spiele, kader };
+  return { league, rank: ownRow?.rank || null, rankTotal: tabelle.length, tabelle, spiele, kader };
 }
- 
-scrapeAll().catch(err => {
-  console.error('Fehler:', err);
-  process.exit(1);
-});
+
+async function scrapeAll() {
+  console.log('🏐 TV Hörde WVV-Scraper v3 startet...\n');
+  const browser = await chromium.launch({ headless: true });
+  const context = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36'
+  });
+  await context.addCookies([{
+    name: 'cookieConsent', value: 'true',
+    domain: 'ergebnisdienst.volleyball.nrw', path: '/',
+  }]);
+
+  const results = {};
+  for (const team of TEAMS) {
+    console.log(`📋 ${team.name} (${team.age})...`);
+    try {
+      results[team.id] = await scrapeTeam(context, team);
+      const d = results[team.id];
+      console.log(`   ✅ "${d.league}" | Platz ${d.rank}/${d.rankTotal} | Spiele: ${d.spiele.length} | Kader: ${d.kader.length}`);
+    } catch(e) {
+      console.log(`   ❌ ${e.message.split('\n')[0]}`);
+      results[team.id] = { league:'', rank:null, rankTotal:null, tabelle:[], spiele:[], kader:[] };
+    }
+    await new Promise(r => setTimeout(r, 2500));
+  }
+
+  await browser.close();
+  fs.writeFileSync('tvhoerde-data.json', JSON.stringify(results, null, 2), 'utf8');
+  console.log('\n✅ Fertig! tvhoerde-data.json gespeichert.');
+}
+
+scrapeAll().catch(err => { console.error(err); process.exit(1); });
