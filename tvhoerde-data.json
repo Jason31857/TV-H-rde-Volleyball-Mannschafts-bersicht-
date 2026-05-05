@@ -9,7 +9,6 @@
         "name": "USC Münster III",
         "sp": "▲",
         "s": "18",
-        "saetze": "16",
         "pkt": "47",
         "current": false
       },
@@ -18,7 +17,6 @@
         "name": "SV Blau-Weiß Sande",
         "sp": "△",
         "s": "18",
-        "saetze": "14",
         "pkt": "41",
         "current": false
       },
@@ -27,7 +25,6 @@
         "name": "SC Hennen",
         "sp": "",
         "s": "18",
-        "saetze": "11",
         "pkt": "30",
         "current": false
       },
@@ -36,7 +33,6 @@
         "name": "RC Sorpesee II",
         "sp": "",
         "s": "18",
-        "saetze": "9",
         "pkt": "28",
         "current": false
       },
@@ -45,7 +41,6 @@
         "name": "TB Höntrop",
         "sp": "",
         "s": "18",
-        "saetze": "8",
         "pkt": "28",
         "current": false
       },
@@ -54,7 +49,6 @@
         "name": "SC Halle",
         "sp": "",
         "s": "18",
-        "saetze": "9",
         "pkt": "27",
         "current": false
       },
@@ -63,7 +57,6 @@
         "name": "SSV Meschede",
         "sp": "",
         "s": "18",
-        "saetze": "7",
         "pkt": "21",
         "current": false
       },
@@ -72,7 +65,6 @@
         "name": "SG Sendenhorst",
         "sp": "▽",
         "s": "18",
-        "saetze": "6",
         "pkt": "20",
         "current": false
       },
@@ -81,7 +73,6 @@
         "name": "SV Blau-Weiß Aasee II",
         "sp": "▼",
         "s": "18",
-        "saetze": "6",
         "pkt": "16",
         "current": false
       },
@@ -90,7 +81,6 @@
         "name": "DJK Sportfreunde Datteln",
         "sp": "▼",
         "s": "18",
-        "saetze": "4",
         "pkt": "12",
         "current": false
       }
@@ -108,7 +98,6 @@
         "name": "1. VV Holzwickede",
         "sp": "▲",
         "s": "16",
-        "saetze": "12",
         "pkt": "37",
         "current": false
       },
@@ -117,7 +106,6 @@
         "name": "VV Schwerte III",
         "sp": "△",
         "s": "16",
-        "saetze": "12",
         "pkt": "36",
         "current": false
       },
@@ -126,7 +114,6 @@
         "name": "VV Schwerte II",
         "sp": "",
         "s": "16",
-        "saetze": "10",
         "pkt": "31",
         "current": false
       },
@@ -135,7 +122,6 @@
         "name": "SC Hennen II",
         "sp": "",
         "s": "16",
-        "saetze": "10",
         "pkt": "30",
         "current": false
       },
@@ -144,7 +130,6 @@
         "name": "SuS Oberaden",
         "sp": "",
         "s": "16",
-        "saetze": "10",
         "pkt": "27",
         "current": false
       },
@@ -153,7 +138,6 @@
         "name": "Lüner SV",
         "sp": "",
         "s": "16",
-        "saetze": "8",
         "pkt": "23",
         "current": false
       },
@@ -162,7 +146,6 @@
         "name": "SuS Oestereiden",
         "sp": "▽",
         "s": "16",
-        "saetze": "6",
         "pkt": "18",
         "current": false
       },
@@ -171,7 +154,6 @@
         "name": "TV Eiche Grüne",
         "sp": "▼",
         "s": "16",
-        "saetze": "4",
         "pkt": "13",
         "current": false
       },
@@ -180,7 +162,6 @@
         "name": "TuS Bönen",
         "sp": "▼",
         "s": "16",
-        "saetze": "0",
         "pkt": "1",
         "current": false
       }
@@ -198,7 +179,6 @@
         "name": "TUS Weddinghofen",
         "sp": "▲",
         "s": "10",
-        "saetze": "8",
         "pkt": "25",
         "current": false
       },
@@ -207,7 +187,6 @@
         "name": "TV Asseln",
         "sp": "△",
         "s": "10",
-        "saetze": "7",
         "pkt": "22",
         "current": false
       },
@@ -216,7 +195,6 @@
         "name": "SLC Bockum-Hövel",
         "sp": "",
         "s": "10",
-        "saetze": "7",
         "pkt": "21",
         "current": false
       },
@@ -225,7 +203,6 @@
         "name": "Lüner SV III",
         "sp": "",
         "s": "10",
-        "saetze": "6",
         "pkt": "16",
         "current": false
       },
@@ -234,7 +211,6 @@
         "name": "SuS Oberaden III",
         "sp": "",
         "s": "10",
-        "saetze": "1",
         "pkt": "4",
         "current": false
       },
@@ -243,7 +219,6 @@
         "name": "TV Werne II",
         "sp": "",
         "s": "10",
-        "saetze": "1",
         "pkt": "2",
         "current": false
       }
@@ -261,7 +236,6 @@
         "name": "VV Humann Essen IV",
         "sp": "▲",
         "s": "18",
-        "saetze": "14",
         "pkt": "40",
         "current": false
       },
@@ -270,7 +244,6 @@
         "name": "SV Blau-Weiß Aasee",
         "sp": "△",
         "s": "18",
-        "saetze": "12",
         "pkt": "38",
         "current": false
       },
@@ -279,7 +252,6 @@
         "name": "SC Halle",
         "sp": "",
         "s": "18",
-        "saetze": "12",
         "pkt": "34",
         "current": false
       },
@@ -288,7 +260,6 @@
         "name": "Telekom Post SV Bielefeld II",
         "sp": "",
         "s": "18",
-        "saetze": "11",
         "pkt": "33",
         "current": false
       },
@@ -297,7 +268,6 @@
         "name": "1. VC Minden",
         "sp": "",
         "s": "18",
-        "saetze": "8",
         "pkt": "24",
         "current": false
       },
@@ -306,7 +276,6 @@
         "name": "SG Coesfeld 06",
         "sp": "",
         "s": "18",
-        "saetze": "8",
         "pkt": "23",
         "current": false
       },
@@ -315,7 +284,6 @@
         "name": "VV Humann Essen V",
         "sp": "",
         "s": "18",
-        "saetze": "7",
         "pkt": "21",
         "current": false
       },
@@ -324,7 +292,6 @@
         "name": "TuS Willebadessen",
         "sp": "▽",
         "s": "18",
-        "saetze": "8",
         "pkt": "20",
         "current": false
       },
@@ -333,7 +300,6 @@
         "name": "Spvg. Steinhagen",
         "sp": "▼",
         "s": "18",
-        "saetze": "5",
         "pkt": "19",
         "current": false
       },
@@ -342,7 +308,6 @@
         "name": "Hammer SportClub",
         "sp": "▼",
         "s": "18",
-        "saetze": "5",
         "pkt": "15",
         "current": false
       }
@@ -360,7 +325,6 @@
         "name": "TVE Vogelsang",
         "sp": "▲",
         "s": "16",
-        "saetze": "13",
         "pkt": "38",
         "current": false
       },
@@ -369,7 +333,6 @@
         "name": "VfL Telstar Bochum",
         "sp": "△",
         "s": "16",
-        "saetze": "12",
         "pkt": "38",
         "current": false
       },
@@ -378,7 +341,6 @@
         "name": "DJK Blau-Weiß Annen",
         "sp": "",
         "s": "16",
-        "saetze": "12",
         "pkt": "36",
         "current": false
       },
@@ -387,7 +349,6 @@
         "name": "TB Höntrop II",
         "sp": "",
         "s": "16",
-        "saetze": "12",
         "pkt": "33",
         "current": false
       },
@@ -396,7 +357,6 @@
         "name": "MTG Horst",
         "sp": "",
         "s": "16",
-        "saetze": "7",
         "pkt": "22",
         "current": false
       },
@@ -405,7 +365,6 @@
         "name": "MTG Horst II",
         "sp": "",
         "s": "16",
-        "saetze": "7",
         "pkt": "20",
         "current": false
       },
@@ -414,7 +373,6 @@
         "name": "Letmather TV",
         "sp": "▽",
         "s": "16",
-        "saetze": "6",
         "pkt": "16",
         "current": false
       },
@@ -423,7 +381,6 @@
         "name": "TuS Hattingen",
         "sp": "▼",
         "s": "16",
-        "saetze": "3",
         "pkt": "11",
         "current": false
       },
@@ -432,7 +389,6 @@
         "name": "VV Schwerte",
         "sp": "▼",
         "s": "16",
-        "saetze": "0",
         "pkt": "2",
         "current": false
       }
@@ -450,7 +406,6 @@
         "name": "TB Höntrop III",
         "sp": "▲",
         "s": "14",
-        "saetze": "12",
         "pkt": "36",
         "current": false
       },
@@ -459,7 +414,6 @@
         "name": "EVC Massen II",
         "sp": "△",
         "s": "14",
-        "saetze": "11",
         "pkt": "34",
         "current": false
       },
@@ -468,7 +422,6 @@
         "name": "TSC Eintracht Dortmund II",
         "sp": "",
         "s": "14",
-        "saetze": "9",
         "pkt": "29",
         "current": false
       },
@@ -477,7 +430,6 @@
         "name": "PSV Bochum",
         "sp": "",
         "s": "14",
-        "saetze": "7",
         "pkt": "20",
         "current": false
       },
@@ -486,7 +438,6 @@
         "name": "VfL Telstar Bochum II",
         "sp": "",
         "s": "14",
-        "saetze": "6",
         "pkt": "19",
         "current": false
       },
@@ -495,7 +446,6 @@
         "name": "TV Hörde IV",
         "sp": "",
         "s": "14",
-        "saetze": "6",
         "pkt": "14",
         "current": true
       },
@@ -504,7 +454,6 @@
         "name": "Ruhrvolleys Stockum",
         "sp": "▽",
         "s": "14",
-        "saetze": "3",
         "pkt": "9",
         "current": false
       },
@@ -513,17 +462,22 @@
         "name": "TV Asseln",
         "sp": "▼",
         "s": "14",
-        "saetze": "2",
         "pkt": "7",
         "current": false
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "Westdeutscher Volleyball-Verband e.V.",
+        "name": "Mannschaftsdetails",
+        "pos": "–"
+      }
+    ]
   },
   "herren5": {
     "league": "Bezirksklasse 18 Männer",
-    "rank": null,
+    "rank": 6,
     "rankTotal": 8,
     "tabelle": [
       {
@@ -531,7 +485,6 @@
         "name": "TSC Eintracht Dortmund III",
         "sp": "▲",
         "s": "14",
-        "saetze": "13",
         "pkt": "39",
         "current": false
       },
@@ -540,7 +493,6 @@
         "name": "TuS Meinerzhagen II",
         "sp": "△",
         "s": "14",
-        "saetze": "12",
         "pkt": "35",
         "current": false
       },
@@ -549,7 +501,6 @@
         "name": "VV Schwerte II",
         "sp": "",
         "s": "14",
-        "saetze": "11",
         "pkt": "34",
         "current": false
       },
@@ -558,7 +509,6 @@
         "name": "DJK Sümmern II",
         "sp": "",
         "s": "14",
-        "saetze": "7",
         "pkt": "19",
         "current": false
       },
@@ -567,7 +517,6 @@
         "name": "TuS Iserlohn III",
         "sp": "",
         "s": "14",
-        "saetze": "6",
         "pkt": "18",
         "current": false
       },
@@ -576,16 +525,14 @@
         "name": "TV Hasperbach",
         "sp": "",
         "s": "14",
-        "saetze": "4",
         "pkt": "13",
-        "current": false
+        "current": true
       },
       {
         "rank": 7,
         "name": "SV Menden",
         "sp": "",
         "s": "14",
-        "saetze": "3",
         "pkt": "9",
         "current": false
       },
@@ -594,12 +541,17 @@
         "name": "TSV Hagen II",
         "sp": "",
         "s": "14",
-        "saetze": "0",
         "pkt": "1",
         "current": false
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "Westdeutscher Volleyball-Verband e.V.",
+        "name": "Mannschaftsdetails",
+        "pos": "–"
+      }
+    ]
   }
 }
