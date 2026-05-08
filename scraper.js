@@ -1,9 +1,9 @@
-// TV Hörde – WVV Scraper v5
+// TV Hörde – WVV Scraper v6
 const { chromium } = require('playwright');
 const fs = require('fs');
- 
+
 const BASE = 'https://ergebnisdienst.volleyball.nrw';
- 
+
 const TEAMS = [
   {
     id: 'damen2', name: '2. Damen', age: 'Frauen',
@@ -18,7 +18,9 @@ const TEAMS = [
   {
     id: 'damen4', name: '4. Damen', age: 'Frauen',
     searchName: 'TV Hörde IV',
-    url: `${BASE}/cms/home/erwachsene/bezirksklassen/bezirksklassen_frauen/bezirksklasse_21_frauen.xhtml`,
+    // Bezirksklasse 21 Frauen enthält laut PDF: TUS Weddinghofen, TV Asseln, SLC Bockum-Hövel → kein Hörde
+    // Laut Kreisliga-PDF: TV Hörde IV & V spielen in Kreisliga Dortmund-Unna Frauen
+    url: `${BASE}/cms/home/erwachsene/kreisligen/alle_kreisligen.xhtml?LeaguePresenter.view=resultTable&LeaguePresenter.matchSeriesId=98622543`,
   },
   {
     id: 'herren2', name: '2. Herren', age: 'Männer',
@@ -38,15 +40,15 @@ const TEAMS = [
   {
     id: 'herren5', name: '5. Herren', age: 'Männer',
     searchName: 'TV Hörde V',
-    // Kreisliga Dortmund-Unna Männer – matchSeriesId aus dem WVV-Ergebnisdienst
+    // Kreisliga Dortmund-Unna Männer
     url: `${BASE}/cms/home/erwachsene/kreisligen/alle_kreisligen.xhtml?LeaguePresenter.view=resultTable&LeaguePresenter.matchSeriesId=95241748`,
   },
 ];
- 
+
 function norm(s) {
   return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim();
 }
- 
+
 async function dismissCookieBanner(page) {
   try {
     await page.waitForSelector('.sams-cookie-modal', { timeout: 3000 });
@@ -58,23 +60,13 @@ async function dismissCookieBanner(page) {
     await page.waitForTimeout(300);
   } catch(e) {}
 }
- 
-async function scrapeTeam(context, team) {
-  const searchNorm = norm(team.searchName);
-  const page = await context.newPage();
- 
-  // ── TABELLE ───────────────────────────────────────────────────────
-  await page.goto(team.url, { waitUntil: 'domcontentloaded', timeout: 25000 });
-  await page.waitForTimeout(2500);
-  await dismissCookieBanner(page);
- 
-  const league = await page.evaluate(() => (document.querySelector('h1,h2')?.innerText || '').trim());
- 
-  const tabelle = await page.evaluate((searchNorm) => {
+
+async function getTabelle(page, searchNorm) {
+  return page.evaluate((searchNorm) => {
     function n(s) { return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim(); }
     for (const table of document.querySelectorAll('table')) {
       const txt = table.innerText || '';
-      if (!txt.includes('Mannschaft') && !txt.includes('Team') && !txt.includes('Verein')) continue;
+      if (!txt.includes('Mannschaft') && !txt.includes('Team') && !txt.includes('Platz')) continue;
       const rows = [];
       let rank = 0;
       for (const tr of table.querySelectorAll('tbody tr, tr')) {
@@ -84,39 +76,59 @@ async function scrapeTeam(context, team) {
         const name = (tds[1]?.innerText || tds[0]?.innerText || '').split('\n')[0].replace(/\s+/g,' ').trim();
         if (!name || name.length < 2) continue;
         rows.push({
-          rank,
-          name,
+          rank, name,
           sp:  (tds[2]?.innerText || '').trim(),
           s:   (tds[3]?.innerText || '').trim(),
           pkt: (tds[tds.length-1]?.innerText || '').trim(),
-          current: n(name).includes(searchNorm)
+          current: n(name).includes(n(searchNorm))
         });
       }
       if (rows.length > 2) return rows;
     }
     return [];
   }, searchNorm);
- 
+}
+
+async function scrapeTeam(context, team) {
+  const searchNorm = norm(team.searchName);
+  const page = await context.newPage();
+
+  // ── TABELLE ───────────────────────────────────────────────────────
+  await page.goto(team.url, { waitUntil: 'domcontentloaded', timeout: 25000 });
+  await page.waitForTimeout(2500);
+  await dismissCookieBanner(page);
+
+  const league = await page.evaluate(() => (document.querySelector('h1,h2')?.innerText || '').trim());
+  const tabelle = await getTabelle(page, searchNorm);
   const ownRow = tabelle.find(r => r.current);
+
   if (ownRow) console.log(`      ✓ "${ownRow.name}" → Platz ${ownRow.rank}/${tabelle.length}`);
-  else if (tabelle.length > 0) console.log(`      ⚠ Nicht gefunden! Teams: ${tabelle.slice(0,3).map(r=>r.name).join(', ')}`);
-  else console.log(`      ⚠ Keine Tabelle!`);
- 
-  // ── SPIELPLAN ─────────────────────────────────────────────────────
-  // Direkt die Spiele-URL aufrufen (matchSeriesId aus der aktuellen URL holen)
-  const spieleUrl = await page.evaluate(() => {
+  else console.log(`      ⚠ Nicht gefunden! Teams: ${tabelle.slice(0,4).map(r=>r.name).join(', ')}`);
+
+  // ── matchSeriesId aus der Seite holen ─────────────────────────────
+  const matchSeriesId = await page.evaluate(() => {
+    // Aus den Tab-Links die matchSeriesId lesen
     for (const a of document.querySelectorAll('a')) {
-      if ((a.href || '').includes('view=matches')) return a.href;
+      const href = a.href || '';
+      const m = href.match(/matchSeriesId=(\d+)/);
+      if (m) return m[1];
     }
     return null;
   });
- 
+  console.log(`      matchSeriesId: ${matchSeriesId}`);
+
+  // ── SPIELPLAN (direkt per URL) ─────────────────────────────────────
   let spiele = [];
-  if (spieleUrl) {
-    await page.goto(spieleUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
+  if (matchSeriesId) {
+    const spieleUrl = `${BASE}/cms/home/erwachsene/kreisligen/alle_kreisligen.xhtml?LeaguePresenter.view=matches&LeaguePresenter.matchSeriesId=${matchSeriesId}`;
+    // Versuche die Liga-spezifische URL zu ermitteln
+    const basePageUrl = team.url.split('?')[0];
+    const spielePageUrl = `${basePageUrl}?LeaguePresenter.view=matches&LeaguePresenter.matchSeriesId=${matchSeriesId}`;
+
+    await page.goto(spielePageUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
     await page.waitForTimeout(1500);
     await dismissCookieBanner(page);
- 
+
     spiele = await page.evaluate((searchNorm) => {
       function n(s) { return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim(); }
       const result = [];
@@ -138,58 +150,40 @@ async function scrapeTeam(context, team) {
       return result.slice(0, 6);
     }, searchNorm);
   }
- 
-  // ── KADER ─────────────────────────────────────────────────────────
+
+  // ── KADER (direkt per URL + warte auf JS) ─────────────────────────
   let kader = [];
-  try {
-    // Direkt die Mannschaften-URL aufrufen
-    const mannUrl = await page.evaluate(() => {
-      for (const a of document.querySelectorAll('a')) {
-        if ((a.href || '').includes('view=teamOverview')) return a.href;
-      }
-      return null;
-    }) || spieleUrl?.replace('view=matches', 'view=teamOverview');
- 
-    // Zurück zur Haupt-URL falls nötig
-    if (!mannUrl) {
-      await page.goto(team.url, { waitUntil: 'domcontentloaded', timeout: 20000 });
-      await page.waitForTimeout(1500);
+  if (matchSeriesId) {
+    try {
+      const basePageUrl = team.url.split('?')[0];
+      const mannUrl = `${basePageUrl}?LeaguePresenter.view=teamOverview&LeaguePresenter.matchSeriesId=${matchSeriesId}`;
+      await page.goto(mannUrl, { waitUntil: 'networkidle', timeout: 25000 });
+      await page.waitForTimeout(3000);
       await dismissCookieBanner(page);
-    }
- 
-    const targetMannUrl = mannUrl || await page.evaluate(() => {
-      for (const a of document.querySelectorAll('a')) {
-        if ((a.href || '').includes('view=teamOverview')) return a.href;
-      }
-      return null;
-    });
- 
-    if (targetMannUrl) {
-      await page.goto(targetMannUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
-      await page.waitForTimeout(1500);
-      await dismissCookieBanner(page);
- 
-      // Finde TV Hörde Link
+
+      // Warte explizit auf Links mit teamDetails
+      await page.waitForSelector('a[href*="teamDetails"]', { timeout: 8000 }).catch(() => {});
+
       const teamLink = await page.evaluate((searchNorm) => {
         function n(s) { return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim(); }
-        for (const a of document.querySelectorAll('a')) {
-          const txt = n(a.innerText);
-          const href = a.href || '';
-          if (txt.includes(searchNorm) && href.includes('teamDetails')) return href;
+        const allLinks = Array.from(document.querySelectorAll('a[href*="teamDetails"]'));
+        console.log('teamDetail links found:', allLinks.length);
+        for (const a of allLinks) {
+          console.log('  link text:', (a.innerText||'').trim(), 'href:', a.href);
+          if (n(a.innerText).includes(searchNorm)) return a.href;
         }
-        // Fallback: alle Links loggen
-        return Array.from(document.querySelectorAll('a'))
-          .filter(a => (a.href||'').includes('teamDetails'))
-          .map(a => ({ text: (a.innerText||'').trim(), href: a.href }));
+        // Fallback: erstes teamDetails Link
+        if (allLinks.length > 0) {
+          return { fallback: true, links: allLinks.map(a => ({ text: (a.innerText||'').trim().slice(0,30), href: a.href })) };
+        }
+        return null;
       }, searchNorm);
- 
+
       if (typeof teamLink === 'string') {
-        console.log(`      Kader-Link: gefunden`);
         const popup = await context.newPage();
         await popup.goto(teamLink, { waitUntil: 'domcontentloaded', timeout: 15000 });
         await popup.waitForTimeout(1500);
         await dismissCookieBanner(popup);
- 
         kader = await popup.evaluate(() => {
           const players = [];
           for (const row of document.querySelectorAll('table tr')) {
@@ -206,21 +200,22 @@ async function scrapeTeam(context, team) {
         });
         console.log(`      Kader: ${kader.length} Spieler`);
         await popup.close();
-      } else if (Array.isArray(teamLink)) {
-        // Debug: zeige alle verfügbaren Team-Links
-        console.log(`      Verfügbare Teams: ${teamLink.map(l => l.text).join(', ')}`);
+      } else if (teamLink?.fallback) {
+        console.log(`      Verfügbare Team-Links: ${teamLink.links.map(l=>l.text).join(', ')}`);
+      } else {
+        console.log(`      Keine teamDetails-Links gefunden`);
       }
+    } catch(e) {
+      console.log(`      ⚠ Kader-Fehler: ${e.message.split('\n')[0].slice(0,60)}`);
     }
-  } catch(e) {
-    console.log(`      ⚠ Kader-Fehler: ${e.message.split('\n')[0].slice(0,60)}`);
   }
- 
+
   await page.close();
   return { league, rank: ownRow?.rank || null, rankTotal: tabelle.length, tabelle, spiele, kader };
 }
- 
+
 async function scrapeAll() {
-  console.log('🏐 TV Hörde WVV-Scraper v5 startet...\n');
+  console.log('🏐 TV Hörde WVV-Scraper v6 startet...\n');
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36'
@@ -229,7 +224,7 @@ async function scrapeAll() {
     name: 'cookieConsent', value: 'true',
     domain: 'ergebnisdienst.volleyball.nrw', path: '/'
   }]);
- 
+
   const results = {};
   for (const team of TEAMS) {
     console.log(`📋 ${team.name} (${team.age})...`);
@@ -241,12 +236,12 @@ async function scrapeAll() {
       console.log(`   ❌ ${e.message.split('\n')[0]}`);
       results[team.id] = { league:'', rank:null, rankTotal:null, tabelle:[], spiele:[], kader:[] };
     }
-    await new Promise(r => setTimeout(r, 2500));
+    await new Promise(r => setTimeout(r, 2000));
   }
- 
+
   await browser.close();
   fs.writeFileSync('tvhoerde-data.json', JSON.stringify(results, null, 2), 'utf8');
   console.log('\n✅ Fertig! tvhoerde-data.json gespeichert.');
 }
- 
+
 scrapeAll().catch(err => { console.error(err); process.exit(1); });
