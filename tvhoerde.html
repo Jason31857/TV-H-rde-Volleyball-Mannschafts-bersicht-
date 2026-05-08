@@ -883,41 +883,26 @@ const TEAMS = [
     ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksklassen/bezirksklassen_maenner/bezirksklasse_18_maenner.xhtml',
     note: 'Kaderdaten werden nicht öffentlich auf tvhoerde.de gepflegt. Spielplan & Tabelle über den WVV-Ergebnisdienst.'
   },
-  {
-    id: 'jugend_w',
-    name: 'Weibl. Jugend',
-    age: 'Jugend weiblich',
-    league: 'U12 · U13 · U14 · U16 · U18 · U20',
-    rank: null,
-    rankTotal: null,
-    kader: [],
-    trainer: [],
-    spiele: [],
-    tabelle: [],
-    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/',
-    note: 'TV Hörde hat weibliche Jugendmannschaften in allen Altersklassen von U12 bis U20. Detaildaten über den WVV-Ergebnisdienst.'
-  },
-  {
-    id: 'jugend_m',
-    name: 'Männl. Jugend',
-    age: 'Jugend männlich',
-    league: 'U12 · U13 · U14 · U16 · U18 · U20',
-    rank: null,
-    rankTotal: null,
-    kader: [],
-    trainer: [],
-    spiele: [],
-    tabelle: [],
-    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/',
-    note: 'TV Hörde hat männliche Jugendmannschaften in allen Altersklassen von U12 bis U20. Detaildaten über den WVV-Ergebnisdienst.'
-  }
+  // ── WEIBLICHE JUGEND ─────────────────────────────────────────────
+  { id:'u20w', name:'U20 Damen', age:'U20 weiblich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u20/u20_weiblich.xhtml', note:null },
+  { id:'u18w', name:'U18 Damen', age:'U18 weiblich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u18/u18_weiblich.xhtml', note:null },
+  { id:'u16w', name:'U16 Damen', age:'U16 weiblich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u16/u16_weiblich.xhtml', note:null },
+  { id:'u14w', name:'U14 Damen', age:'U14 weiblich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u14/u14_weiblich.xhtml', note:null },
+  { id:'u13w', name:'U13 Damen', age:'U13 weiblich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u13/u13_weiblich.xhtml', note:null },
+  { id:'u12w', name:'U12 Damen', age:'U12 weiblich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u12/u12_weiblich.xhtml', note:null },
+  // ── MÄNNLICHE JUGEND ─────────────────────────────────────────────
+  { id:'u20m', name:'U20 Herren', age:'U20 männlich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u20/u20_maennlich.xhtml', note:null },
+  { id:'u18m', name:'U18 Herren', age:'U18 männlich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u18/u18_maennlich.xhtml', note:null },
+  { id:'u16m', name:'U16 Herren', age:'U16 männlich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u16/u16_maennlich.xhtml', note:null },
+  { id:'u14m', name:'U14 Herren', age:'U14 männlich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u14/u14_maennlich.xhtml', note:null },
+  { id:'u13m', name:'U13 Herren', age:'U13 männlich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u13/u13_maennlich.xhtml', note:null },
+  { id:'u12m', name:'U12 Herren', age:'U12 männlich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:'https://ergebnisdienst.volleyball.nrw/cms/home/jugend/u12/u12_maennlich.xhtml', note:null }
 ];
 
-// ── RENDER HOME ─────────────────────────────────────────────────────────
-function renderHome() {
-  const grid = document.getElementById('teams-grid');
-  grid.innerHTML = TEAMS.map(t => `
-    <div class="team-card" onclick="showTeam('${t.id}')">
+const JUGEND_IDS = ['u20w','u18w','u16w','u14w','u13w','u12w','u20m','u18m','u16m','u14m','u13m','u12m'];
+
+function teamCardHTML(t) {
+  return `<div class="team-card" onclick="showTeam('${t.id}')">
       <div class="team-card-top">
         <span class="team-badge">${t.age}</span>
         ${t.rank ? `<span class="team-rank">${t.rank}</span>` : ''}
@@ -934,8 +919,30 @@ function renderHome() {
         ` : `<span class="rank-label" style="color:#555">Keine Daten verfügbar</span>`}
         <span class="arrow-icon">→</span>
       </div>
-    </div>
-  `).join('');
+    </div>`;
+}
+
+function sectionHeader(title) {
+  return `<div class="section-header" style="padding:30px 0 12px;grid-column:1/-1;">
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:3px;color:var(--white);">${title}</h2>
+    <div class="line" style="flex:1;height:2px;background:linear-gradient(to right,var(--red),transparent);margin-left:16px;"></div>
+  </div>`;
+}
+
+// ── RENDER HOME ─────────────────────────────────────────────────────────
+function renderHome() {
+  const grid = document.getElementById('teams-grid');
+  const erwachsene = TEAMS.filter(t => !JUGEND_IDS.includes(t.id));
+  const jugendW    = TEAMS.filter(t => ['u20w','u18w','u16w','u14w','u13w','u12w'].includes(t.id));
+  const jugendM    = TEAMS.filter(t => ['u20m','u18m','u16m','u14m','u13m','u12m'].includes(t.id));
+
+  grid.innerHTML =
+    sectionHeader('Erwachsene') +
+    erwachsene.map(teamCardHTML).join('') +
+    sectionHeader('Weibliche Jugend') +
+    jugendW.map(teamCardHTML).join('') +
+    sectionHeader('Männliche Jugend') +
+    jugendM.map(teamCardHTML).join('');
 }
 
 // ── SHOW TEAM DETAIL ────────────────────────────────────────────────────
@@ -971,7 +978,7 @@ function showTeam(id) {
           </tr>`).join('')}
       </tbody>
     </table>
-  ` : `<p style="color:#888;padding:20px 0 12px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;font-size:15px;">${t.note || 'Keine Kaderdaten verfügbar.'}</p>${ergebnisBtn}`;
+  ` : `<p style="color:#888;padding:20px 0 12px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;font-size:15px;">${t.note || 'Saison vorbei – keine aktuellen Kaderdaten verfügbar.'}</p>${ergebnisBtn}`;
 
   // Spiele
   document.getElementById('tab-spiele').innerHTML = t.spiele.length > 0 ? `
@@ -990,7 +997,7 @@ function showTeam(id) {
         </div>
       `).join('')}
     </div>
-  ` : `<p style="color:#888;padding:20px 0 12px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;font-size:15px;">${t.note || 'Keine Spieldaten verfügbar.'}</p>${ergebnisBtn}`;
+  ` : `<p style="color:#888;padding:20px 0 12px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;font-size:15px;">${t.note || 'Saison vorbei – keine bevorstehenden Spiele verfügbar.'}</p>${ergebnisBtn}`;
 
   // Tabelle
   document.getElementById('tab-tabelle').innerHTML = t.tabelle.length > 0 ? `
@@ -1010,7 +1017,7 @@ function showTeam(id) {
         `).join('')}
       </tbody>
     </table>
-  ` : `<p style="color:#888;padding:20px 0 12px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;font-size:15px;">${t.note || 'Keine Tabellendaten verfügbar.'}</p>${ergebnisBtn}`;
+  ` : `<p style="color:#888;padding:20px 0 12px;font-family:'Barlow Condensed',sans-serif;letter-spacing:1px;font-size:15px;">${t.note || 'Saison vorbei – keine aktuellen Tabellendaten verfügbar.'}</p>${ergebnisBtn}`;
 
   // Tabs reset
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
