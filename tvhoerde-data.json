@@ -170,56 +170,72 @@
     "kader": []
   },
   "damen4": {
-    "league": "Bezirksklasse 21 Frauen",
-    "rank": null,
-    "rankTotal": 6,
+    "league": "Kreisliga Dortmund - Unna Frauen",
+    "rank": 2,
+    "rankTotal": 8,
     "tabelle": [
       {
         "rank": 1,
-        "name": "TUS Weddinghofen",
+        "name": "TV Asseln III",
         "sp": "▲",
-        "s": "10",
-        "pkt": "25",
+        "s": "14",
+        "pkt": "40",
         "current": false
       },
       {
         "rank": 2,
-        "name": "TV Asseln",
-        "sp": "△",
-        "s": "10",
-        "pkt": "22",
-        "current": false
+        "name": "TV Hörde IV",
+        "sp": "▲",
+        "s": "14",
+        "pkt": "36",
+        "current": true
       },
       {
         "rank": 3,
-        "name": "SLC Bockum-Hövel",
-        "sp": "",
-        "s": "10",
-        "pkt": "21",
+        "name": "TV Asseln IV",
+        "sp": "△",
+        "s": "14",
+        "pkt": "27",
         "current": false
       },
       {
         "rank": 4,
-        "name": "Lüner SV III",
+        "name": "SuS Oberaden IV",
         "sp": "",
-        "s": "10",
-        "pkt": "16",
+        "s": "14",
+        "pkt": "21",
         "current": false
       },
       {
         "rank": 5,
-        "name": "SuS Oberaden III",
+        "name": "TUS Weddinghofen II",
         "sp": "",
-        "s": "10",
-        "pkt": "4",
+        "s": "14",
+        "pkt": "19",
         "current": false
       },
       {
         "rank": 6,
-        "name": "TV Werne II",
+        "name": "TV Dortmund-Mengede II",
         "sp": "",
-        "s": "10",
-        "pkt": "2",
+        "s": "14",
+        "pkt": "15",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "SuS Oberaden V",
+        "sp": "",
+        "s": "14",
+        "pkt": "10",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "TV Hörde V",
+        "sp": "",
+        "s": "14",
+        "pkt": "0",
         "current": false
       }
     ],
