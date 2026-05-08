@@ -1,12 +1,12 @@
 {
   "damen2": {
-    "league": "Oberliga 2 Frauen",
-    "rank": null,
+    "league": "Verbandsliga 4 Frauen",
+    "rank": 4,
     "rankTotal": 10,
     "tabelle": [
       {
         "rank": 1,
-        "name": "USC Münster III",
+        "name": "TV Mesum",
         "sp": "▲",
         "s": "18",
         "pkt": "47",
@@ -14,31 +14,31 @@
       },
       {
         "rank": 2,
-        "name": "SV Blau-Weiß Sande",
+        "name": "1. VC Minden",
         "sp": "△",
         "s": "18",
-        "pkt": "41",
+        "pkt": "46",
         "current": false
       },
       {
         "rank": 3,
-        "name": "SC Hennen",
+        "name": "TSC Gievenbeck",
         "sp": "",
         "s": "18",
-        "pkt": "30",
+        "pkt": "36",
         "current": false
       },
       {
         "rank": 4,
-        "name": "RC Sorpesee II",
+        "name": "TV Hörde II",
         "sp": "",
         "s": "18",
-        "pkt": "28",
-        "current": false
+        "pkt": "36",
+        "current": true
       },
       {
         "rank": 5,
-        "name": "TB Höntrop",
+        "name": "DJK Delbrück",
         "sp": "",
         "s": "18",
         "pkt": "28",
@@ -46,7 +46,7 @@
       },
       {
         "rank": 6,
-        "name": "SC Halle",
+        "name": "SG TSC Gievenbeck",
         "sp": "",
         "s": "18",
         "pkt": "27",
@@ -54,34 +54,34 @@
       },
       {
         "rank": 7,
-        "name": "SSV Meschede",
+        "name": "VoR Paderborn II",
         "sp": "",
         "s": "18",
-        "pkt": "21",
+        "pkt": "22",
         "current": false
       },
       {
         "rank": 8,
-        "name": "SG Sendenhorst",
+        "name": "Telekom Post SV Bielefeld",
         "sp": "▽",
         "s": "18",
-        "pkt": "20",
+        "pkt": "18",
         "current": false
       },
       {
         "rank": 9,
-        "name": "SV Blau-Weiß Aasee II",
+        "name": "VfB Schloß Holte",
         "sp": "▼",
         "s": "18",
-        "pkt": "16",
+        "pkt": "6",
         "current": false
       },
       {
         "rank": 10,
-        "name": "DJK Sportfreunde Datteln",
+        "name": "TV Werne",
         "sp": "▼",
         "s": "18",
-        "pkt": "12",
+        "pkt": "4",
         "current": false
       }
     ],
@@ -89,80 +89,80 @@
     "kader": []
   },
   "damen3": {
-    "league": "Landesliga 6 Frauen",
-    "rank": null,
+    "league": "Bezirksliga 9 Frauen",
+    "rank": 4,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
-        "name": "1. VV Holzwickede",
+        "name": "SG Boelerheide",
         "sp": "▲",
         "s": "16",
-        "pkt": "37",
+        "pkt": "46",
         "current": false
       },
       {
         "rank": 2,
-        "name": "VV Schwerte III",
+        "name": "Letmather TV",
         "sp": "△",
         "s": "16",
-        "pkt": "36",
+        "pkt": "34",
         "current": false
       },
       {
         "rank": 3,
-        "name": "VV Schwerte II",
-        "sp": "",
-        "s": "16",
-        "pkt": "31",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "SC Hennen II",
+        "name": "TV Kredenbach-Lohe",
         "sp": "",
         "s": "16",
         "pkt": "30",
         "current": false
       },
       {
-        "rank": 5,
-        "name": "SuS Oberaden",
+        "rank": 4,
+        "name": "TV Hörde III",
         "sp": "",
         "s": "16",
-        "pkt": "27",
+        "pkt": "29",
+        "current": true
+      },
+      {
+        "rank": 5,
+        "name": "VfL Bad Berleburg",
+        "sp": "",
+        "s": "16",
+        "pkt": "29",
         "current": false
       },
       {
         "rank": 6,
-        "name": "Lüner SV",
+        "name": "VSC Dortmund",
         "sp": "",
         "s": "16",
-        "pkt": "23",
+        "pkt": "21",
         "current": false
       },
       {
         "rank": 7,
-        "name": "SuS Oestereiden",
+        "name": "TV Hasperbach",
         "sp": "▽",
         "s": "16",
-        "pkt": "18",
+        "pkt": "14",
         "current": false
       },
       {
         "rank": 8,
-        "name": "TV Eiche Grüne",
+        "name": "SG Siegen Giersberg",
         "sp": "▼",
         "s": "16",
-        "pkt": "13",
+        "pkt": "9",
         "current": false
       },
       {
         "rank": 9,
-        "name": "TuS Bönen",
+        "name": "CVJM Siegen II",
         "sp": "▼",
         "s": "16",
-        "pkt": "1",
+        "pkt": "4",
         "current": false
       }
     ],
@@ -227,37 +227,37 @@
     "kader": []
   },
   "herren2": {
-    "league": "Oberliga 2 Männer",
-    "rank": null,
+    "league": "Verbandsliga 3 Männer",
+    "rank": 2,
     "rankTotal": 10,
     "tabelle": [
       {
         "rank": 1,
-        "name": "VV Humann Essen IV",
+        "name": "TSC Eintracht Dortmund",
         "sp": "▲",
         "s": "18",
-        "pkt": "40",
+        "pkt": "42",
         "current": false
       },
       {
         "rank": 2,
-        "name": "SV Blau-Weiß Aasee",
+        "name": "TV Hörde II",
         "sp": "△",
+        "s": "18",
+        "pkt": "42",
+        "current": true
+      },
+      {
+        "rank": 3,
+        "name": "TuS Saxonia Münster II",
+        "sp": "",
         "s": "18",
         "pkt": "38",
         "current": false
       },
       {
-        "rank": 3,
-        "name": "SC Halle",
-        "sp": "",
-        "s": "18",
-        "pkt": "34",
-        "current": false
-      },
-      {
         "rank": 4,
-        "name": "Telekom Post SV Bielefeld II",
+        "name": "TuS Saxonia Münster III",
         "sp": "",
         "s": "18",
         "pkt": "33",
@@ -265,50 +265,50 @@
       },
       {
         "rank": 5,
-        "name": "1. VC Minden",
+        "name": "TB Höntrop",
         "sp": "",
         "s": "18",
-        "pkt": "24",
+        "pkt": "31",
         "current": false
       },
       {
         "rank": 6,
-        "name": "SG Coesfeld 06",
+        "name": "TuS Meinerzhagen",
+        "sp": "",
+        "s": "18",
+        "pkt": "27",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "TSC Gievenbeck III",
         "sp": "",
         "s": "18",
         "pkt": "23",
         "current": false
       },
       {
-        "rank": 7,
-        "name": "VV Humann Essen V",
-        "sp": "",
-        "s": "18",
-        "pkt": "21",
-        "current": false
-      },
-      {
         "rank": 8,
-        "name": "TuS Willebadessen",
+        "name": "TuS Iserlohn",
         "sp": "▽",
         "s": "18",
-        "pkt": "20",
+        "pkt": "18",
         "current": false
       },
       {
         "rank": 9,
-        "name": "Spvg. Steinhagen",
+        "name": "TV Westfalia Epe",
         "sp": "▼",
         "s": "18",
-        "pkt": "19",
+        "pkt": "11",
         "current": false
       },
       {
         "rank": 10,
-        "name": "Hammer SportClub",
+        "name": "SG SuS Oberaden-Hammer SC",
         "sp": "▼",
         "s": "18",
-        "pkt": "15",
+        "pkt": "5",
         "current": false
       }
     ],
@@ -316,21 +316,21 @@
     "kader": []
   },
   "herren3": {
-    "league": "Landesliga 5 Männer",
-    "rank": null,
+    "league": "Landesliga 6 Männer",
+    "rank": 1,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
-        "name": "TVE Vogelsang",
+        "name": "TV Hörde III",
         "sp": "▲",
         "s": "16",
-        "pkt": "38",
-        "current": false
+        "pkt": "40",
+        "current": true
       },
       {
         "rank": 2,
-        "name": "VfL Telstar Bochum",
+        "name": "TuS Saxonia Münster IV",
         "sp": "△",
         "s": "16",
         "pkt": "38",
@@ -338,58 +338,58 @@
       },
       {
         "rank": 3,
-        "name": "DJK Blau-Weiß Annen",
+        "name": "SV Blau-Weiß Aasee II",
         "sp": "",
         "s": "16",
-        "pkt": "36",
+        "pkt": "30",
         "current": false
       },
       {
         "rank": 4,
-        "name": "TB Höntrop II",
+        "name": "TSC Gievenbeck IV",
         "sp": "",
         "s": "16",
-        "pkt": "33",
+        "pkt": "27",
         "current": false
       },
       {
         "rank": 5,
-        "name": "MTG Horst",
+        "name": "SG EVC/ KSV",
         "sp": "",
         "s": "16",
-        "pkt": "22",
+        "pkt": "24",
         "current": false
       },
       {
         "rank": 6,
-        "name": "MTG Horst II",
+        "name": "SG 08-Saxonia",
         "sp": "",
         "s": "16",
-        "pkt": "20",
+        "pkt": "21",
         "current": false
       },
       {
         "rank": 7,
-        "name": "Letmather TV",
+        "name": "SV Schermbeck",
         "sp": "▽",
         "s": "16",
-        "pkt": "16",
+        "pkt": "17",
         "current": false
       },
       {
         "rank": 8,
-        "name": "TuS Hattingen",
+        "name": "TV Mesum",
         "sp": "▼",
         "s": "16",
-        "pkt": "11",
+        "pkt": "10",
         "current": false
       },
       {
         "rank": 9,
-        "name": "VV Schwerte",
+        "name": "VC Bottrop 90",
         "sp": "▼",
         "s": "16",
-        "pkt": "2",
+        "pkt": "9",
         "current": false
       }
     ],
@@ -467,91 +467,14 @@
       }
     ],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "Westdeutscher Volleyball-Verband e.V.",
-        "name": "Mannschaftsdetails",
-        "pos": "–"
-      }
-    ]
+    "kader": []
   },
   "herren5": {
-    "league": "Bezirksklasse 18 Männer",
-    "rank": 6,
-    "rankTotal": 8,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "TSC Eintracht Dortmund III",
-        "sp": "▲",
-        "s": "14",
-        "pkt": "39",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "TuS Meinerzhagen II",
-        "sp": "△",
-        "s": "14",
-        "pkt": "35",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "VV Schwerte II",
-        "sp": "",
-        "s": "14",
-        "pkt": "34",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "DJK Sümmern II",
-        "sp": "",
-        "s": "14",
-        "pkt": "19",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "TuS Iserlohn III",
-        "sp": "",
-        "s": "14",
-        "pkt": "18",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "TV Hasperbach",
-        "sp": "",
-        "s": "14",
-        "pkt": "13",
-        "current": true
-      },
-      {
-        "rank": 7,
-        "name": "SV Menden",
-        "sp": "",
-        "s": "14",
-        "pkt": "9",
-        "current": false
-      },
-      {
-        "rank": 8,
-        "name": "TSV Hagen II",
-        "sp": "",
-        "s": "14",
-        "pkt": "1",
-        "current": false
-      }
-    ],
+    "league": "404 - PAGE /cms/home/erwachsene/kreisligen/kreisligen_maenner/kreisliga_dortmund_unna_maenner not found.",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "Westdeutscher Volleyball-Verband e.V.",
-        "name": "Mannschaftsdetails",
-        "pos": "–"
-      }
-    ]
+    "kader": []
   }
 }
