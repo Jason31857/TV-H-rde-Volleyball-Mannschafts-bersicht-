@@ -1,142 +1,87 @@
-// TV Hörde – WVV Scraper v3
+// TV Hörde – WVV Scraper v4 – korrekte Staffeln
 const { chromium } = require('playwright');
 const fs = require('fs');
-
+ 
 const TEAMS = [
   {
     id: 'damen2',
     name: '2. Damen',
     age: 'Frauen',
-    url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/oberligen/Ol_frauen/oberliga_2_frauen.xhtml',
+    searchName: 'TV Hörde II',
+    url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/verbandsligen/vl_frauen/verbandsliga_4_frauen.xhtml',
   },
   {
     id: 'damen3',
     name: '3. Damen',
     age: 'Frauen',
-    url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/landesligen/landesligen_frauen/landesliga_6_frauen.xhtml',
+    searchName: 'TV Hörde III',
+    url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksligen/bezirksligen_frauen/bezirksliga_9_frauen.xhtml',
   },
   {
     id: 'damen4',
     name: '4. Damen',
     age: 'Frauen',
+    searchName: 'TV Hörde',
     url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksklassen/bezirksklassen_frauen/bezirksklasse_21_frauen.xhtml',
   },
   {
     id: 'herren2',
     name: '2. Herren',
     age: 'Männer',
-    url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/oberligen/OL_maenner/oberliga_2_maenner.xhtml',
+    searchName: 'TV Hörde II',
+    url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/verbandsligen/vl_maenner/verbandsliga_3_maenner.xhtml',
   },
   {
     id: 'herren3',
     name: '3. Herren',
     age: 'Männer',
-    url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/landesligen/landesligen_maenner/landesliga_5_maenner.xhtml',
+    searchName: 'TV Hörde III',
+    url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/landesligen/landesligen_maenner/landesliga_6_maenner.xhtml',
   },
   {
     id: 'herren4',
     name: '4. Herren',
     age: 'Männer',
+    searchName: 'TV Hörde IV',
     url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksligen/bezirksligen_maenner/bezirksliga_10_maenner.xhtml',
   },
   {
     id: 'herren5',
     name: '5. Herren',
     age: 'Männer',
-    url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksklassen/bezirksklassen_maenner/bezirksklasse_18_maenner.xhtml',
+    searchName: 'TV Hörde V',
+    url: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/kreisligen/kreisligen_maenner/kreisliga_dortmund_unna_maenner.xhtml',
   },
 ];
-
-// Alle möglichen Schreibweisen von TV Hörde
-const SEARCH_TERMS = ['hörde', 'hoerde', 'tv h', 'tvh', 'horde'];
-
-function isHoerde(text) {
-  const t = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  return SEARCH_TERMS.some(s => t.includes(s.normalize('NFD').replace(/[\u0300-\u036f]/g, '')));
-}
-
+ 
 async function dismissCookieBanner(page) {
   try {
     await page.waitForSelector('.sams-cookie-modal', { timeout: 4000 });
-    await page.evaluate(() => {
-      // Akzeptieren-Button klicken
-      const modal = document.querySelector('.sams-cookie-modal');
-      if (!modal) return;
-      const btns = modal.querySelectorAll('button, a');
-      for (const b of btns) {
-        const t = (b.innerText || '').toLowerCase();
-        if (t.includes('akzept') || t.includes('ok') || t.includes('zustimm') || t.includes('alle')) {
-          b.click(); return;
-        }
-      }
-      // Fallback: Modal ausblenden
-      modal.remove();
-      document.querySelectorAll('[class*="cookie"], [class*="overlay"], [class*="modal"]').forEach(el => {
-        if (el.innerText && el.innerText.includes('Cookie')) el.remove();
-      });
-      document.body.style.overflow = 'auto';
-      document.body.style.pointerEvents = 'auto';
-    });
-    await page.waitForTimeout(600);
-    // Sicherheits-Cleanup
     await page.evaluate(() => {
       document.querySelectorAll('.sams-cookie-modal, .sams-cookie-modal-overlay').forEach(el => el.remove());
       document.body.style.overflow = 'auto';
       document.body.style.pointerEvents = 'auto';
     });
-  } catch(e) { /* kein Banner */ }
+    await page.waitForTimeout(400);
+  } catch(e) {}
 }
-
-async function clickTabByText(page, keywords) {
-  return await page.evaluate((kws) => {
-    const links = document.querySelectorAll('a, button, li');
-    for (const el of links) {
-      const t = (el.innerText || el.textContent || '').toLowerCase().trim();
-      for (const kw of kws) {
-        if (t.includes(kw)) { el.click(); return t; }
-      }
-    }
-    return null;
-  }, keywords);
+ 
+function normalize(str) {
+  return (str || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim();
 }
-
+ 
 async function scrapeTeam(context, team) {
   const page = await context.newPage();
   await page.goto(team.url, { waitUntil: 'domcontentloaded', timeout: 25000 });
   await page.waitForTimeout(2500);
   await dismissCookieBanner(page);
-
-  // ── DEBUG: Alle Tabellen-Inhalte loggen ──────────────────────────
-  const pageInfo = await page.evaluate(() => {
-    const tables = document.querySelectorAll('table');
-    const info = { tableCount: tables.length, firstRows: [] };
-    if (tables.length > 0) {
-      const rows = tables[0].querySelectorAll('tr');
-      for (let i = 0; i < Math.min(5, rows.length); i++) {
-        info.firstRows.push(rows[i].innerText.replace(/\s+/g, ' ').trim().slice(0, 100));
-      }
-    }
-    // Alle Links
-    info.links = Array.from(document.querySelectorAll('a')).map(a => ({
-      text: (a.innerText || '').trim().slice(0, 40),
-      href: (a.href || '').slice(0, 100)
-    })).filter(l => l.text.length > 1).slice(0, 20);
-    return info;
-  });
-  console.log(`      Tabellen: ${pageInfo.tableCount}`);
-  if (pageInfo.firstRows.length) console.log(`      Erste Zeilen: ${pageInfo.firstRows.join(' | ')}`);
-
-  // ── LIGA-NAME ─────────────────────────────────────────────────────
-  const league = await page.evaluate(() => {
-    return (document.querySelector('h1,h2')?.innerText || '').trim();
-  });
-
+ 
+  const league = await page.evaluate(() => (document.querySelector('h1,h2')?.innerText || '').trim());
+ 
   // ── TABELLE ───────────────────────────────────────────────────────
-  const tabelle = await page.evaluate((searchTerms) => {
-    function isHoerde(text) {
-      const t = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-      return searchTerms.some(s => t.includes(s.normalize('NFD').replace(/[\u0300-\u036f]/g,'')));
-    }
+  const searchNorm = normalize(team.searchName);
+  const tabelle = await page.evaluate((searchNorm) => {
+    function norm(s) { return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim(); }
     const rows = [];
     for (const table of document.querySelectorAll('table')) {
       const txt = table.innerText || '';
@@ -152,39 +97,40 @@ async function scrapeTeam(context, team) {
         const sp  = (tds[2]?.innerText || '').trim();
         const s   = (tds[3]?.innerText || '').trim();
         const pkt = (tds[tds.length-1]?.innerText || '').trim();
-        rows.push({ rank, name, sp, s, pkt, current: isHoerde(name) });
+        const isCurrent = norm(name).includes(searchNorm);
+        rows.push({ rank, name, sp, s, pkt, current: isCurrent });
       }
       if (rows.length > 2) break;
     }
     return rows;
-  }, SEARCH_TERMS);
-
-  // TV Hörde in Tabelle gefunden?
+  }, searchNorm);
+ 
   const ownRow = tabelle.find(r => r.current);
   if (ownRow) {
-    console.log(`      ✓ TV Hörde gefunden als: "${ownRow.name}" (Platz ${ownRow.rank})`);
+    console.log(`      ✓ Gefunden: "${ownRow.name}" (Platz ${ownRow.rank}/${tabelle.length})`);
   } else if (tabelle.length > 0) {
-    console.log(`      ⚠ TV Hörde NICHT gefunden! Erste Teams: ${tabelle.slice(0,3).map(r=>r.name).join(', ')}`);
+    console.log(`      ⚠ "${team.searchName}" nicht gefunden! Erste Teams: ${tabelle.slice(0,3).map(r=>r.name).join(', ')}`);
+  } else {
+    console.log(`      ⚠ Keine Tabelle gefunden auf: ${team.url}`);
   }
-
+ 
   // ── SPIELPLAN ─────────────────────────────────────────────────────
-  const spieleTab = await clickTabByText(page, ['spiel', 'ergebnis', 'begegnung']);
-  if (spieleTab) {
-    await page.waitForTimeout(1500);
-    await dismissCookieBanner(page);
-  }
-
-  const spiele = await page.evaluate((searchTerms) => {
-    function isHoerde(text) {
-      const t = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-      return searchTerms.some(s => t.includes(s.normalize('NFD').replace(/[\u0300-\u036f]/g,'')));
+  await page.evaluate(() => {
+    for (const a of document.querySelectorAll('a')) {
+      const t = (a.innerText || '').toLowerCase();
+      const h = (a.href || '');
+      if (h.includes('view=matches') || t === 'spiele' || t === 'spielplan') { a.click(); return; }
     }
+  });
+  await page.waitForTimeout(1500);
+  await dismissCookieBanner(page);
+ 
+  const spiele = await page.evaluate((searchNorm) => {
+    function norm(s) { return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim(); }
     const result = [];
     for (const table of document.querySelectorAll('table')) {
-      const trs = table.querySelectorAll('tbody tr, tr');
-      for (const tr of trs) {
-        const txt = tr.innerText || '';
-        if (!isHoerde(txt)) continue;
+      for (const tr of table.querySelectorAll('tbody tr, tr')) {
+        if (!norm(tr.innerText).includes(searchNorm)) continue;
         const tds = tr.querySelectorAll('td');
         if (tds.length < 4) continue;
         const datum    = (tds[0]?.innerText || '').trim();
@@ -193,61 +139,46 @@ async function scrapeTeam(context, team) {
         const team2    = (tds[3]?.innerText || '').trim().split('\n')[0];
         const ergebnis = (tds[4]?.innerText || '').trim();
         const halle    = (tds[5]?.innerText || '').trim().split('\n')[0];
-        // Nur zukünftige (kein echtes Ergebnis)
         if (!ergebnis || ergebnis.includes('–') || ergebnis === '') {
-          result.push({
-            datum, uhrzeit,
-            team1: team1 || '', team2: team2 || '',
-            heim: isHoerde(team1),
-            halle: halle || ''
-          });
+          result.push({ datum, uhrzeit, team1, team2, heim: norm(team1).includes(searchNorm), halle });
         }
       }
     }
     return result.slice(0, 6);
-  }, SEARCH_TERMS);
-
+  }, searchNorm);
+ 
   // ── KADER ─────────────────────────────────────────────────────────
   let kader = [];
   try {
     await page.goto(team.url, { waitUntil: 'domcontentloaded', timeout: 20000 });
     await page.waitForTimeout(2000);
     await dismissCookieBanner(page);
-
-    const mannTab = await clickTabByText(page, ['mannschaft', 'team', 'verein']);
-    if (mannTab) {
-      await page.waitForTimeout(2000);
-      await dismissCookieBanner(page);
-    }
-
-    // Finde Link der TV Hörde enthält UND zu teamDetails führt
-    const teamLink = await page.evaluate((searchTerms) => {
-      function isHoerde(text) {
-        const t = text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-        return searchTerms.some(s => t.includes(s.normalize('NFD').replace(/[\u0300-\u036f]/g,'')));
-      }
+ 
+    await page.evaluate(() => {
       for (const a of document.querySelectorAll('a')) {
-        const txt = a.innerText || a.title || '';
-        const href = a.href || '';
-        if (isHoerde(txt) && (href.includes('team') || href.includes('detail') || href.includes('popup'))) {
-          return href;
-        }
+        const t = (a.innerText || '').toLowerCase();
+        const h = (a.href || '');
+        if (h.includes('view=teamOverview') || t === 'mannschaften' || t === 'teams') { a.click(); return; }
       }
-      // Fallback: irgendein Link der Hörde enthält
+    });
+    await page.waitForTimeout(2000);
+    await dismissCookieBanner(page);
+ 
+    const teamLink = await page.evaluate((searchNorm) => {
+      function norm(s) { return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim(); }
       for (const a of document.querySelectorAll('a')) {
-        if (isHoerde(a.innerText || '')) return a.href;
+        if (norm(a.innerText).includes(searchNorm) && (a.href||'').includes('teamDetails')) return a.href;
       }
       return null;
-    }, SEARCH_TERMS);
-
+    }, searchNorm);
+ 
     if (teamLink) {
-      console.log(`      Kader-Link: ${teamLink.slice(0, 80)}`);
-      const popupPage = await context.newPage();
-      await popupPage.goto(teamLink, { waitUntil: 'domcontentloaded', timeout: 15000 });
-      await popupPage.waitForTimeout(1500);
-      await dismissCookieBanner(popupPage);
-
-      kader = await popupPage.evaluate(() => {
+      console.log(`      Kader-Link gefunden`);
+      const popup = await context.newPage();
+      await popup.goto(teamLink, { waitUntil: 'domcontentloaded', timeout: 15000 });
+      await popup.waitForTimeout(1500);
+      await dismissCookieBanner(popup);
+      kader = await popup.evaluate(() => {
         const players = [];
         for (const row of document.querySelectorAll('table tr')) {
           const tds = row.querySelectorAll('td');
@@ -261,27 +192,24 @@ async function scrapeTeam(context, team) {
         }
         return players;
       });
-      await popupPage.close();
+      await popup.close();
     }
   } catch(e) {
     console.log(`      ⚠ Kader-Fehler: ${e.message.split('\n')[0].slice(0,60)}`);
   }
-
+ 
   await page.close();
   return { league, rank: ownRow?.rank || null, rankTotal: tabelle.length, tabelle, spiele, kader };
 }
-
+ 
 async function scrapeAll() {
-  console.log('🏐 TV Hörde WVV-Scraper v3 startet...\n');
+  console.log('🏐 TV Hörde WVV-Scraper v4 startet...\n');
   const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext({
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36'
   });
-  await context.addCookies([{
-    name: 'cookieConsent', value: 'true',
-    domain: 'ergebnisdienst.volleyball.nrw', path: '/',
-  }]);
-
+  await context.addCookies([{ name: 'cookieConsent', value: 'true', domain: 'ergebnisdienst.volleyball.nrw', path: '/' }]);
+ 
   const results = {};
   for (const team of TEAMS) {
     console.log(`📋 ${team.name} (${team.age})...`);
@@ -295,10 +223,10 @@ async function scrapeAll() {
     }
     await new Promise(r => setTimeout(r, 2500));
   }
-
+ 
   await browser.close();
   fs.writeFileSync('tvhoerde-data.json', JSON.stringify(results, null, 2), 'utf8');
   console.log('\n✅ Fertig! tvhoerde-data.json gespeichert.');
 }
-
+ 
 scrapeAll().catch(err => { console.error(err); process.exit(1); });
