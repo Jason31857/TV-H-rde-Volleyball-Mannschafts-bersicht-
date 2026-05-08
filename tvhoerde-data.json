@@ -557,5 +557,259 @@
     ],
     "spiele": [],
     "kader": []
+  },
+  "u20w": {
+    "league": "NRW-Liga wU20",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
+    "spiele": [],
+    "kader": []
+  },
+  "u18w": {
+    "league": "NRW-Liga wU18",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
+    "spiele": [],
+    "kader": []
+  },
+  "u16w": {
+    "league": "NRW-Liga wU16",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
+    "spiele": [],
+    "kader": []
+  },
+  "u14w": {
+    "league": "Oberliga 1 wU14",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
+    "spiele": [],
+    "kader": []
+  },
+  "u13w": {
+    "league": "Oberliga 1 wU13",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
+    "spiele": [],
+    "kader": []
+  },
+  "u12w": {
+    "league": "Bezirksmeisterschaft weibliche U12",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
+    "spiele": [],
+    "kader": []
+  },
+  "u20m": {
+    "league": "NRW-Liga mU20",
+    "rank": 7,
+    "rankTotal": 9,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "VV Humann Essen",
+        "sp": "▲",
+        "s": "8",
+        "pkt": "16",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "Moerser SC",
+        "sp": "▲",
+        "s": "8",
+        "pkt": "14",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "TSC Gievenbeck",
+        "sp": "▲",
+        "s": "8",
+        "pkt": "10",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "TuB Bocholt",
+        "sp": "▲",
+        "s": "8",
+        "pkt": "8",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "FCJ Köln",
+        "sp": "",
+        "s": "8",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "Telekom Post SV Bielefeld",
+        "sp": "",
+        "s": "8",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "TV Hörde",
+        "sp": "",
+        "s": "8",
+        "pkt": "4",
+        "current": true
+      },
+      {
+        "rank": 8,
+        "name": "Rumelner TV",
+        "sp": "",
+        "s": "8",
+        "pkt": "4",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "Meckenheimer SV",
+        "sp": "",
+        "s": "8",
+        "pkt": "4",
+        "current": false
+      }
+    ],
+    "spiele": [],
+    "kader": [
+      {
+        "nr": "Westdeutscher Volleyball-Verband e.V.",
+        "name": "Mannschaftsdetails",
+        "pos": "–"
+      }
+    ]
+  },
+  "u18m": {
+    "league": "NRW-Liga mU18",
+    "rank": 5,
+    "rankTotal": 9,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "VV Humann Essen",
+        "sp": "▲",
+        "s": "8",
+        "pkt": "16",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "Telekom Post SV Bielefeld",
+        "sp": "▲",
+        "s": "8",
+        "pkt": "12",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "SolingenVolleys",
+        "sp": "▲",
+        "s": "8",
+        "pkt": "12",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "FCJ Köln",
+        "sp": "▲",
+        "s": "8",
+        "pkt": "10",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "TV Hörde",
+        "sp": "",
+        "s": "8",
+        "pkt": "10",
+        "current": true
+      },
+      {
+        "rank": 6,
+        "name": "Rhein-Sieg Volleys / Mondorf",
+        "sp": "",
+        "s": "8",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "Rumelner TV",
+        "sp": "",
+        "s": "8",
+        "pkt": "4",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "Meckenheimer SV",
+        "sp": "",
+        "s": "8",
+        "pkt": "2",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "Moerser SC",
+        "sp": "",
+        "s": "8",
+        "pkt": "0",
+        "current": false
+      }
+    ],
+    "spiele": [],
+    "kader": [
+      {
+        "nr": "Westdeutscher Volleyball-Verband e.V.",
+        "name": "Mannschaftsdetails",
+        "pos": "–"
+      }
+    ]
+  },
+  "u16m": {
+    "league": "NRW-Liga mU16",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
+    "spiele": [],
+    "kader": []
+  },
+  "u14m": {
+    "league": "Oberliga 1 mU14",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
+    "spiele": [],
+    "kader": []
+  },
+  "u13m": {
+    "league": "Oberliga 1 mU13",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
+    "spiele": [],
+    "kader": []
+  },
+  "u12m": {
+    "league": "Bezirksmeisterschaft männliche U12",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
+    "spiele": [],
+    "kader": []
   }
 }
