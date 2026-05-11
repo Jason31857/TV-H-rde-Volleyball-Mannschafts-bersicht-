@@ -1065,7 +1065,14 @@ const JUGEND_SCRAPER_IDS = ['u20w','u18w','u16w','u14w','u13w','u12w','u20m','u1
       if (d.rank)      team.rank      = d.rank;
       if (d.rankTotal) team.rankTotal = d.rankTotal;
       if (d.tabelle && d.tabelle.length > 0) team.tabelle = d.tabelle;
-      if (d.kader   && d.kader.length  > 0) { team.kader = d.kader; team.trainer = []; }
+      if (d.kader && d.kader.length > 0) {
+        // Filtere WVV-Header-Zeilen heraus
+        const filtered = d.kader.filter(p =>
+          p.name && p.name.length > 1 &&
+          !/mannschaftsdetail|volleyball|verband|westdeutsch|impressum/i.test(p.name)
+        );
+        if (filtered.length > 0) { team.kader = filtered; team.trainer = []; }
+      }
       if (d.spiele  && d.spiele.length  > 0) {
         team.spiele = d.spiele.map(s => {
           const m = (s.datum || '').match(/(\d{1,2})\.(\d{2})\.(\d{2,4})/);
