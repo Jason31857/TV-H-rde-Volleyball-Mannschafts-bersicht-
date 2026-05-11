@@ -8,11 +8,11 @@ const TEAMS = [
   // ── ERWACHSENE ────────────────────────────────────────────────────
   { id:'damen2',  name:'2. Damen',   searchName:'TV Hörde II',  url:`${BASE}/cms/home/erwachsene/verbandsligen/vl_frauen/verbandsliga_4_frauen.xhtml` },
   { id:'damen3',  name:'3. Damen',   searchName:'TV Hörde III', url:`${BASE}/cms/home/erwachsene/bezirksligen/bezirksligen_frauen/bezirksliga_9_frauen.xhtml` },
-  { id:'damen4',  name:'4. Damen',   searchName:'TV Hörde IV',  url:`${BASE}/cms/home/erwachsene/kreisligen/alle_kreisligen.xhtml?LeaguePresenter.view=resultTable&LeaguePresenter.matchSeriesId=98622543` },
+  { id:'damen4',  name:'4. Damen',   searchName:'TV Hörde IV',  url:`${BASE}/cms/home/erwachsene/kreisligen/alle_kreisligen.xhtml`, searchAll: true },
   { id:'herren2', name:'2. Herren',  searchName:'TV Hörde II',  url:`${BASE}/cms/home/erwachsene/verbandsligen/vl_maenner/verbandsliga_3_maenner.xhtml` },
   { id:'herren3', name:'3. Herren',  searchName:'TV Hörde III', url:`${BASE}/cms/home/erwachsene/landesligen/landesligen_maenner/landesliga_6_maenner.xhtml` },
   { id:'herren4', name:'4. Herren',  searchName:'TV Hörde IV',  url:`${BASE}/cms/home/erwachsene/bezirksligen/bezirksligen_maenner/bezirksliga_10_maenner.xhtml` },
-  { id:'herren5', name:'5. Herren',  searchName:'TV Hörde V',   url:`${BASE}/cms/home/erwachsene/kreisligen/alle_kreisligen.xhtml?LeaguePresenter.view=resultTable&LeaguePresenter.matchSeriesId=95241748` },
+  { id:'herren5', name:'5. Herren',  searchName:'TV Hörde V',   url:`${BASE}/cms/home/erwachsene/kreisligen/alle_kreisligen.xhtml`, searchAll: true },
   // ── WEIBLICHE JUGEND ──────────────────────────────────────────────
   { id:'u20w', name:'U20 Damen', searchName:'TV Hörde', url:`${BASE}/cms/home/jugend/u20/u20_weiblich.xhtml` },
   { id:'u18w', name:'U18 Damen', searchName:'TV Hörde', url:`${BASE}/cms/home/jugend/u18/u18_weiblich.xhtml` },
