@@ -65,9 +65,8 @@ async function scrapeTeam(context, team) {
     return null;
   });
 
-  // Jugend: Suche die richtige Staffel wo TV Hörde drin ist
-  // Bei Jugend gibt es mehrere Staffeln auf einer Seite – wir müssen die richtige finden
   const isJugend = team.id.startsWith('u');
+  const isSearchAll = team.searchAll === true;
 
   let tabelle = [];
   let correctMatchSeriesId = matchSeriesId;
@@ -121,6 +120,54 @@ async function scrapeTeam(context, team) {
       }
     }
     if (!tabelle.length) console.log(`      ⚠ TV Hörde in keiner Staffel gefunden`);
+  } else if (isSearchAll) {
+    // Kreisligen: alle Staffeln auf der Seite durchsuchen
+    const allStaffeln = await page.evaluate(() => {
+      const result = [];
+      document.querySelectorAll('a[href*="matchSeriesId"]').forEach(a => {
+        const m = (a.href||'').match(/matchSeriesId=(\d+)/);
+        if (m && (a.href||'').includes('view=resultTable')) {
+          result.push({ id: m[1], text: (a.innerText||'').trim() });
+        }
+      });
+      return [...new Map(result.map(r => [r.id, r])).values()];
+    });
+    console.log(`      Kreisligen: ${allStaffeln.length} Staffeln`);
+
+    for (const staffel of allStaffeln) {
+      const staffelUrl = `${BASE}/cms/home/erwachsene/kreisligen/alle_kreisligen.xhtml?LeaguePresenter.view=resultTable&LeaguePresenter.matchSeriesId=${staffel.id}`;
+      await page.goto(staffelUrl, { waitUntil: 'domcontentloaded', timeout: 20000 });
+      await page.waitForTimeout(1000);
+      await dismissCookieBanner(page);
+
+      const rows = await page.evaluate((searchNorm) => {
+        function n(s) { return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim(); }
+        for (const table of document.querySelectorAll('table')) {
+          if (!(table.innerText||'').includes('Mannschaft') && !(table.innerText||'').includes('Platz')) continue;
+          const rows = [];
+          let rank = 0;
+          for (const tr of table.querySelectorAll('tbody tr, tr')) {
+            const tds = tr.querySelectorAll('td');
+            if (tds.length < 3) continue;
+            rank++;
+            const name = (tds[1]?.innerText||tds[0]?.innerText||'').split('\n')[0].replace(/\s+/g,' ').trim();
+            if (!name || name.length < 2) continue;
+            rows.push({ rank, name, sp:(tds[2]?.innerText||'').trim(), s:(tds[3]?.innerText||'').trim(), pkt:(tds[tds.length-1]?.innerText||'').trim(), current:n(name).includes(n(searchNorm)) });
+          }
+          if (rows.length > 2) return rows;
+        }
+        return [];
+      }, searchNorm);
+
+      if (rows.some(r => r.current)) {
+        tabelle = rows;
+        correctMatchSeriesId = staffel.id;
+        console.log(`      ✓ TV Hörde in "${staffel.text}" (ID: ${staffel.id})`);
+        break;
+      }
+    }
+    if (!tabelle.length) console.log(`      ⚠ TV Hörde in keiner Kreisliga gefunden`);
+
   } else {
     // Erwachsene: direkt
     tabelle = await page.evaluate((searchNorm) => {
@@ -211,11 +258,15 @@ async function scrapeTeam(context, team) {
             const tds = row.querySelectorAll('td');
             if (tds.length < 2) continue;
             const nr   = (tds[0]?.innerText||'').trim();
-            const name = (tds[1]?.innerText||'').trim();
+            const name = (tds[1]?.innerText||'').trim().split('\n')[0].trim();
             const pos  = (tds[2]?.innerText||'').trim();
-            if (name && name.length > 2 && !/^(name|spieler|pos|nr|#|trikot)/i.test(name)) {
-              players.push({ nr: nr||'–', name, pos: pos||'–' });
-            }
+            // Filtere Kopfzeilen, WVV-Header und ungültige Einträge
+            if (!name || name.length < 2) continue;
+            if (/^(name|spieler|pos|nr|#|trikot)/i.test(name)) continue;
+            if (/volleyball|verband|mannschaftsdetail|impressum|datenschutz/i.test(name)) continue;
+            if (/^westdeutsch/i.test(nr)) continue;
+            // Prüfe ob es eine echte Trikotnummer ist (leer oder Zahl)
+            players.push({ nr: nr||'–', name, pos: pos||'–' });
           }
           return players;
         });
