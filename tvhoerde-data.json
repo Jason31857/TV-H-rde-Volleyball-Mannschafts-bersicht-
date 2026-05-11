@@ -1,9 +1,90 @@
 {
   "damen2": {
-    "league": "",
-    "rank": null,
-    "rankTotal": 0,
-    "tabelle": [],
+    "league": "Verbandsliga 4 Frauen",
+    "rank": 4,
+    "rankTotal": 10,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "TV Mesum",
+        "sp": "▲",
+        "s": "18",
+        "pkt": "47",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "1. VC Minden",
+        "sp": "△",
+        "s": "18",
+        "pkt": "46",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "TSC Gievenbeck",
+        "sp": "",
+        "s": "18",
+        "pkt": "36",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "TV Hörde II",
+        "sp": "",
+        "s": "18",
+        "pkt": "36",
+        "current": true
+      },
+      {
+        "rank": 5,
+        "name": "DJK Delbrück",
+        "sp": "",
+        "s": "18",
+        "pkt": "28",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "SG TSC Gievenbeck",
+        "sp": "",
+        "s": "18",
+        "pkt": "27",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "VoR Paderborn II",
+        "sp": "",
+        "s": "18",
+        "pkt": "22",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "Telekom Post SV Bielefeld",
+        "sp": "▽",
+        "s": "18",
+        "pkt": "18",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "VfB Schloß Holte",
+        "sp": "▼",
+        "s": "18",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 10,
+        "name": "TV Werne",
+        "sp": "▼",
+        "s": "18",
+        "pkt": "4",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
@@ -89,7 +170,7 @@
     "kader": []
   },
   "damen4": {
-    "league": "Kreise Essen & Mülheim-Oberhausen & Wesel",
+    "league": "Kreisliga Dortmund - Unna Frauen",
     "rank": 2,
     "rankTotal": 8,
     "tabelle": [
@@ -405,7 +486,7 @@
     "kader": []
   },
   "herren5": {
-    "league": "Kreise Essen & Mülheim-Oberhausen & Wesel",
+    "league": "Kreisliga Dortmund - Unna Frauen",
     "rank": 8,
     "rankTotal": 8,
     "tabelle": [
@@ -478,7 +559,7 @@
     "kader": []
   },
   "u20w": {
-    "league": "NRW-Liga wU20",
+    "league": "",
     "rank": null,
     "rankTotal": 0,
     "tabelle": [],
@@ -486,7 +567,7 @@
     "kader": []
   },
   "u18w": {
-    "league": "NRW-Liga wU18",
+    "league": "",
     "rank": null,
     "rankTotal": 0,
     "tabelle": [],
@@ -494,7 +575,7 @@
     "kader": []
   },
   "u16w": {
-    "league": "NRW-Liga wU16",
+    "league": "",
     "rank": null,
     "rankTotal": 0,
     "tabelle": [],
@@ -502,7 +583,7 @@
     "kader": []
   },
   "u14w": {
-    "league": "Oberliga 1 wU14",
+    "league": "NRW-Liga mU14",
     "rank": 7,
     "rankTotal": 9,
     "tabelle": [
@@ -580,10 +661,41 @@
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "So, 09.11.25, 11:00",
+        "name": "10",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 09.11.25, 13:00",
+        "name": "11",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 30.11.25, 12:00",
+        "name": "19",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 30.11.25, 14:00",
+        "name": "21",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 14.12.25, 12:00",
+        "name": "34",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 14.12.25, 14:00",
+        "name": "36",
+        "pos": "–"
+      }
+    ]
   },
   "u13w": {
-    "league": "Oberliga 1 wU13",
+    "league": "",
     "rank": null,
     "rankTotal": 0,
     "tabelle": [],
@@ -591,7 +703,7 @@
     "kader": []
   },
   "u12w": {
-    "league": "Bezirksmeisterschaft weibliche U12",
+    "league": "",
     "rank": null,
     "rankTotal": 0,
     "tabelle": [],
@@ -761,7 +873,7 @@
     "kader": []
   },
   "u16m": {
-    "league": "NRW-Liga mU16",
+    "league": "",
     "rank": null,
     "rankTotal": 0,
     "tabelle": [],
@@ -769,7 +881,7 @@
     "kader": []
   },
   "u14m": {
-    "league": "Oberliga 1 mU14",
+    "league": "NRW-Liga mU14",
     "rank": 7,
     "rankTotal": 9,
     "tabelle": [
@@ -847,10 +959,41 @@
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "So, 09.11.25, 11:00",
+        "name": "10",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 09.11.25, 13:00",
+        "name": "11",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 30.11.25, 12:00",
+        "name": "19",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 30.11.25, 14:00",
+        "name": "21",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 14.12.25, 12:00",
+        "name": "34",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 14.12.25, 14:00",
+        "name": "36",
+        "pos": "–"
+      }
+    ]
   },
   "u13m": {
-    "league": "Oberliga 1 mU13",
+    "league": "",
     "rank": null,
     "rankTotal": 0,
     "tabelle": [],
@@ -858,7 +1001,7 @@
     "kader": []
   },
   "u12m": {
-    "league": "Bezirksmeisterschaft männliche U12",
+    "league": "",
     "rank": null,
     "rankTotal": 0,
     "tabelle": [],
