@@ -1,90 +1,9 @@
 {
   "damen2": {
-    "league": "Verbandsliga 4 Frauen",
-    "rank": 4,
-    "rankTotal": 10,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "TV Mesum",
-        "sp": "▲",
-        "s": "18",
-        "pkt": "47",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "1. VC Minden",
-        "sp": "△",
-        "s": "18",
-        "pkt": "46",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "TSC Gievenbeck",
-        "sp": "",
-        "s": "18",
-        "pkt": "36",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "TV Hörde II",
-        "sp": "",
-        "s": "18",
-        "pkt": "36",
-        "current": true
-      },
-      {
-        "rank": 5,
-        "name": "DJK Delbrück",
-        "sp": "",
-        "s": "18",
-        "pkt": "28",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "SG TSC Gievenbeck",
-        "sp": "",
-        "s": "18",
-        "pkt": "27",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "VoR Paderborn II",
-        "sp": "",
-        "s": "18",
-        "pkt": "22",
-        "current": false
-      },
-      {
-        "rank": 8,
-        "name": "Telekom Post SV Bielefeld",
-        "sp": "▽",
-        "s": "18",
-        "pkt": "18",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "VfB Schloß Holte",
-        "sp": "▼",
-        "s": "18",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 10,
-        "name": "TV Werne",
-        "sp": "▼",
-        "s": "18",
-        "pkt": "4",
-        "current": false
-      }
-    ],
+    "league": "",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
     "kader": []
   },
@@ -236,7 +155,7 @@
         "sp": "",
         "s": "14",
         "pkt": "0",
-        "current": false
+        "current": true
       }
     ],
     "spiele": [],
@@ -584,9 +503,82 @@
   },
   "u14w": {
     "league": "Oberliga 1 wU14",
-    "rank": null,
-    "rankTotal": 0,
-    "tabelle": [],
+    "rank": 7,
+    "rankTotal": 9,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "VV Humann Essen",
+        "sp": "",
+        "s": "8",
+        "pkt": "16",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "SolingenVolleys",
+        "sp": "",
+        "s": "8",
+        "pkt": "14",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "FCJ Köln",
+        "sp": "",
+        "s": "8",
+        "pkt": "12",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "Meckenheimer SV",
+        "sp": "",
+        "s": "8",
+        "pkt": "8",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "VoR Paderborn",
+        "sp": "",
+        "s": "8",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "DJK Tusa Düsseldorf",
+        "sp": "",
+        "s": "8",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "TV Hörde",
+        "sp": "",
+        "s": "8",
+        "pkt": "4",
+        "current": true
+      },
+      {
+        "rank": 8,
+        "name": "Dürener TV",
+        "sp": "",
+        "s": "8",
+        "pkt": "4",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "TSC Gievenbeck",
+        "sp": "",
+        "s": "8",
+        "pkt": "2",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
@@ -685,38 +677,7 @@
       }
     ],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "Sa, 08.11.25, 11:00",
-        "name": "16",
-        "pos": "–"
-      },
-      {
-        "nr": "Sa, 08.11.25, 13:00",
-        "name": "17",
-        "pos": "–"
-      },
-      {
-        "nr": "Sa, 29.11.25, 12:00",
-        "name": "25",
-        "pos": "–"
-      },
-      {
-        "nr": "Sa, 29.11.25, 14:00",
-        "name": "27",
-        "pos": "–"
-      },
-      {
-        "nr": "Sa, 13.12.25, 13:30",
-        "name": "34",
-        "pos": "–"
-      },
-      {
-        "nr": "Sa, 13.12.25, 14:30",
-        "name": "35",
-        "pos": "–"
-      }
-    ]
+    "kader": []
   },
   "u18m": {
     "league": "NRW-Liga mU18",
@@ -797,38 +758,7 @@
       }
     ],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "So, 30.11.25, 12:00",
-        "name": "25",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 30.11.25, 14:00",
-        "name": "27",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 14.12.25, 12:00",
-        "name": "34",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 14.12.25, 13:00",
-        "name": "35",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 25.01.26, 14:00",
-        "name": "16",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 25.01.26, 16:00",
-        "name": "17",
-        "pos": "–"
-      }
-    ]
+    "kader": []
   },
   "u16m": {
     "league": "NRW-Liga mU16",
@@ -840,9 +770,82 @@
   },
   "u14m": {
     "league": "Oberliga 1 mU14",
-    "rank": null,
-    "rankTotal": 0,
-    "tabelle": [],
+    "rank": 7,
+    "rankTotal": 9,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "VV Humann Essen",
+        "sp": "",
+        "s": "8",
+        "pkt": "16",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "SolingenVolleys",
+        "sp": "",
+        "s": "8",
+        "pkt": "14",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "FCJ Köln",
+        "sp": "",
+        "s": "8",
+        "pkt": "12",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "Meckenheimer SV",
+        "sp": "",
+        "s": "8",
+        "pkt": "8",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "VoR Paderborn",
+        "sp": "",
+        "s": "8",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "DJK Tusa Düsseldorf",
+        "sp": "",
+        "s": "8",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "TV Hörde",
+        "sp": "",
+        "s": "8",
+        "pkt": "4",
+        "current": true
+      },
+      {
+        "rank": 8,
+        "name": "Dürener TV",
+        "sp": "",
+        "s": "8",
+        "pkt": "4",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "TSC Gievenbeck",
+        "sp": "",
+        "s": "8",
+        "pkt": "2",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
