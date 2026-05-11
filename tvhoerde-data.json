@@ -170,7 +170,7 @@
     "kader": []
   },
   "damen4": {
-    "league": "Kreisliga Dortmund - Unna Frauen",
+    "league": "Kreise Essen & Mülheim-Oberhausen & Wesel",
     "rank": 2,
     "rankTotal": 8,
     "tabelle": [
@@ -486,73 +486,73 @@
     "kader": []
   },
   "herren5": {
-    "league": "Kreisliga Unna Frauen",
-    "rank": null,
+    "league": "Kreise Essen & Mülheim-Oberhausen & Wesel",
+    "rank": 8,
     "rankTotal": 8,
     "tabelle": [
       {
         "rank": 1,
-        "name": "Lüner SV IV",
+        "name": "TV Asseln III",
         "sp": "▲",
         "s": "14",
-        "pkt": "33",
+        "pkt": "40",
         "current": false
       },
       {
         "rank": 2,
-        "name": "1. VV Holzwickede III",
+        "name": "TV Hörde IV",
         "sp": "▲",
         "s": "14",
-        "pkt": "31",
+        "pkt": "36",
         "current": false
       },
       {
         "rank": 3,
-        "name": "Königsborner SV II",
+        "name": "TV Asseln IV",
         "sp": "△",
         "s": "14",
-        "pkt": "31",
+        "pkt": "27",
         "current": false
       },
       {
         "rank": 4,
-        "name": "1. VV Holzwickede IV",
-        "sp": "",
-        "s": "14",
-        "pkt": "30",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "VV Schwerte VI",
+        "name": "SuS Oberaden IV",
         "sp": "",
         "s": "14",
         "pkt": "21",
         "current": false
       },
       {
-        "rank": 6,
-        "name": "TuS Bönen II",
+        "rank": 5,
+        "name": "TUS Weddinghofen II",
         "sp": "",
         "s": "14",
-        "pkt": "13",
+        "pkt": "19",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "TV Dortmund-Mengede II",
+        "sp": "",
+        "s": "14",
+        "pkt": "15",
         "current": false
       },
       {
         "rank": 7,
-        "name": "VV Schwerte VII",
+        "name": "SuS Oberaden V",
         "sp": "",
         "s": "14",
-        "pkt": "9",
+        "pkt": "10",
         "current": false
       },
       {
         "rank": 8,
-        "name": "EVC Massen III",
+        "name": "TV Hörde V",
         "sp": "",
         "s": "14",
         "pkt": "0",
-        "current": false
+        "current": true
       }
     ],
     "spiele": [],
@@ -687,8 +687,33 @@
     "spiele": [],
     "kader": [
       {
-        "nr": "Westdeutscher Volleyball-Verband e.V.",
-        "name": "Mannschaftsdetails",
+        "nr": "Sa, 08.11.25, 11:00",
+        "name": "16",
+        "pos": "–"
+      },
+      {
+        "nr": "Sa, 08.11.25, 13:00",
+        "name": "17",
+        "pos": "–"
+      },
+      {
+        "nr": "Sa, 29.11.25, 12:00",
+        "name": "25",
+        "pos": "–"
+      },
+      {
+        "nr": "Sa, 29.11.25, 14:00",
+        "name": "27",
+        "pos": "–"
+      },
+      {
+        "nr": "Sa, 13.12.25, 13:30",
+        "name": "34",
+        "pos": "–"
+      },
+      {
+        "nr": "Sa, 13.12.25, 14:30",
+        "name": "35",
         "pos": "–"
       }
     ]
@@ -774,8 +799,33 @@
     "spiele": [],
     "kader": [
       {
-        "nr": "Westdeutscher Volleyball-Verband e.V.",
-        "name": "Mannschaftsdetails",
+        "nr": "So, 30.11.25, 12:00",
+        "name": "25",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 30.11.25, 14:00",
+        "name": "27",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 14.12.25, 12:00",
+        "name": "34",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 14.12.25, 13:00",
+        "name": "35",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 25.01.26, 14:00",
+        "name": "16",
+        "pos": "–"
+      },
+      {
+        "nr": "So, 25.01.26, 16:00",
+        "name": "17",
         "pos": "–"
       }
     ]
