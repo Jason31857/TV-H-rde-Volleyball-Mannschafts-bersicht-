@@ -1,6 +1,6 @@
-# TV Hörde – Volleyball Website
+# TV Hoerde – Volleyball Website
 
-Automatische Vereinswebsite für TV Hörde Volleyball mit täglichem Datenabruf vom WVV-Ergebnisdienst.
+Automatische Vereinswebsite für TV Hoerde Volleyball mit täglichem Datenabruf vom WVV-Ergebnisdienst.
 
 ## Dateien
 
