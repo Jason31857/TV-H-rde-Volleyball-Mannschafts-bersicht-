@@ -2,9 +2,7 @@ name: WVV Daten aktualisieren
 
 on:
   schedule:
-    # Jeden Tag um 06:00 Uhr morgens (UTC = 07:00 Uhr deutsche Zeit)
     - cron: '0 6 * * *'
-  # Manuell auslösbar über GitHub → Actions → "Run workflow"
   workflow_dispatch:
 
 jobs:
