@@ -170,7 +170,7 @@
     "kader": []
   },
   "damen4": {
-    "league": "Kreisliga Dortmund - Unna Frauen",
+    "league": "Kreise Essen & Mülheim-Oberhausen & Wesel",
     "rank": 2,
     "rankTotal": 8,
     "tabelle": [
@@ -486,7 +486,7 @@
     "kader": []
   },
   "herren5": {
-    "league": "Kreisliga Dortmund - Unna Frauen",
+    "league": "Kreise Essen & Mülheim-Oberhausen & Wesel",
     "rank": 8,
     "rankTotal": 8,
     "tabelle": [
@@ -583,116 +583,12 @@
     "kader": []
   },
   "u14w": {
-    "league": "NRW-Liga mU14",
-    "rank": 7,
-    "rankTotal": 9,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "VV Humann Essen",
-        "sp": "",
-        "s": "8",
-        "pkt": "16",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "SolingenVolleys",
-        "sp": "",
-        "s": "8",
-        "pkt": "14",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "FCJ Köln",
-        "sp": "",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "Meckenheimer SV",
-        "sp": "",
-        "s": "8",
-        "pkt": "8",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "VoR Paderborn",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "DJK Tusa Düsseldorf",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "TV Hörde",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": true
-      },
-      {
-        "rank": 8,
-        "name": "Dürener TV",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "TSC Gievenbeck",
-        "sp": "",
-        "s": "8",
-        "pkt": "2",
-        "current": false
-      }
-    ],
+    "league": "",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "So, 09.11.25, 11:00",
-        "name": "10",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 09.11.25, 13:00",
-        "name": "11",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 30.11.25, 12:00",
-        "name": "19",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 30.11.25, 14:00",
-        "name": "21",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 14.12.25, 12:00",
-        "name": "34",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 14.12.25, 14:00",
-        "name": "36",
-        "pos": "–"
-      }
-    ]
+    "kader": []
   },
   "u13w": {
     "league": "",
@@ -959,38 +855,7 @@
       }
     ],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "So, 09.11.25, 11:00",
-        "name": "10",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 09.11.25, 13:00",
-        "name": "11",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 30.11.25, 12:00",
-        "name": "19",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 30.11.25, 14:00",
-        "name": "21",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 14.12.25, 12:00",
-        "name": "34",
-        "pos": "–"
-      },
-      {
-        "nr": "So, 14.12.25, 14:00",
-        "name": "36",
-        "pos": "–"
-      }
-    ]
+    "kader": []
   },
   "u13m": {
     "league": "",
