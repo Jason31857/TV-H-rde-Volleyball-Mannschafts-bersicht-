@@ -593,6 +593,58 @@
   .trend-down { color: var(--red); }
 
   /* ── FOOTER ───────────────────────────── */
+  .refresh-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(204,0,0,0.5);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .refresh-btn:hover {
+    background: var(--red-dark);
+    transform: scale(1.1) rotate(30deg);
+    box-shadow: 0 6px 28px rgba(204,0,0,0.7);
+  }
+  .refresh-btn.spinning {
+    animation: spin 1s linear infinite;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  .refresh-toast {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    background: var(--black3);
+    border: 1px solid var(--red);
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 10px 18px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 999;
+  }
+  .refresh-toast.show { opacity: 1; }
+
   footer {
     background: var(--black2);
     border-top: 1px solid var(--black4);
@@ -681,6 +733,9 @@
   <div class="tab-content" id="tab-spiele"></div>
   <div class="tab-content" id="tab-tabelle"></div>
 </div>
+
+<button class="refresh-btn" id="refreshBtn" onclick="refreshData()" title="Daten aktualisieren">↻</button>
+<div class="refresh-toast" id="refreshToast"></div>
 
 <footer>
   <span>TV Hörde</span> · Volleyball seit 1964 · Daten: tvhoerde.de &amp; volleyball.nrw · Stand: April 2026
@@ -873,15 +928,15 @@ const TEAMS = [
     id: 'herren5',
     name: '5. Herren',
     age: 'Männer',
-    league: 'Bezirksklasse 18',
+    league: 'Kreisliga',
     rank: null,
     rankTotal: null,
     kader: [],
     trainer: [],
     spiele: [],
     tabelle: [],
-    ergebnisLink: 'https://ergebnisdienst.volleyball.nrw/cms/home/erwachsene/bezirksklassen/bezirksklassen_maenner/bezirksklasse_18_maenner.xhtml',
-    note: 'Kaderdaten werden nicht öffentlich auf tvhoerde.de gepflegt. Spielplan & Tabelle über den WVV-Ergebnisdienst.'
+    ergebnisLink: null,
+    note: 'Die 5. Herren wurde kürzlich neu gegründet. Saison vorbei – keine aktuellen Daten verfügbar.'
   },
   // ── WEIBLICHE JUGEND ─────────────────────────────────────────────
   { id:'u20w', name:'U20 Damen', age:'U20 weiblich', league:'NRW-Liga', rank:null, rankTotal:null, kader:[], trainer:[], spiele:[], tabelle:[], ergebnisLink:null, note:null },
@@ -1046,6 +1101,25 @@ function switchTab(name, btn) {
   document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('tab-' + name).classList.add('active');
+}
+
+// ── REFRESH FUNKTION ─────────────────────────────────────────────────────
+async function refreshData() {
+  const btn = document.getElementById('refreshBtn');
+  const toast = document.getElementById('refreshToast');
+  btn.classList.add('spinning');
+  toast.textContent = 'Daten werden geladen...';
+  toast.classList.add('show');
+  try {
+    await // Beim Start laden
+loadScrapedData();
+    toast.textContent = '✓ Daten aktualisiert!';
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  } catch(e) {
+    toast.textContent = '✗ Fehler beim Laden';
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  }
+  btn.classList.remove('spinning');
 }
 
 // ── SCRAPED DATEN LADEN & EINMERGEN ──────────────────────────────────────
