@@ -13,67 +13,20 @@ const TEAMS = [
   { id:'herren3', name:'3. Herren', sn:'TV Hörde III', base:`${BASE}/cms/home/erwachsene/landesligen/landesligen_maenner/landesliga_6_maenner.xhtml`,     msId:'95238341' },
   { id:'herren4', name:'4. Herren', sn:'TV Hörde IV',  base:`${BASE}/cms/home/erwachsene/bezirksligen/bezirksligen_maenner/bezirksliga_10_maenner.xhtml`, msId:'95240622' },
   { id:'herren5', name:'5. Herren', sn:'TV Hörde V',   base:null, msId:null },
-  // ── WEIBLICHE JUGEND – alle Ligen pro Altersklasse durchsuchen ────
-  { id:'u20w', name:'U20 Damen', sn:'TV Hörde', pages:[
-    `${BASE}/cms/home/jugend/u20/u20_weiblich/nrw_liga.xhtml`,
-    `${BASE}/cms/home/jugend/u20/u20_weiblich/oberliga.xhtml`,
-    `${BASE}/cms/home/jugend/u20/u20_weiblich/verbandsliga.xhtml`,
-    `${BASE}/cms/home/jugend/u20/u20_weiblich/landesliga.xhtml`,
-    `${BASE}/cms/home/jugend/u20/u20_weiblich/bezirksliga.xhtml`,
-    `${BASE}/cms/home/jugend/u20/u20_weiblich/bezirksklasse.xhtml`,
-    `${BASE}/cms/home/jugend/u20/u20_weiblich/kreisliga.xhtml`,
-  ]},
-  { id:'u18w', name:'U18 Damen', sn:'TV Hörde', pages:[
-    `${BASE}/cms/home/jugend/u18/u18_weiblich/nrw_liga.xhtml`,
-    `${BASE}/cms/home/jugend/u18/u18_weiblich/oberliga.xhtml`,
-    `${BASE}/cms/home/jugend/u18/u18_weiblich/verbandsliga.xhtml`,
-    `${BASE}/cms/home/jugend/u18/u18_weiblich/landesliga.xhtml`,
-    `${BASE}/cms/home/jugend/u18/u18_weiblich/bezirksliga.xhtml`,
-    `${BASE}/cms/home/jugend/u18/u18_weiblich/bezirksklasse.xhtml`,
-    `${BASE}/cms/home/jugend/u18/u18_weiblich/kreisliga.xhtml`,
-  ]},
-  { id:'u16w', name:'U16 Damen', sn:'TV Hörde', pages:[
-    `${BASE}/cms/home/jugend/u16/u16_weiblich/nrw_liga.xhtml`,
-    `${BASE}/cms/home/jugend/u16/u16_weiblich/oberliga.xhtml`,
-    `${BASE}/cms/home/jugend/u16/u16_weiblich/bezirksliga.xhtml`,
-    `${BASE}/cms/home/jugend/u16/u16_midi.xhtml`,
-  ]},
-  { id:'u14w', name:'U14 Damen', sn:'TV Hörde', pages:[
-    `${BASE}/cms/home/jugend/u14/nrw_ligen/wu14_NRW.xhtml`,
-    `${BASE}/cms/home/jugend/u14/u14_weiblich/oberliga.xhtml`,
-    `${BASE}/cms/home/jugend/u14/u14_weiblich/bezirksliga.xhtml`,
-    `${BASE}/cms/home/jugend/u14/u14_weiblich/kreisliga.xhtml`,
-  ]},
-  { id:'u13w', name:'U13 Damen', sn:'TV Hörde', pages:[
-    `${BASE}/cms/home/jugend/u13/u13_weiblich/oberliga.xhtml`,
-    `${BASE}/cms/home/jugend/u13/u13_weiblich/bezirksliga.xhtml`,
-    `${BASE}/cms/home/jugend/u13/u13_weiblich/kreisliga.xhtml`,
-    `${BASE}/cms/home/jugend/u13/u13_mixed.xhtml`,
-  ]},
-  { id:'u12w', name:'U12 Damen', sn:'TV Hörde', pages:[
-    `${BASE}/cms/home/jugend/u12/u12_weiblich.xhtml`,
-    `${BASE}/cms/home/jugend/u12/u12_mixed.xhtml`,
-  ]},
+  // ── WEIBLICHE JUGEND – Hauptseiten mit allen Staffeln durchsuchen ──
+  { id:'u20w', name:'U20 Damen', sn:'TV Hörde', pages:[`${BASE}/cms/home/jugend/u20/u20_weiblich.xhtml`] },
+  { id:'u18w', name:'U18 Damen', sn:'TV Hörde', pages:[`${BASE}/cms/home/jugend/u18/u18_weiblich.xhtml`] },
+  { id:'u16w', name:'U16 Damen', sn:'TV Hörde', pages:[`${BASE}/cms/home/jugend/u16/u16_weiblich.xhtml`,`${BASE}/cms/home/jugend/u16/u16_midi.xhtml`] },
+  { id:'u14w', name:'U14 Damen', sn:'TV Hörde', pages:[`${BASE}/cms/home/jugend/u14/nrw_ligen.xhtml`,`${BASE}/cms/home/jugend/u14/u14_weiblich.xhtml`] },
+  { id:'u13w', name:'U13 Damen', sn:'TV Hörde', pages:[`${BASE}/cms/home/jugend/u13/u13_weiblich.xhtml`,`${BASE}/cms/home/jugend/u13/u13_mixed.xhtml`] },
+  { id:'u12w', name:'U12 Damen', sn:'TV Hörde', pages:[`${BASE}/cms/home/jugend/u12/u12_weiblich.xhtml`,`${BASE}/cms/home/jugend/u12/u12_mixed.xhtml`] },
   // ── MÄNNLICHE JUGEND ──────────────────────────────────────────────
-  { id:'u20m', name:'U20 Herren', sn:'TV Hörde', base:`${BASE}/cms/home/jugend/u20/u20_maennlich/nrw_liga.xhtml`, msId:'95251447' },
-  { id:'u18m', name:'U18 Herren', sn:'TV Hörde', base:`${BASE}/cms/home/jugend/u18/u18_maennlich/nrw_liga.xhtml`, msId:'95250679' },
-  { id:'u16m', name:'U16 Herren', sn:'TV Hörde', pages:[
-    `${BASE}/cms/home/jugend/u16/u16_maennlich/nrw_liga.xhtml`,
-    `${BASE}/cms/home/jugend/u16/u16_maennlich/oberliga.xhtml`,
-    `${BASE}/cms/home/jugend/u16/u16_maennlich/bezirksliga.xhtml`,
-    `${BASE}/cms/home/jugend/u16/u16_maennlich/kreisliga.xhtml`,
-  ]},
-  { id:'u14m', name:'U14 Herren', sn:'TV Hörde', base:`${BASE}/cms/home/jugend/u14/nrw_ligen/mu14_NRW.xhtml`, msId:'95251152' },
-  { id:'u13m', name:'U13 Herren', sn:'TV Hörde', pages:[
-    `${BASE}/cms/home/jugend/u13/u13_maennlich/oberliga.xhtml`,
-    `${BASE}/cms/home/jugend/u13/u13_maennlich/bezirksliga.xhtml`,
-    `${BASE}/cms/home/jugend/u13/u13_maennlich/kreisliga.xhtml`,
-    `${BASE}/cms/home/jugend/u13/u13_mixed.xhtml`,
-  ]},
-  { id:'u12m', name:'U12 Herren', sn:'TV Hörde', pages:[
-    `${BASE}/cms/home/jugend/u12/u12_maennlich.xhtml`,
-    `${BASE}/cms/home/jugend/u12/u12_mixed.xhtml`,
-  ]},
+  { id:'u20m', name:'U20 Herren', sn:'TV Hörde', base:`${BASE}/cms/home/jugend/u20/u20_maennlich.xhtml`, msId:'95251447' },
+  { id:'u18m', name:'U18 Herren', sn:'TV Hörde', base:`${BASE}/cms/home/jugend/u18/u18_maennlich.xhtml`, msId:'95250679' },
+  { id:'u16m', name:'U16 Herren', sn:'TV Hörde', pages:[`${BASE}/cms/home/jugend/u16/u16_maennlich.xhtml`] },
+  { id:'u14m', name:'U14 Herren', sn:'TV Hörde', base:`${BASE}/cms/home/jugend/u14/nrw_ligen.xhtml`, msId:'95251152' },
+  { id:'u13m', name:'U13 Herren', sn:'TV Hörde', pages:[`${BASE}/cms/home/jugend/u13/u13_maennlich.xhtml`,`${BASE}/cms/home/jugend/u13/u13_mixed.xhtml`] },
+  { id:'u12m', name:'U12 Herren', sn:'TV Hörde', pages:[`${BASE}/cms/home/jugend/u12/u12_maennlich.xhtml`,`${BASE}/cms/home/jugend/u12/u12_mixed.xhtml`] },
 ];
 
 function norm(s){return(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();}
@@ -211,11 +164,12 @@ async function scrapeTeam(context,team){
       await dismissCookies(page);
 
       // Explizit warten bis Links erscheinen
-      await page.waitForFunction(()=>document.querySelectorAll('a[href*="teamDetails"]').length>0,{timeout:8000}).catch(()=>{});
+      await page.waitForFunction(()=>document.querySelectorAll('a[href*="ListView.teamId"]').length>0,{timeout:8000}).catch(()=>{});
 
       const link=await page.evaluate((sn)=>{
         function n(s){return(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();}
-        const all=[...document.querySelectorAll('a[href*="teamDetails"]')];
+        // Kader-Link hat ListView.teamId in der URL
+        const all=[...document.querySelectorAll('a[href*="ListView.teamId"]')];
         for(const a of all)if(n(a.innerText||'').includes(sn))return a.href;
         return all.length===1?all[0].href:null;
       },sn);
@@ -248,10 +202,10 @@ async function scrapeTeam(context,team){
       }else{
         // Debug: zeige was auf der Seite ist
         const info=await page.evaluate(()=>({
-          links:document.querySelectorAll('a[href*="teamDetails"]').length,
-          allLinks:[...document.querySelectorAll('a')].filter(a=>(a.href||'').includes('team')).map(a=>a.href.slice(-50)).slice(0,3)
+          links:document.querySelectorAll('a[href*="ListView.teamId"]').length,
+          names:[...document.querySelectorAll('a[href*="ListView.teamId"]')].map(a=>(a.innerText||'').trim().slice(0,25)).slice(0,4)
         }));
-        console.log(`      teamDetails: ${info.links} Links, allTeamLinks: ${info.allLinks.join(', ')}`);
+        console.log(`      Kader-Links: ${info.links}, Teams: ${info.names.join(', ')}`);
       }
     }catch(e){console.log(`      ⚠ Kader: ${e.message.split('\n')[0].slice(0,40)}`);}
   }
