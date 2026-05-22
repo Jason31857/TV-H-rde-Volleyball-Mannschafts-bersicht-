@@ -494,424 +494,50 @@
     "kader": []
   },
   "u20w": {
-    "league": "NRW-Liga wU20",
+    "league": "",
     "rank": null,
-    "rankTotal": 9,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "RC Sorpesee",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "16",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "SV Blau-Weiß Aasee",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "14",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "PTSV Aachen",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "VV Humann Essen",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "10",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "DJK Südwest Köln",
-        "sp": "",
-        "s": "8",
-        "pkt": "8",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "RSV Borken",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "TSV Bayer 04 Leverkusen",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 8,
-        "name": "VoR Paderborn",
-        "sp": "",
-        "s": "8",
-        "pkt": "2",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "VC SFG Olpe",
-        "sp": "",
-        "s": "8",
-        "pkt": "0",
-        "current": false
-      }
-    ],
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
     "kader": []
   },
   "u18w": {
-    "league": "NRW-Liga wU18",
+    "league": "",
     "rank": null,
-    "rankTotal": 9,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "VV Humann Essen",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "14",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "RSV Borken",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "VoR Paderborn",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "RC Sorpesee",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "SC Hennen",
-        "sp": "",
-        "s": "8",
-        "pkt": "8",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "USC Münster",
-        "sp": "",
-        "s": "8",
-        "pkt": "8",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "Werdener TB",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 8,
-        "name": "TuB Bocholt",
-        "sp": "",
-        "s": "8",
-        "pkt": "2",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "SV Blau-Weiß Aasee",
-        "sp": "",
-        "s": "8",
-        "pkt": "0",
-        "current": false
-      }
-    ],
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
     "kader": []
   },
   "u16w": {
-    "league": "NRW-Liga wU16",
+    "league": "",
     "rank": null,
-    "rankTotal": 9,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "RSV Borken",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "16",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "USC Münster",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "14",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "SC Union Lüdinghausen",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "TV Gladbeck",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "8",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "VV Schwerte",
-        "sp": "",
-        "s": "8",
-        "pkt": "8",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "VoR Paderborn",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "TSC Gievenbeck",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 8,
-        "name": "SC Hennen",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "VV Humann Essen",
-        "sp": "",
-        "s": "8",
-        "pkt": "0",
-        "current": false
-      }
-    ],
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
     "kader": []
   },
   "u14w": {
-    "league": "NRW-Liga wU14",
+    "league": "",
     "rank": null,
-    "rankTotal": 9,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "TSV Bayer 04 Leverkusen",
-        "sp": "",
-        "s": "8",
-        "pkt": "16",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "RSV Borken",
-        "sp": "",
-        "s": "8",
-        "pkt": "14",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "PTSV Aachen",
-        "sp": "",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "SC Union Lüdinghausen",
-        "sp": "",
-        "s": "8",
-        "pkt": "10",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "USC Münster",
-        "sp": "",
-        "s": "8",
-        "pkt": "8",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "SV Wachtberg",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "VV Schwerte",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 8,
-        "name": "TSC Gievenbeck",
-        "sp": "",
-        "s": "8",
-        "pkt": "2",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "DJK Tusa Düsseldorf",
-        "sp": "",
-        "s": "8",
-        "pkt": "0",
-        "current": false
-      }
-    ],
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
     "kader": []
   },
   "u13w": {
-    "league": "Oberliga 1 wU13",
+    "league": "",
     "rank": null,
-    "rankTotal": 7,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "TSV Bayer 04 Leverkusen",
-        "sp": "▲",
-        "s": "12",
-        "pkt": "22",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "PTSV Aachen",
-        "sp": "▲",
-        "s": "12",
-        "pkt": "20",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "SV Wachtberg",
-        "sp": "▲",
-        "s": "12",
-        "pkt": "18",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "SV Wachtberg II",
-        "sp": "",
-        "s": "12",
-        "pkt": "10",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "FCJ Köln",
-        "sp": "▲",
-        "s": "12",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "PTSV Aachen II",
-        "sp": "",
-        "s": "12",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "DJK Südwest Köln",
-        "sp": "",
-        "s": "12",
-        "pkt": "4",
-        "current": false
-      }
-    ],
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
     "kader": []
   },
   "u12w": {
-    "league": "Bezirksmeisterschaft weibliche U12",
+    "league": "",
     "rank": null,
-    "rankTotal": 3,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "12",
-        "sp": "30/30",
-        "s": "",
-        "pkt": "30/30",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "15",
-        "sp": "45/45",
-        "s": "",
-        "pkt": "45/45",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "16",
-        "sp": "48/48",
-        "s": "",
-        "pkt": "48/48",
-        "current": false
-      }
-    ],
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
     "kader": []
   },
@@ -1078,83 +704,10 @@
     "kader": []
   },
   "u16m": {
-    "league": "NRW-Liga mU16",
+    "league": "",
     "rank": null,
-    "rankTotal": 9,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "SolingenVolleys",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "16",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "1. VC Minden",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "DJK Tusa 06 Düsseldorf",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "FCJ Köln",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "TuB Bocholt",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "SSF Bonn",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "VV Humann Essen",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 8,
-        "name": "Rhein-Sieg Volleys / Mondorf",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "VfL Telstar Bochum",
-        "sp": "",
-        "s": "8",
-        "pkt": "0",
-        "current": false
-      }
-    ],
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
     "kader": []
   },
@@ -1240,64 +793,15 @@
     "kader": []
   },
   "u13m": {
-    "league": "Oberliga 1 mU13",
+    "league": "",
     "rank": null,
-    "rankTotal": 6,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "FCJ Köln",
-        "sp": "▲",
-        "s": "10",
-        "pkt": "18",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "Meckenheimer SV",
-        "sp": "▲",
-        "s": "10",
-        "pkt": "16",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "Rhein-Sieg Volleys / Mondorf",
-        "sp": "▲",
-        "s": "10",
-        "pkt": "14",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "SSF Bonn",
-        "sp": "▲",
-        "s": "10",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "Dürener TV",
-        "sp": "▲",
-        "s": "10",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "FCJ Köln II",
-        "sp": "",
-        "s": "10",
-        "pkt": "0",
-        "current": false
-      }
-    ],
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
     "kader": []
   },
   "u12m": {
-    "league": "Bezirksmeisterschaft männliche U12",
+    "league": "",
     "rank": null,
     "rankTotal": 0,
     "tabelle": [],
