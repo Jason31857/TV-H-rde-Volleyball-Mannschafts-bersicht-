@@ -86,7 +86,43 @@
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "Altintas, Ceyda",
+        "name": "10",
+        "pos": "Außenangriff"
+      },
+      {
+        "nr": "Bader, Sophia",
+        "name": "15",
+        "pos": "Zuspiel"
+      },
+      {
+        "nr": "Danne, Leonie",
+        "name": "11",
+        "pos": "Außenangriff"
+      },
+      {
+        "nr": "Dunkhorst, Minna Luise",
+        "name": "21",
+        "pos": "Libero"
+      },
+      {
+        "nr": "Rustige, Greta",
+        "name": "12",
+        "pos": "Mittelblock"
+      },
+      {
+        "nr": "Schulte, IvyPauline",
+        "name": "33",
+        "pos": "Außenangriff"
+      },
+      {
+        "nr": "Stojanovic, Teodora",
+        "name": "17",
+        "pos": "Zuspiel"
+      }
+    ]
   },
   "damen3": {
     "league": "Bezirksliga 9 Frauen",
@@ -167,7 +203,53 @@
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "Dunkhorst, Matilda",
+        "name": "19",
+        "pos": "Außenangriff"
+      },
+      {
+        "nr": "Graba, MiaMarie",
+        "name": "17",
+        "pos": "Mittelblock"
+      },
+      {
+        "nr": "Landgraf, Ida",
+        "name": "16",
+        "pos": "Mittelblock"
+      },
+      {
+        "nr": "Lefarth, Miria",
+        "name": "13",
+        "pos": "Diagonal"
+      },
+      {
+        "nr": "Lindenberg, Mia",
+        "name": "18",
+        "pos": "Libero"
+      },
+      {
+        "nr": "Nuessen, Francesca",
+        "name": "11",
+        "pos": "Außenangriff"
+      },
+      {
+        "nr": "nicht sichtbar",
+        "name": "24",
+        "pos": "Mittelblock"
+      },
+      {
+        "nr": "terSchmitten, Nala",
+        "name": "14",
+        "pos": "Zuspiel"
+      },
+      {
+        "nr": "Winter, Franziska",
+        "name": "12",
+        "pos": "Mittelblock"
+      }
+    ]
   },
   "damen4": {
     "league": "Kreisliga Dortmund - Unna Frauen",
@@ -329,7 +411,53 @@
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "Bungert, Linus",
+        "name": "2007",
+        "pos": "22"
+      },
+      {
+        "nr": "Dieckmann, Ole",
+        "name": "2010",
+        "pos": "5"
+      },
+      {
+        "nr": "Goldenbogen, Mathias",
+        "name": "1995",
+        "pos": "–"
+      },
+      {
+        "nr": "Gudenoge, Paul",
+        "name": "2007",
+        "pos": "2"
+      },
+      {
+        "nr": "Hashemi, Arastou",
+        "name": "2008",
+        "pos": "44"
+      },
+      {
+        "nr": "Kohl, Jerry",
+        "name": "2008",
+        "pos": "8"
+      },
+      {
+        "nr": "Obier-Biesinger, Arthur",
+        "name": "2008",
+        "pos": "7"
+      },
+      {
+        "nr": "Rdesinski, Michal",
+        "name": "2009",
+        "pos": "10"
+      },
+      {
+        "nr": "Wenzel, Erik",
+        "name": "2006",
+        "pos": "–"
+      }
+    ]
   },
   "herren3": {
     "league": "Landesliga 6 Männer",
@@ -410,7 +538,33 @@
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "Bogoslov, Leo",
+        "name": "14",
+        "pos": "Libero"
+      },
+      {
+        "nr": "Goos, Benjamin",
+        "name": "12",
+        "pos": "–"
+      },
+      {
+        "nr": "Mücke, Pepe",
+        "name": "13",
+        "pos": "–"
+      },
+      {
+        "nr": "Piek, Ole",
+        "name": "23",
+        "pos": "–"
+      },
+      {
+        "nr": "Zywicki, Davin",
+        "name": "24",
+        "pos": "–"
+      }
+    ]
   },
   "herren4": {
     "league": "Bezirksliga 10 Männer",
@@ -483,7 +637,83 @@
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "Chen, Toni",
+        "name": "21",
+        "pos": "–"
+      },
+      {
+        "nr": "Evert, Henrik",
+        "name": "22",
+        "pos": "–"
+      },
+      {
+        "nr": "Haken, Julius",
+        "name": "15",
+        "pos": "–"
+      },
+      {
+        "nr": "Hartwig, Moritz",
+        "name": "12",
+        "pos": "–"
+      },
+      {
+        "nr": "Kramer, Henry",
+        "name": "99",
+        "pos": "–"
+      },
+      {
+        "nr": "Köhler, Niklas",
+        "name": "26",
+        "pos": "–"
+      },
+      {
+        "nr": "Lennartz, Lewis",
+        "name": "28",
+        "pos": "–"
+      },
+      {
+        "nr": "Lutter, Justus",
+        "name": "32",
+        "pos": "–"
+      },
+      {
+        "nr": "Pohl, Moritz",
+        "name": "10",
+        "pos": "–"
+      },
+      {
+        "nr": "Rautenberg, Melvin",
+        "name": "33",
+        "pos": "–"
+      },
+      {
+        "nr": "nicht sichtbar",
+        "name": "31",
+        "pos": "–"
+      },
+      {
+        "nr": "Rodegro, Piet",
+        "name": "16",
+        "pos": "–"
+      },
+      {
+        "nr": "Schmiegel, Timo",
+        "name": "30",
+        "pos": "–"
+      },
+      {
+        "nr": "Schumann, Jakob",
+        "name": "11",
+        "pos": "–"
+      },
+      {
+        "nr": "Schumann, Noah",
+        "name": "17",
+        "pos": "–"
+      }
+    ]
   },
   "herren5": {
     "league": "",
@@ -518,10 +748,83 @@
     "kader": []
   },
   "u14w": {
-    "league": "",
-    "rank": null,
-    "rankTotal": 0,
-    "tabelle": [],
+    "league": "NRW-Liga mU14",
+    "rank": 7,
+    "rankTotal": 9,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "VV Humann Essen",
+        "sp": "",
+        "s": "8",
+        "pkt": "16",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "SolingenVolleys",
+        "sp": "",
+        "s": "8",
+        "pkt": "14",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "FCJ Köln",
+        "sp": "",
+        "s": "8",
+        "pkt": "12",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "Meckenheimer SV",
+        "sp": "",
+        "s": "8",
+        "pkt": "8",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "VoR Paderborn",
+        "sp": "",
+        "s": "8",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "DJK Tusa Düsseldorf",
+        "sp": "",
+        "s": "8",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "TV Hörde",
+        "sp": "",
+        "s": "8",
+        "pkt": "4",
+        "current": true
+      },
+      {
+        "rank": 8,
+        "name": "Dürener TV",
+        "sp": "",
+        "s": "8",
+        "pkt": "4",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "TSC Gievenbeck",
+        "sp": "",
+        "s": "8",
+        "pkt": "2",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
