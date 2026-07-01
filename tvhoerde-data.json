@@ -1,255 +1,92 @@
 {
   "damen2": {
     "league": "Verbandsliga 4 Frauen",
-    "rank": 4,
-    "rankTotal": 10,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "TV Mesum",
-        "sp": "▲",
-        "s": "18",
-        "pkt": "47",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "1. VC Minden",
-        "sp": "△",
-        "s": "18",
-        "pkt": "46",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "TSC Gievenbeck",
-        "sp": "",
-        "s": "18",
-        "pkt": "36",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "TV Hörde II",
-        "sp": "",
-        "s": "18",
-        "pkt": "36",
-        "current": true
-      },
-      {
-        "rank": 5,
-        "name": "DJK Delbrück",
-        "sp": "",
-        "s": "18",
-        "pkt": "28",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "SG TSC Gievenbeck",
-        "sp": "",
-        "s": "18",
-        "pkt": "27",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "VoR Paderborn II",
-        "sp": "",
-        "s": "18",
-        "pkt": "22",
-        "current": false
-      },
-      {
-        "rank": 8,
-        "name": "Telekom Post SV Bielefeld",
-        "sp": "▽",
-        "s": "18",
-        "pkt": "18",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "VfB Schloß Holte",
-        "sp": "▼",
-        "s": "18",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 10,
-        "name": "TV Werne",
-        "sp": "▼",
-        "s": "18",
-        "pkt": "4",
-        "current": false
-      }
-    ],
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "Altintas, Ceyda",
-        "name": "10",
-        "pos": "Außenangriff"
-      },
-      {
-        "nr": "Bader, Sophia",
-        "name": "15",
-        "pos": "Zuspiel"
-      },
-      {
-        "nr": "Danne, Leonie",
-        "name": "11",
-        "pos": "Außenangriff"
-      },
-      {
-        "nr": "Dunkhorst, Minna Luise",
-        "name": "21",
-        "pos": "Libero"
-      },
-      {
-        "nr": "Rustige, Greta",
-        "name": "12",
-        "pos": "Mittelblock"
-      },
-      {
-        "nr": "Schulte, IvyPauline",
-        "name": "33",
-        "pos": "Außenangriff"
-      },
-      {
-        "nr": "Stojanovic, Teodora",
-        "name": "17",
-        "pos": "Zuspiel"
-      }
-    ]
+    "kader": []
   },
   "damen3": {
     "league": "Bezirksliga 9 Frauen",
-    "rank": 4,
+    "rank": 6,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
-        "name": "SG Boelerheide",
+        "name": "VfL Bad Berleburg",
         "sp": "▲",
-        "s": "16",
-        "pkt": "46",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 2,
-        "name": "Letmather TV",
+        "name": "VV Schwerte IV",
         "sp": "△",
-        "s": "16",
-        "pkt": "34",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 3,
-        "name": "TV Kredenbach-Lohe",
+        "name": "VSC Dortmund",
         "sp": "",
-        "s": "16",
-        "pkt": "30",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 4,
-        "name": "TV Hörde III",
+        "name": "TuS Iserlohn",
         "sp": "",
-        "s": "16",
-        "pkt": "29",
-        "current": true
+        "s": "0",
+        "pkt": "0",
+        "current": false
       },
       {
         "rank": 5,
-        "name": "VfL Bad Berleburg",
+        "name": "TV Kredenbach-Lohe",
         "sp": "",
-        "s": "16",
-        "pkt": "29",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 6,
-        "name": "VSC Dortmund",
+        "name": "TV Hörde III",
         "sp": "",
-        "s": "16",
-        "pkt": "21",
-        "current": false
+        "s": "0",
+        "pkt": "0",
+        "current": true
       },
       {
         "rank": 7,
-        "name": "TV Hasperbach",
+        "name": "TV Hoffnung Littfeld",
         "sp": "▽",
-        "s": "16",
-        "pkt": "14",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 8,
-        "name": "SG Siegen Giersberg",
+        "name": "TV Eiche Grüne",
         "sp": "▼",
-        "s": "16",
-        "pkt": "9",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 9,
-        "name": "CVJM Siegen II",
+        "name": "Letmather TV II",
         "sp": "▼",
-        "s": "16",
-        "pkt": "4",
+        "s": "0",
+        "pkt": "0",
         "current": false
       }
     ],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "Dunkhorst, Matilda",
-        "name": "19",
-        "pos": "Außenangriff"
-      },
-      {
-        "nr": "Graba, MiaMarie",
-        "name": "17",
-        "pos": "Mittelblock"
-      },
-      {
-        "nr": "Landgraf, Ida",
-        "name": "16",
-        "pos": "Mittelblock"
-      },
-      {
-        "nr": "Lefarth, Miria",
-        "name": "13",
-        "pos": "Diagonal"
-      },
-      {
-        "nr": "Lindenberg, Mia",
-        "name": "18",
-        "pos": "Libero"
-      },
-      {
-        "nr": "Nuessen, Francesca",
-        "name": "11",
-        "pos": "Außenangriff"
-      },
-      {
-        "nr": "nicht sichtbar",
-        "name": "24",
-        "pos": "Mittelblock"
-      },
-      {
-        "nr": "terSchmitten, Nala",
-        "name": "14",
-        "pos": "Zuspiel"
-      },
-      {
-        "nr": "Winter, Franziska",
-        "name": "12",
-        "pos": "Mittelblock"
-      }
-    ]
+    "kader": []
   },
   "damen4": {
     "league": "Kreisliga Dortmund - Unna Frauen",
@@ -326,394 +163,246 @@
   },
   "herren2": {
     "league": "Verbandsliga 3 Männer",
-    "rank": 2,
+    "rank": 6,
     "rankTotal": 10,
     "tabelle": [
       {
         "rank": 1,
-        "name": "TSC Eintracht Dortmund",
+        "name": "TuS Saxonia Münster III",
         "sp": "▲",
-        "s": "18",
-        "pkt": "42",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 2,
-        "name": "TV Hörde II",
+        "name": "TuS Saxonia Münster II",
         "sp": "△",
-        "s": "18",
-        "pkt": "42",
-        "current": true
+        "s": "0",
+        "pkt": "0",
+        "current": false
       },
       {
         "rank": 3,
-        "name": "TuS Saxonia Münster II",
+        "name": "TuS Meinerzhagen",
         "sp": "",
-        "s": "18",
-        "pkt": "38",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 4,
-        "name": "TuS Saxonia Münster III",
+        "name": "TuS Iserlohn",
         "sp": "",
-        "s": "18",
-        "pkt": "33",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 5,
-        "name": "TB Höntrop",
+        "name": "TVE Vogelsang",
         "sp": "",
-        "s": "18",
-        "pkt": "31",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 6,
-        "name": "TuS Meinerzhagen",
+        "name": "TV Hörde III",
         "sp": "",
-        "s": "18",
-        "pkt": "27",
-        "current": false
+        "s": "0",
+        "pkt": "0",
+        "current": true
       },
       {
         "rank": 7,
         "name": "TSC Gievenbeck III",
         "sp": "",
-        "s": "18",
-        "pkt": "23",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 8,
-        "name": "TuS Iserlohn",
+        "name": "TB Höntrop",
         "sp": "▽",
-        "s": "18",
-        "pkt": "18",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 9,
-        "name": "TV Westfalia Epe",
+        "name": "SG Sendenhorst",
         "sp": "▼",
-        "s": "18",
-        "pkt": "11",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 10,
-        "name": "SG SuS Oberaden-Hammer SC",
+        "name": "Hammer SportClub",
         "sp": "▼",
-        "s": "18",
-        "pkt": "5",
+        "s": "0",
+        "pkt": "0",
         "current": false
       }
     ],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "Bungert, Linus",
-        "name": "2007",
-        "pos": "22"
-      },
-      {
-        "nr": "Dieckmann, Ole",
-        "name": "2010",
-        "pos": "5"
-      },
-      {
-        "nr": "Goldenbogen, Mathias",
-        "name": "1995",
-        "pos": "–"
-      },
-      {
-        "nr": "Gudenoge, Paul",
-        "name": "2007",
-        "pos": "2"
-      },
-      {
-        "nr": "Hashemi, Arastou",
-        "name": "2008",
-        "pos": "44"
-      },
-      {
-        "nr": "Kohl, Jerry",
-        "name": "2008",
-        "pos": "8"
-      },
-      {
-        "nr": "Obier-Biesinger, Arthur",
-        "name": "2008",
-        "pos": "7"
-      },
-      {
-        "nr": "Rdesinski, Michal",
-        "name": "2009",
-        "pos": "10"
-      },
-      {
-        "nr": "Wenzel, Erik",
-        "name": "2006",
-        "pos": "–"
-      }
-    ]
+    "kader": []
   },
   "herren3": {
     "league": "Landesliga 6 Männer",
-    "rank": 1,
+    "rank": null,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
-        "name": "TV Hörde III",
+        "name": "VC Marl",
         "sp": "▲",
-        "s": "16",
-        "pkt": "40",
-        "current": true
+        "s": "0",
+        "pkt": "0",
+        "current": false
       },
       {
         "rank": 2,
         "name": "TuS Saxonia Münster IV",
         "sp": "△",
-        "s": "16",
-        "pkt": "38",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 3,
-        "name": "SV Blau-Weiß Aasee II",
+        "name": "TV Westfalia Epe",
         "sp": "",
-        "s": "16",
-        "pkt": "30",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 4,
         "name": "TSC Gievenbeck IV",
         "sp": "",
-        "s": "16",
-        "pkt": "27",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 5,
-        "name": "SG EVC/ KSV",
+        "name": "Sportclub Münster 08",
         "sp": "",
-        "s": "16",
-        "pkt": "24",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 6,
-        "name": "SG 08-Saxonia",
+        "name": "SV Blau-Weiß Aasee II",
         "sp": "",
-        "s": "16",
-        "pkt": "21",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 7,
-        "name": "SV Schermbeck",
+        "name": "SG Sendenhorst II",
         "sp": "▽",
-        "s": "16",
-        "pkt": "17",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 8,
-        "name": "TV Mesum",
+        "name": "Raesfelder VG",
         "sp": "▼",
-        "s": "16",
-        "pkt": "10",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 9,
-        "name": "VC Bottrop 90",
+        "name": "Bocholter WSV",
         "sp": "▼",
-        "s": "16",
-        "pkt": "9",
+        "s": "0",
+        "pkt": "0",
         "current": false
       }
     ],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "Bogoslov, Leo",
-        "name": "14",
-        "pos": "Libero"
-      },
-      {
-        "nr": "Goos, Benjamin",
-        "name": "12",
-        "pos": "–"
-      },
-      {
-        "nr": "Mücke, Pepe",
-        "name": "13",
-        "pos": "–"
-      },
-      {
-        "nr": "Piek, Ole",
-        "name": "23",
-        "pos": "–"
-      },
-      {
-        "nr": "Zywicki, Davin",
-        "name": "24",
-        "pos": "–"
-      }
-    ]
+    "kader": []
   },
   "herren4": {
     "league": "Bezirksliga 10 Männer",
-    "rank": 6,
+    "rank": 3,
     "rankTotal": 8,
     "tabelle": [
       {
         "rank": 1,
-        "name": "TB Höntrop III",
+        "name": "VfL Telstar Bochum II",
         "sp": "▲",
-        "s": "14",
-        "pkt": "36",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 2,
-        "name": "EVC Massen II",
+        "name": "TuS Hattingen",
         "sp": "△",
-        "s": "14",
-        "pkt": "34",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 3,
-        "name": "TSC Eintracht Dortmund II",
+        "name": "TV Hörde IV",
         "sp": "",
-        "s": "14",
-        "pkt": "29",
-        "current": false
+        "s": "0",
+        "pkt": "0",
+        "current": true
       },
       {
         "rank": 4,
-        "name": "PSV Bochum",
+        "name": "TV Dortmund-Mengede",
         "sp": "",
-        "s": "14",
-        "pkt": "20",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 5,
-        "name": "VfL Telstar Bochum II",
+        "name": "TB Höntrop III",
         "sp": "",
-        "s": "14",
-        "pkt": "19",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 6,
-        "name": "TV Hörde IV",
+        "name": "Ruhrvolleys Stockum",
         "sp": "",
-        "s": "14",
-        "pkt": "14",
-        "current": true
+        "s": "0",
+        "pkt": "0",
+        "current": false
       },
       {
         "rank": 7,
-        "name": "Ruhrvolleys Stockum",
+        "name": "PSV Bochum",
         "sp": "▽",
-        "s": "14",
-        "pkt": "9",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 8,
-        "name": "TV Asseln",
+        "name": "Baukauer TC Herne",
         "sp": "▼",
-        "s": "14",
-        "pkt": "7",
+        "s": "0",
+        "pkt": "0",
         "current": false
       }
     ],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "Chen, Toni",
-        "name": "21",
-        "pos": "–"
-      },
-      {
-        "nr": "Evert, Henrik",
-        "name": "22",
-        "pos": "–"
-      },
-      {
-        "nr": "Haken, Julius",
-        "name": "15",
-        "pos": "–"
-      },
-      {
-        "nr": "Hartwig, Moritz",
-        "name": "12",
-        "pos": "–"
-      },
-      {
-        "nr": "Kramer, Henry",
-        "name": "99",
-        "pos": "–"
-      },
-      {
-        "nr": "Köhler, Niklas",
-        "name": "26",
-        "pos": "–"
-      },
-      {
-        "nr": "Lennartz, Lewis",
-        "name": "28",
-        "pos": "–"
-      },
-      {
-        "nr": "Lutter, Justus",
-        "name": "32",
-        "pos": "–"
-      },
-      {
-        "nr": "Pohl, Moritz",
-        "name": "10",
-        "pos": "–"
-      },
-      {
-        "nr": "Rautenberg, Melvin",
-        "name": "33",
-        "pos": "–"
-      },
-      {
-        "nr": "nicht sichtbar",
-        "name": "31",
-        "pos": "–"
-      },
-      {
-        "nr": "Rodegro, Piet",
-        "name": "16",
-        "pos": "–"
-      },
-      {
-        "nr": "Schmiegel, Timo",
-        "name": "30",
-        "pos": "–"
-      },
-      {
-        "nr": "Schumann, Jakob",
-        "name": "11",
-        "pos": "–"
-      },
-      {
-        "nr": "Schumann, Noah",
-        "name": "17",
-        "pos": "–"
-      }
-    ]
+    "kader": []
   },
   "herren5": {
     "league": "",
@@ -748,83 +437,10 @@
     "kader": []
   },
   "u14w": {
-    "league": "NRW-Liga mU14",
-    "rank": 7,
-    "rankTotal": 9,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "VV Humann Essen",
-        "sp": "",
-        "s": "8",
-        "pkt": "16",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "SolingenVolleys",
-        "sp": "",
-        "s": "8",
-        "pkt": "14",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "FCJ Köln",
-        "sp": "",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "Meckenheimer SV",
-        "sp": "",
-        "s": "8",
-        "pkt": "8",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "VoR Paderborn",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "DJK Tusa Düsseldorf",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "TV Hörde",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": true
-      },
-      {
-        "rank": 8,
-        "name": "Dürener TV",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "TSC Gievenbeck",
-        "sp": "",
-        "s": "8",
-        "pkt": "2",
-        "current": false
-      }
-    ],
+    "league": "",
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
     "kader": []
   },
@@ -846,159 +462,94 @@
   },
   "u20m": {
     "league": "NRW-Liga mU20",
-    "rank": 7,
-    "rankTotal": 9,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "VV Humann Essen",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "16",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "Moerser SC",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "14",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "TSC Gievenbeck",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "10",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "TuB Bocholt",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "8",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "FCJ Köln",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "Telekom Post SV Bielefeld",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "TV Hörde",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": true
-      },
-      {
-        "rank": 8,
-        "name": "Rumelner TV",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "Meckenheimer SV",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      }
-    ],
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
     "spiele": [],
     "kader": []
   },
   "u18m": {
     "league": "NRW-Liga mU18",
-    "rank": 5,
+    "rank": null,
+    "rankTotal": 0,
+    "tabelle": [],
+    "spiele": [],
+    "kader": []
+  },
+  "u16m": {
+    "league": "NRW-Liga mU16",
+    "rank": 4,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
         "name": "VV Humann Essen",
         "sp": "▲",
-        "s": "8",
-        "pkt": "16",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 2,
-        "name": "Telekom Post SV Bielefeld",
+        "name": "TuB Bocholt",
         "sp": "▲",
-        "s": "8",
-        "pkt": "12",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 3,
-        "name": "SolingenVolleys",
+        "name": "Telekom Post SV Bielefeld",
         "sp": "▲",
-        "s": "8",
-        "pkt": "12",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 4,
-        "name": "FCJ Köln",
-        "sp": "▲",
-        "s": "8",
-        "pkt": "10",
-        "current": false
-      },
-      {
-        "rank": 5,
         "name": "TV Hörde",
-        "sp": "",
-        "s": "8",
-        "pkt": "10",
+        "sp": "▲",
+        "s": "0",
+        "pkt": "0",
         "current": true
       },
       {
-        "rank": 6,
-        "name": "Rhein-Sieg Volleys / Mondorf",
+        "rank": 5,
+        "name": "SolingenVolleys",
         "sp": "",
-        "s": "8",
-        "pkt": "6",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "SSF Bonn",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 7,
-        "name": "Rumelner TV",
+        "name": "Rhein-Sieg Volleys",
         "sp": "",
-        "s": "8",
-        "pkt": "4",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 8,
-        "name": "Meckenheimer SV",
+        "name": "FCJ Köln",
         "sp": "",
-        "s": "8",
-        "pkt": "2",
+        "s": "0",
+        "pkt": "0",
         "current": false
       },
       {
         "rank": 9,
-        "name": "Moerser SC",
+        "name": "DJK Tusa 06 Düsseldorf",
         "sp": "",
-        "s": "8",
+        "s": "0",
         "pkt": "0",
         "current": false
       }
@@ -1006,92 +557,11 @@
     "spiele": [],
     "kader": []
   },
-  "u16m": {
-    "league": "",
+  "u14m": {
+    "league": "NRW-Liga mU14",
     "rank": null,
     "rankTotal": 0,
     "tabelle": [],
-    "spiele": [],
-    "kader": []
-  },
-  "u14m": {
-    "league": "NRW-Liga mU14",
-    "rank": 7,
-    "rankTotal": 9,
-    "tabelle": [
-      {
-        "rank": 1,
-        "name": "VV Humann Essen",
-        "sp": "",
-        "s": "8",
-        "pkt": "16",
-        "current": false
-      },
-      {
-        "rank": 2,
-        "name": "SolingenVolleys",
-        "sp": "",
-        "s": "8",
-        "pkt": "14",
-        "current": false
-      },
-      {
-        "rank": 3,
-        "name": "FCJ Köln",
-        "sp": "",
-        "s": "8",
-        "pkt": "12",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "Meckenheimer SV",
-        "sp": "",
-        "s": "8",
-        "pkt": "8",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "VoR Paderborn",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "DJK Tusa Düsseldorf",
-        "sp": "",
-        "s": "8",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "TV Hörde",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": true
-      },
-      {
-        "rank": 8,
-        "name": "Dürener TV",
-        "sp": "",
-        "s": "8",
-        "pkt": "4",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "TSC Gievenbeck",
-        "sp": "",
-        "s": "8",
-        "pkt": "2",
-        "current": false
-      }
-    ],
     "spiele": [],
     "kader": []
   },
