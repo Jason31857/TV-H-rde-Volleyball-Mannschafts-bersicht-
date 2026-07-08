@@ -2,8 +2,89 @@
   "damen2": {
     "league": "Verbandsliga 4 Frauen",
     "rank": null,
-    "rankTotal": 0,
-    "tabelle": [],
+    "rankTotal": 10,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "VoR Paderborn II",
+        "sp": "▲",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "Telekom Post SV Bielefeld",
+        "sp": "△",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "TV Jahn Rheine",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "TSC Gievenbeck II",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "TSC Gievenbeck",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "SV Blau-Weiß Aasee II",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "RC Sorpesee II",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "Gütersloher TV",
+        "sp": "▽",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "DJK Delbrück",
+        "sp": "▼",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 10,
+        "name": "1. VV Holzwickede",
+        "sp": "▼",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
@@ -305,7 +386,7 @@
       },
       {
         "rank": 7,
-        "name": "SG Sendenhorst II",
+        "name": "SG Everswinkel-Sendenhorst",
         "sp": "▽",
         "s": "0",
         "pkt": "0",
