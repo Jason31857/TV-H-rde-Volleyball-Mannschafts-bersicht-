@@ -329,7 +329,48 @@
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "Dieckmann, Ole",
+        "name": "2010",
+        "pos": "–"
+      },
+      {
+        "nr": "Kukoljac, Andrej",
+        "name": "2006",
+        "pos": "–"
+      },
+      {
+        "nr": "Lalov, Vladimir",
+        "name": "2009",
+        "pos": "–"
+      },
+      {
+        "nr": "May, Lewis",
+        "name": "2006",
+        "pos": "–"
+      },
+      {
+        "nr": "Obier-Biesinger, Arthur",
+        "name": "2008",
+        "pos": "–"
+      },
+      {
+        "nr": "Rautenberg, Melvin",
+        "name": "2008",
+        "pos": "–"
+      },
+      {
+        "nr": "Selen, Tanel",
+        "name": "2006",
+        "pos": "–"
+      },
+      {
+        "nr": "Zywicki, Davin",
+        "name": "2008",
+        "pos": "–"
+      }
+    ]
   },
   "herren3": {
     "league": "Landesliga 6 Männer",
