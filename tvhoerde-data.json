@@ -589,17 +589,163 @@
   },
   "u20m": {
     "league": "NRW-Liga mU20",
-    "rank": null,
-    "rankTotal": 0,
-    "tabelle": [],
+    "rank": 3,
+    "rankTotal": 9,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "VV Humann Essen",
+        "sp": "▲",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "Telekom Post SV Bielefeld",
+        "sp": "▲",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "TV Hörde",
+        "sp": "▲",
+        "s": "0",
+        "pkt": "0",
+        "current": true
+      },
+      {
+        "rank": 4,
+        "name": "SolingenVolleys",
+        "sp": "▲",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "Rhein-Sieg Volleys",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "Moerser SC",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "Meckenheimer SV",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "FCJ Köln",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "1. VC Minden",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
   "u18m": {
     "league": "NRW-Liga mU18",
-    "rank": null,
-    "rankTotal": 0,
-    "tabelle": [],
+    "rank": 4,
+    "rankTotal": 9,
+    "tabelle": [
+      {
+        "rank": 1,
+        "name": "VV Humann Essen",
+        "sp": "▲",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "TuB Bocholt",
+        "sp": "▲",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "Telekom Post SV Bielefeld",
+        "sp": "▲",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "TV Hörde",
+        "sp": "▲",
+        "s": "0",
+        "pkt": "0",
+        "current": true
+      },
+      {
+        "rank": 5,
+        "name": "SolingenVolleys",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 6,
+        "name": "SSF Bonn",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "FCJ Köln",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 8,
+        "name": "DJK Tusa 06 Düsseldorf",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "1. VC Minden",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      }
+    ],
     "spiele": [],
     "kader": []
   },
