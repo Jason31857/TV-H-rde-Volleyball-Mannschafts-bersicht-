@@ -159,7 +159,53 @@
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "Dunkhorst, Matilda",
+        "name": "15",
+        "pos": "Libero"
+      },
+      {
+        "nr": "Graba, MiaMarie",
+        "name": "17",
+        "pos": "Middle blocker"
+      },
+      {
+        "nr": "Landgraf, Ida",
+        "name": "16",
+        "pos": "Middle blocker"
+      },
+      {
+        "nr": "Lefarth, Miria",
+        "name": "13",
+        "pos": "Opposite"
+      },
+      {
+        "nr": "Lindenberg, Mia",
+        "name": "18",
+        "pos": "Libero"
+      },
+      {
+        "nr": "Nuessen, Francesca",
+        "name": "11",
+        "pos": "Wing spiker"
+      },
+      {
+        "nr": "Not visible",
+        "name": "26",
+        "pos": "Wing spiker"
+      },
+      {
+        "nr": "terSchmitten, Nala",
+        "name": "14",
+        "pos": "Setter"
+      },
+      {
+        "nr": "Winter, Franziska",
+        "name": "12",
+        "pos": "Middle blocker"
+      }
+    ]
   },
   "damen4": {
     "league": "Kreisliga Dortmund - Unna Frauen",
