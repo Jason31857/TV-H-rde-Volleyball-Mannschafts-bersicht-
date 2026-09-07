@@ -54,7 +54,7 @@
       },
       {
         "rank": 7,
-        "name": "RC Sorpesee II",
+        "name": "SG DJK Delbrück/VfB Schloß Holte",
         "sp": "",
         "s": "0",
         "pkt": "0",
@@ -62,7 +62,7 @@
       },
       {
         "rank": 8,
-        "name": "Gütersloher TV",
+        "name": "RC Sorpesee II",
         "sp": "▽",
         "s": "0",
         "pkt": "0",
@@ -70,7 +70,7 @@
       },
       {
         "rank": 9,
-        "name": "DJK Delbrück",
+        "name": "Gütersloher TV",
         "sp": "▼",
         "s": "0",
         "pkt": "0",
@@ -464,14 +464,6 @@
       },
       {
         "rank": 5,
-        "name": "Sportclub Münster 08",
-        "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": false
-      },
-      {
-        "rank": 6,
         "name": "SV Blau-Weiß Aasee II",
         "sp": "",
         "s": "0",
@@ -479,8 +471,16 @@
         "current": false
       },
       {
-        "rank": 7,
+        "rank": 6,
         "name": "SG Everswinkel-Sendenhorst",
+        "sp": "",
+        "s": "0",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 7,
+        "name": "SG 08-Saxonia",
         "sp": "▽",
         "s": "0",
         "pkt": "0",
