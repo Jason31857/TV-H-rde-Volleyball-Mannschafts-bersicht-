@@ -642,19 +642,35 @@
   },
   "u20m": {
     "league": "NRW-Liga mU20",
-    "rank": 3,
+    "rank": 5,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
         "name": "VV Humann Essen",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 2,
+        "name": "FCJ Köln",
+        "sp": "▲",
+        "s": "1",
+        "pkt": "2",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "SolingenVolleys",
+        "sp": "▲",
+        "s": "2",
+        "pkt": "2",
+        "current": false
+      },
+      {
+        "rank": 4,
         "name": "Telekom Post SV Bielefeld",
         "sp": "▲",
         "s": "0",
@@ -662,39 +678,15 @@
         "current": false
       },
       {
-        "rank": 3,
+        "rank": 5,
         "name": "TV Hörde",
-        "sp": "▲",
+        "sp": "",
         "s": "0",
         "pkt": "0",
         "current": true
       },
       {
-        "rank": 4,
-        "name": "SolingenVolleys",
-        "sp": "▲",
-        "s": "0",
-        "pkt": "0",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "Rhein-Sieg Volleys",
-        "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": false
-      },
-      {
         "rank": 6,
-        "name": "Moerser SC",
-        "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": false
-      },
-      {
-        "rank": 7,
         "name": "Meckenheimer SV",
         "sp": "",
         "s": "0",
@@ -702,18 +694,26 @@
         "current": false
       },
       {
-        "rank": 8,
-        "name": "FCJ Köln",
+        "rank": 7,
+        "name": "1. VC Minden",
         "sp": "",
         "s": "0",
         "pkt": "0",
         "current": false
       },
       {
-        "rank": 9,
-        "name": "1. VC Minden",
+        "rank": 8,
+        "name": "Moerser SC",
         "sp": "",
-        "s": "0",
+        "s": "1",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "Rhein-Sieg Volleys",
+        "sp": "",
+        "s": "1",
         "pkt": "0",
         "current": false
       }
@@ -804,44 +804,44 @@
   },
   "u16m": {
     "league": "NRW-Liga mU16",
-    "rank": 4,
+    "rank": 8,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
-        "name": "VV Humann Essen",
+        "name": "SolingenVolleys",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 2,
-        "name": "TuB Bocholt",
+        "name": "VV Humann Essen",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 3,
-        "name": "Telekom Post SV Bielefeld",
+        "name": "Rhein-Sieg Volleys",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 4,
-        "name": "TV Hörde",
+        "name": "FCJ Köln",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
-        "current": true
+        "s": "2",
+        "pkt": "2",
+        "current": false
       },
       {
         "rank": 5,
-        "name": "SolingenVolleys",
+        "name": "Telekom Post SV Bielefeld",
         "sp": "",
         "s": "0",
         "pkt": "0",
@@ -857,25 +857,25 @@
       },
       {
         "rank": 7,
-        "name": "Rhein-Sieg Volleys",
+        "name": "DJK Tusa 06 Düsseldorf",
         "sp": "",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       },
       {
         "rank": 8,
-        "name": "FCJ Köln",
+        "name": "TV Hörde",
         "sp": "",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
-        "current": false
+        "current": true
       },
       {
         "rank": 9,
-        "name": "DJK Tusa 06 Düsseldorf",
+        "name": "TuB Bocholt",
         "sp": "",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       }
