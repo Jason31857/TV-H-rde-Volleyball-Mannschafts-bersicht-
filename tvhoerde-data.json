@@ -642,27 +642,35 @@
   },
   "u20m": {
     "league": "NRW-Liga mU20",
-    "rank": 5,
+    "rank": 7,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
-        "name": "VV Humann Essen",
+        "name": "FCJ Köln",
         "sp": "▲",
-        "s": "1",
-        "pkt": "2",
+        "s": "2",
+        "pkt": "4",
         "current": false
       },
       {
         "rank": 2,
-        "name": "FCJ Köln",
+        "name": "VV Humann Essen",
         "sp": "▲",
-        "s": "1",
-        "pkt": "2",
+        "s": "2",
+        "pkt": "4",
         "current": false
       },
       {
         "rank": 3,
+        "name": "Meckenheimer SV",
+        "sp": "▲",
+        "s": "2",
+        "pkt": "4",
+        "current": false
+      },
+      {
+        "rank": 4,
         "name": "SolingenVolleys",
         "sp": "▲",
         "s": "2",
@@ -670,42 +678,34 @@
         "current": false
       },
       {
-        "rank": 4,
-        "name": "Telekom Post SV Bielefeld",
-        "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "rank": 5,
+        "name": "Moerser SC",
+        "sp": "",
+        "s": "2",
+        "pkt": "2",
         "current": false
       },
       {
-        "rank": 5,
-        "name": "TV Hörde",
-        "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": true
-      },
-      {
         "rank": 6,
-        "name": "Meckenheimer SV",
+        "name": "1. VC Minden",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "2",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 7,
-        "name": "1. VC Minden",
+        "name": "TV Hörde",
         "sp": "",
-        "s": "0",
+        "s": "2",
         "pkt": "0",
-        "current": false
+        "current": true
       },
       {
         "rank": 8,
-        "name": "Moerser SC",
+        "name": "Telekom Post SV Bielefeld",
         "sp": "",
-        "s": "1",
+        "s": "2",
         "pkt": "0",
         "current": false
       },
@@ -713,7 +713,7 @@
         "rank": 9,
         "name": "Rhein-Sieg Volleys",
         "sp": "",
-        "s": "1",
+        "s": "2",
         "pkt": "0",
         "current": false
       }
@@ -723,11 +723,27 @@
   },
   "u18m": {
     "league": "NRW-Liga mU18",
-    "rank": 4,
+    "rank": 2,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
+        "name": "FCJ Köln",
+        "sp": "▲",
+        "s": "1",
+        "pkt": "2",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "TV Hörde",
+        "sp": "▲",
+        "s": "1",
+        "pkt": "2",
+        "current": true
+      },
+      {
+        "rank": 3,
         "name": "VV Humann Essen",
         "sp": "▲",
         "s": "0",
@@ -735,7 +751,7 @@
         "current": false
       },
       {
-        "rank": 2,
+        "rank": 4,
         "name": "TuB Bocholt",
         "sp": "▲",
         "s": "0",
@@ -743,24 +759,8 @@
         "current": false
       },
       {
-        "rank": 3,
-        "name": "Telekom Post SV Bielefeld",
-        "sp": "▲",
-        "s": "0",
-        "pkt": "0",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "TV Hörde",
-        "sp": "▲",
-        "s": "0",
-        "pkt": "0",
-        "current": true
-      },
-      {
         "rank": 5,
-        "name": "SolingenVolleys",
+        "name": "Telekom Post SV Bielefeld",
         "sp": "",
         "s": "0",
         "pkt": "0",
@@ -768,7 +768,7 @@
       },
       {
         "rank": 6,
-        "name": "SSF Bonn",
+        "name": "SolingenVolleys",
         "sp": "",
         "s": "0",
         "pkt": "0",
@@ -776,14 +776,6 @@
       },
       {
         "rank": 7,
-        "name": "FCJ Köln",
-        "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": false
-      },
-      {
-        "rank": 8,
         "name": "DJK Tusa 06 Düsseldorf",
         "sp": "",
         "s": "0",
@@ -791,10 +783,18 @@
         "current": false
       },
       {
-        "rank": 9,
+        "rank": 8,
         "name": "1. VC Minden",
         "sp": "",
-        "s": "0",
+        "s": "1",
+        "pkt": "0",
+        "current": false
+      },
+      {
+        "rank": 9,
+        "name": "SSF Bonn",
+        "sp": "",
+        "s": "1",
         "pkt": "0",
         "current": false
       }
@@ -809,31 +809,31 @@
     "tabelle": [
       {
         "rank": 1,
-        "name": "SolingenVolleys",
+        "name": "VV Humann Essen",
         "sp": "▲",
-        "s": "1",
-        "pkt": "2",
+        "s": "2",
+        "pkt": "4",
         "current": false
       },
       {
         "rank": 2,
-        "name": "VV Humann Essen",
+        "name": "SolingenVolleys",
         "sp": "▲",
-        "s": "1",
-        "pkt": "2",
+        "s": "2",
+        "pkt": "4",
         "current": false
       },
       {
         "rank": 3,
-        "name": "Rhein-Sieg Volleys",
+        "name": "Telekom Post SV Bielefeld",
         "sp": "▲",
-        "s": "1",
-        "pkt": "2",
+        "s": "2",
+        "pkt": "4",
         "current": false
       },
       {
         "rank": 4,
-        "name": "FCJ Köln",
+        "name": "Rhein-Sieg Volleys",
         "sp": "▲",
         "s": "2",
         "pkt": "2",
@@ -841,25 +841,25 @@
       },
       {
         "rank": 5,
-        "name": "Telekom Post SV Bielefeld",
+        "name": "SSF Bonn",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "2",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 6,
-        "name": "SSF Bonn",
+        "name": "FCJ Köln",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "2",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 7,
         "name": "DJK Tusa 06 Düsseldorf",
         "sp": "",
-        "s": "1",
+        "s": "2",
         "pkt": "0",
         "current": false
       },
@@ -867,7 +867,7 @@
         "rank": 8,
         "name": "TV Hörde",
         "sp": "",
-        "s": "1",
+        "s": "2",
         "pkt": "0",
         "current": true
       },
@@ -875,7 +875,7 @@
         "rank": 9,
         "name": "TuB Bocholt",
         "sp": "",
-        "s": "1",
+        "s": "2",
         "pkt": "0",
         "current": false
       }
