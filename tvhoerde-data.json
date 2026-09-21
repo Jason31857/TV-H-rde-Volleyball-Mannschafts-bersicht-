@@ -728,65 +728,65 @@
     "tabelle": [
       {
         "rank": 1,
-        "name": "FCJ Köln",
+        "name": "VV Humann Essen",
         "sp": "▲",
-        "s": "1",
-        "pkt": "2",
+        "s": "2",
+        "pkt": "4",
         "current": false
       },
       {
         "rank": 2,
         "name": "TV Hörde",
         "sp": "▲",
-        "s": "1",
-        "pkt": "2",
+        "s": "2",
+        "pkt": "4",
         "current": true
       },
       {
         "rank": 3,
-        "name": "VV Humann Essen",
+        "name": "Telekom Post SV Bielefeld",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "s": "2",
+        "pkt": "4",
         "current": false
       },
       {
         "rank": 4,
-        "name": "TuB Bocholt",
+        "name": "FCJ Köln",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "s": "2",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 5,
-        "name": "Telekom Post SV Bielefeld",
+        "name": "SolingenVolleys",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "2",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 6,
-        "name": "SolingenVolleys",
+        "name": "1. VC Minden",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "2",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 7,
-        "name": "DJK Tusa 06 Düsseldorf",
+        "name": "TuB Bocholt",
         "sp": "",
-        "s": "0",
+        "s": "2",
         "pkt": "0",
         "current": false
       },
       {
         "rank": 8,
-        "name": "1. VC Minden",
+        "name": "DJK Tusa 06 Düsseldorf",
         "sp": "",
-        "s": "1",
+        "s": "2",
         "pkt": "0",
         "current": false
       },
@@ -794,7 +794,7 @@
         "rank": 9,
         "name": "SSF Bonn",
         "sp": "",
-        "s": "1",
+        "s": "2",
         "pkt": "0",
         "current": false
       }
