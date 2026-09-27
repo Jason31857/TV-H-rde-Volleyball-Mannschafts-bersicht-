@@ -6,47 +6,47 @@
     "tabelle": [
       {
         "rank": 1,
-        "name": "VoR Paderborn II",
+        "name": "1. VV Holzwickede",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "3",
         "current": false
       },
       {
         "rank": 2,
-        "name": "Telekom Post SV Bielefeld",
+        "name": "TSC Gievenbeck II",
         "sp": "△",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "3",
         "current": false
       },
       {
         "rank": 3,
-        "name": "TV Jahn Rheine",
+        "name": "SG DJK Delbrück/VfB Schloß Holte",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "3",
         "current": false
       },
       {
         "rank": 4,
-        "name": "TSC Gievenbeck II",
+        "name": "SV Blau-Weiß Aasee II",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 5,
-        "name": "TSC Gievenbeck",
+        "name": "TV Jahn Rheine",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "1",
         "current": false
       },
       {
         "rank": 6,
-        "name": "SV Blau-Weiß Aasee II",
+        "name": "Telekom Post SV Bielefeld",
         "sp": "",
         "s": "0",
         "pkt": "0",
@@ -54,7 +54,7 @@
       },
       {
         "rank": 7,
-        "name": "SG DJK Delbrück/VfB Schloß Holte",
+        "name": "Gütersloher TV",
         "sp": "",
         "s": "0",
         "pkt": "0",
@@ -62,25 +62,25 @@
       },
       {
         "rank": 8,
-        "name": "RC Sorpesee II",
+        "name": "VoR Paderborn II",
         "sp": "▽",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       },
       {
         "rank": 9,
-        "name": "Gütersloher TV",
+        "name": "TSC Gievenbeck",
         "sp": "▼",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       },
       {
         "rank": 10,
-        "name": "1. VV Holzwickede",
+        "name": "RC Sorpesee II",
         "sp": "▼",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       }
@@ -90,60 +90,60 @@
   },
   "damen3": {
     "league": "Bezirksliga 9 Frauen",
-    "rank": 6,
+    "rank": 4,
     "rankTotal": 8,
     "tabelle": [
       {
         "rank": 1,
         "name": "VfL Bad Berleburg",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 2,
-        "name": "VV Schwerte IV",
+        "name": "TuS Iserlohn",
         "sp": "△",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 3,
-        "name": "VSC Dortmund",
+        "name": "Letmather TV II",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 4,
-        "name": "TuS Iserlohn",
+        "name": "TV Hörde III",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": false
+        "s": "1",
+        "pkt": "1",
+        "current": true
       },
       {
         "rank": 5,
-        "name": "TV Kredenbach-Lohe",
+        "name": "TV Hoffnung Littfeld",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "1",
         "current": false
       },
       {
         "rank": 6,
-        "name": "TV Hörde III",
+        "name": "TV Kredenbach-Lohe",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": true
+        "s": "1",
+        "pkt": "1",
+        "current": false
       },
       {
         "rank": 7,
-        "name": "TV Hoffnung Littfeld",
+        "name": "VV Schwerte IV",
         "sp": "▽",
         "s": "0",
         "pkt": "0",
@@ -151,7 +151,7 @@
       },
       {
         "rank": 8,
-        "name": "Letmather TV II",
+        "name": "VSC Dortmund",
         "sp": "▼",
         "s": "0",
         "pkt": "0",
@@ -282,27 +282,43 @@
   },
   "herren2": {
     "league": "Verbandsliga 3 Männer",
-    "rank": 6,
+    "rank": 7,
     "rankTotal": 10,
     "tabelle": [
       {
         "rank": 1,
-        "name": "TuS Saxonia Münster III",
+        "name": "TuS Saxonia Münster II",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "3",
         "current": false
       },
       {
         "rank": 2,
-        "name": "TuS Saxonia Münster II",
+        "name": "Hammer SportClub",
         "sp": "△",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "3",
         "current": false
       },
       {
         "rank": 3,
+        "name": "TSC Gievenbeck III",
+        "sp": "",
+        "s": "1",
+        "pkt": "2",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "SG Sendenhorst",
+        "sp": "",
+        "s": "1",
+        "pkt": "1",
+        "current": false
+      },
+      {
+        "rank": 5,
         "name": "TuS Meinerzhagen",
         "sp": "",
         "s": "0",
@@ -310,7 +326,7 @@
         "current": false
       },
       {
-        "rank": 4,
+        "rank": 6,
         "name": "TuS Iserlohn",
         "sp": "",
         "s": "0",
@@ -318,28 +334,12 @@
         "current": false
       },
       {
-        "rank": 5,
-        "name": "TVE Vogelsang",
-        "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": false
-      },
-      {
-        "rank": 6,
+        "rank": 7,
         "name": "TV Hörde III",
         "sp": "",
         "s": "0",
         "pkt": "0",
         "current": true
-      },
-      {
-        "rank": 7,
-        "name": "TSC Gievenbeck III",
-        "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": false
       },
       {
         "rank": 8,
@@ -351,17 +351,17 @@
       },
       {
         "rank": 9,
-        "name": "SG Sendenhorst",
+        "name": "TVE Vogelsang",
         "sp": "▼",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       },
       {
         "rank": 10,
-        "name": "Hammer SportClub",
+        "name": "TuS Saxonia Münster III",
         "sp": "▼",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       }
@@ -437,30 +437,46 @@
     "tabelle": [
       {
         "rank": 1,
-        "name": "VC Marl",
+        "name": "Bocholter WSV",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "3",
         "current": false
       },
       {
         "rank": 2,
-        "name": "TuS Saxonia Münster IV",
+        "name": "SG 08-Saxonia",
         "sp": "△",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "3",
         "current": false
       },
       {
         "rank": 3,
-        "name": "TV Westfalia Epe",
+        "name": "VC Marl",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "3",
         "current": false
       },
       {
         "rank": 4,
+        "name": "SG Everswinkel-Sendenhorst",
+        "sp": "",
+        "s": "1",
+        "pkt": "2",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "SV Blau-Weiß Aasee II",
+        "sp": "",
+        "s": "1",
+        "pkt": "1",
+        "current": false
+      },
+      {
+        "rank": 6,
         "name": "TSC Gievenbeck IV",
         "sp": "",
         "s": "0",
@@ -468,42 +484,26 @@
         "current": false
       },
       {
-        "rank": 5,
-        "name": "SV Blau-Weiß Aasee II",
-        "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "SG Everswinkel-Sendenhorst",
-        "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": false
-      },
-      {
         "rank": 7,
-        "name": "SG 08-Saxonia",
+        "name": "Raesfelder VG",
         "sp": "▽",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       },
       {
         "rank": 8,
-        "name": "Raesfelder VG",
+        "name": "TuS Saxonia Münster IV",
         "sp": "▼",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       },
       {
         "rank": 9,
-        "name": "Bocholter WSV",
+        "name": "TV Westfalia Epe",
         "sp": "▼",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       }
@@ -513,70 +513,70 @@
   },
   "herren4": {
     "league": "Bezirksliga 10 Männer",
-    "rank": 3,
+    "rank": 6,
     "rankTotal": 8,
     "tabelle": [
       {
         "rank": 1,
-        "name": "VfL Telstar Bochum II",
+        "name": "PSV Bochum",
         "sp": "▲",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "3",
         "current": false
       },
       {
         "rank": 2,
-        "name": "TuS Hattingen",
+        "name": "Ruhrvolleys Stockum",
         "sp": "△",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "3",
         "current": false
       },
       {
         "rank": 3,
-        "name": "TV Hörde IV",
+        "name": "TB Höntrop III",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": true
+        "s": "1",
+        "pkt": "3",
+        "current": false
       },
       {
         "rank": 4,
-        "name": "TV Dortmund-Mengede",
+        "name": "SG Herne",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 5,
-        "name": "TB Höntrop III",
+        "name": "TV Dortmund-Mengede",
         "sp": "",
-        "s": "0",
-        "pkt": "0",
+        "s": "1",
+        "pkt": "1",
         "current": false
       },
       {
         "rank": 6,
-        "name": "SG Herne",
+        "name": "TV Hörde IV",
         "sp": "",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
-        "current": false
+        "current": true
       },
       {
         "rank": 7,
-        "name": "Ruhrvolleys Stockum",
+        "name": "VfL Telstar Bochum II",
         "sp": "▽",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       },
       {
         "rank": 8,
-        "name": "PSV Bochum",
+        "name": "TuS Hattingen",
         "sp": "▼",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       }
