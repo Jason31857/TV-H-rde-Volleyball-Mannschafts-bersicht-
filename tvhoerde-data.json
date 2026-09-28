@@ -6,7 +6,7 @@
     "tabelle": [
       {
         "rank": 1,
-        "name": "1. VV Holzwickede",
+        "name": "Gütersloher TV",
         "sp": "▲",
         "s": "1",
         "pkt": "3",
@@ -14,7 +14,7 @@
       },
       {
         "rank": 2,
-        "name": "TSC Gievenbeck II",
+        "name": "1. VV Holzwickede",
         "sp": "△",
         "s": "1",
         "pkt": "3",
@@ -22,7 +22,7 @@
       },
       {
         "rank": 3,
-        "name": "SG DJK Delbrück/VfB Schloß Holte",
+        "name": "TSC Gievenbeck II",
         "sp": "",
         "s": "1",
         "pkt": "3",
@@ -30,6 +30,14 @@
       },
       {
         "rank": 4,
+        "name": "SG DJK Delbrück/VfB Schloß Holte",
+        "sp": "",
+        "s": "1",
+        "pkt": "3",
+        "current": false
+      },
+      {
+        "rank": 5,
         "name": "SV Blau-Weiß Aasee II",
         "sp": "",
         "s": "1",
@@ -37,7 +45,7 @@
         "current": false
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "TV Jahn Rheine",
         "sp": "",
         "s": "1",
@@ -45,24 +53,16 @@
         "current": false
       },
       {
-        "rank": 6,
-        "name": "Telekom Post SV Bielefeld",
-        "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": false
-      },
-      {
         "rank": 7,
-        "name": "Gütersloher TV",
+        "name": "VoR Paderborn II",
         "sp": "",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       },
       {
         "rank": 8,
-        "name": "VoR Paderborn II",
+        "name": "TSC Gievenbeck",
         "sp": "▽",
         "s": "1",
         "pkt": "0",
@@ -70,7 +70,7 @@
       },
       {
         "rank": 9,
-        "name": "TSC Gievenbeck",
+        "name": "RC Sorpesee II",
         "sp": "▼",
         "s": "1",
         "pkt": "0",
@@ -78,7 +78,7 @@
       },
       {
         "rank": 10,
-        "name": "RC Sorpesee II",
+        "name": "Telekom Post SV Bielefeld",
         "sp": "▼",
         "s": "1",
         "pkt": "0",
@@ -282,7 +282,7 @@
   },
   "herren2": {
     "league": "Verbandsliga 3 Männer",
-    "rank": 7,
+    "rank": 3,
     "rankTotal": 10,
     "tabelle": [
       {
@@ -303,6 +303,14 @@
       },
       {
         "rank": 3,
+        "name": "TV Hörde III",
+        "sp": "",
+        "s": "1",
+        "pkt": "3",
+        "current": true
+      },
+      {
+        "rank": 4,
         "name": "TSC Gievenbeck III",
         "sp": "",
         "s": "1",
@@ -310,7 +318,7 @@
         "current": false
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "SG Sendenhorst",
         "sp": "",
         "s": "1",
@@ -318,7 +326,7 @@
         "current": false
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "TuS Meinerzhagen",
         "sp": "",
         "s": "0",
@@ -326,7 +334,7 @@
         "current": false
       },
       {
-        "rank": 6,
+        "rank": 7,
         "name": "TuS Iserlohn",
         "sp": "",
         "s": "0",
@@ -334,18 +342,10 @@
         "current": false
       },
       {
-        "rank": 7,
-        "name": "TV Hörde III",
-        "sp": "",
-        "s": "0",
-        "pkt": "0",
-        "current": true
-      },
-      {
         "rank": 8,
         "name": "TB Höntrop",
         "sp": "▽",
-        "s": "0",
+        "s": "1",
         "pkt": "0",
         "current": false
       },
