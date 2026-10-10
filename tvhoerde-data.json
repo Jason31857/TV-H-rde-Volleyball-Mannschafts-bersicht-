@@ -723,24 +723,24 @@
   },
   "u18m": {
     "league": "NRW-Liga mU18",
-    "rank": 2,
+    "rank": 1,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
+        "name": "TV Hörde",
+        "sp": "▲",
+        "s": "4",
+        "pkt": "8",
+        "current": true
+      },
+      {
+        "rank": 2,
         "name": "VV Humann Essen",
         "sp": "▲",
         "s": "2",
         "pkt": "4",
         "current": false
-      },
-      {
-        "rank": 2,
-        "name": "TV Hörde",
-        "sp": "▲",
-        "s": "2",
-        "pkt": "4",
-        "current": true
       },
       {
         "rank": 3,
@@ -752,15 +752,15 @@
       },
       {
         "rank": 4,
-        "name": "FCJ Köln",
+        "name": "1. VC Minden",
         "sp": "▲",
-        "s": "2",
-        "pkt": "2",
+        "s": "3",
+        "pkt": "4",
         "current": false
       },
       {
         "rank": 5,
-        "name": "SolingenVolleys",
+        "name": "FCJ Köln",
         "sp": "",
         "s": "2",
         "pkt": "2",
@@ -768,9 +768,9 @@
       },
       {
         "rank": 6,
-        "name": "1. VC Minden",
+        "name": "SolingenVolleys",
         "sp": "",
-        "s": "2",
+        "s": "3",
         "pkt": "2",
         "current": false
       },
@@ -784,17 +784,17 @@
       },
       {
         "rank": 8,
-        "name": "DJK Tusa 06 Düsseldorf",
+        "name": "SSF Bonn",
         "sp": "",
-        "s": "2",
+        "s": "3",
         "pkt": "0",
         "current": false
       },
       {
         "rank": 9,
-        "name": "SSF Bonn",
+        "name": "DJK Tusa 06 Düsseldorf",
         "sp": "",
-        "s": "2",
+        "s": "3",
         "pkt": "0",
         "current": false
       }
