@@ -313,13 +313,13 @@
         "rank": 4,
         "name": "TuS Iserlohn",
         "sp": "",
-        "s": "1",
+        "s": "2",
         "pkt": "3",
         "current": false
       },
       {
         "rank": 5,
-        "name": "Hammer SportClub",
+        "name": "TuS Meinerzhagen",
         "sp": "",
         "s": "2",
         "pkt": "3",
@@ -327,6 +327,14 @@
       },
       {
         "rank": 6,
+        "name": "Hammer SportClub",
+        "sp": "",
+        "s": "2",
+        "pkt": "3",
+        "current": false
+      },
+      {
+        "rank": 7,
         "name": "TB Höntrop",
         "sp": "",
         "s": "2",
@@ -334,27 +342,19 @@
         "current": false
       },
       {
-        "rank": 7,
+        "rank": 8,
         "name": "SG Sendenhorst",
-        "sp": "",
+        "sp": "▽",
         "s": "2",
         "pkt": "2",
         "current": false
       },
       {
-        "rank": 8,
+        "rank": 9,
         "name": "TuS Saxonia Münster III",
-        "sp": "▽",
+        "sp": "▼",
         "s": "2",
         "pkt": "1",
-        "current": false
-      },
-      {
-        "rank": 9,
-        "name": "TuS Meinerzhagen",
-        "sp": "▼",
-        "s": "1",
-        "pkt": "0",
         "current": false
       },
       {
@@ -642,44 +642,44 @@
   },
   "u20m": {
     "league": "NRW-Liga mU20",
-    "rank": 7,
+    "rank": 8,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
         "name": "VV Humann Essen",
         "sp": "▲",
-        "s": "3",
-        "pkt": "6",
+        "s": "4",
+        "pkt": "8",
         "current": false
       },
       {
         "rank": 2,
         "name": "FCJ Köln",
         "sp": "▲",
-        "s": "2",
-        "pkt": "4",
+        "s": "4",
+        "pkt": "6",
         "current": false
       },
       {
         "rank": 3,
         "name": "SolingenVolleys",
         "sp": "▲",
-        "s": "3",
+        "s": "4",
         "pkt": "4",
         "current": false
       },
       {
         "rank": 4,
-        "name": "1. VC Minden",
+        "name": "Meckenheimer SV",
         "sp": "▲",
-        "s": "3",
+        "s": "4",
         "pkt": "4",
         "current": false
       },
       {
         "rank": 5,
-        "name": "Meckenheimer SV",
+        "name": "1. VC Minden",
         "sp": "",
         "s": "4",
         "pkt": "4",
@@ -695,19 +695,19 @@
       },
       {
         "rank": 7,
+        "name": "Telekom Post SV Bielefeld",
+        "sp": "",
+        "s": "4",
+        "pkt": "2",
+        "current": false
+      },
+      {
+        "rank": 8,
         "name": "TV Hörde",
         "sp": "",
         "s": "2",
         "pkt": "0",
         "current": true
-      },
-      {
-        "rank": 8,
-        "name": "Telekom Post SV Bielefeld",
-        "sp": "",
-        "s": "3",
-        "pkt": "0",
-        "current": false
       },
       {
         "rank": 9,
@@ -804,7 +804,7 @@
   },
   "u16m": {
     "league": "NRW-Liga mU16",
-    "rank": 8,
+    "rank": 9,
     "rankTotal": 9,
     "tabelle": [
       {
@@ -819,21 +819,21 @@
         "rank": 2,
         "name": "VV Humann Essen",
         "sp": "▲",
-        "s": "2",
-        "pkt": "4",
+        "s": "4",
+        "pkt": "6",
         "current": false
       },
       {
         "rank": 3,
         "name": "Telekom Post SV Bielefeld",
         "sp": "▲",
-        "s": "2",
-        "pkt": "4",
+        "s": "4",
+        "pkt": "6",
         "current": false
       },
       {
         "rank": 4,
-        "name": "FCJ Köln",
+        "name": "SSF Bonn",
         "sp": "▲",
         "s": "4",
         "pkt": "4",
@@ -841,43 +841,43 @@
       },
       {
         "rank": 5,
-        "name": "SSF Bonn",
+        "name": "TuB Bocholt",
         "sp": "",
-        "s": "2",
-        "pkt": "2",
+        "s": "4",
+        "pkt": "4",
         "current": false
       },
       {
         "rank": 6,
-        "name": "Rhein-Sieg Volleys",
+        "name": "FCJ Köln",
         "sp": "",
-        "s": "3",
-        "pkt": "2",
+        "s": "4",
+        "pkt": "4",
         "current": false
       },
       {
         "rank": 7,
-        "name": "DJK Tusa 06 Düsseldorf",
+        "name": "Rhein-Sieg Volleys",
         "sp": "",
-        "s": "3",
+        "s": "4",
         "pkt": "2",
         "current": false
       },
       {
         "rank": 8,
+        "name": "DJK Tusa 06 Düsseldorf",
+        "sp": "",
+        "s": "4",
+        "pkt": "2",
+        "current": false
+      },
+      {
+        "rank": 9,
         "name": "TV Hörde",
         "sp": "",
         "s": "4",
         "pkt": "0",
         "current": true
-      },
-      {
-        "rank": 9,
-        "name": "TuB Bocholt",
-        "sp": "",
-        "s": "2",
-        "pkt": "0",
-        "current": false
       }
     ],
     "spiele": [],
