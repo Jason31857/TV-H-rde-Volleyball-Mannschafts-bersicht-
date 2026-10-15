@@ -582,7 +582,18 @@
       }
     ],
     "spiele": [],
-    "kader": []
+    "kader": [
+      {
+        "nr": "Dunkhorst, Minna Luise",
+        "name": "Trainer",
+        "pos": "–"
+      },
+      {
+        "nr": "Not visible",
+        "name": "Trainer",
+        "pos": "–"
+      }
+    ]
   },
   "herren5": {
     "league": "",
