@@ -442,23 +442,23 @@
     "tabelle": [
       {
         "rank": 1,
-        "name": "SV Blau-Weiß Aasee II",
+        "name": "SG Everswinkel-Sendenhorst",
         "sp": "▲",
+        "s": "3",
+        "pkt": "8",
+        "current": false
+      },
+      {
+        "rank": 2,
+        "name": "SV Blau-Weiß Aasee II",
+        "sp": "△",
         "s": "3",
         "pkt": "7",
         "current": false
       },
       {
-        "rank": 2,
-        "name": "VC Marl",
-        "sp": "△",
-        "s": "3",
-        "pkt": "6",
-        "current": false
-      },
-      {
         "rank": 3,
-        "name": "SG 08-Saxonia",
+        "name": "VC Marl",
         "sp": "",
         "s": "3",
         "pkt": "6",
@@ -466,15 +466,15 @@
       },
       {
         "rank": 4,
-        "name": "SG Everswinkel-Sendenhorst",
+        "name": "SG 08-Saxonia",
         "sp": "",
-        "s": "2",
-        "pkt": "5",
+        "s": "3",
+        "pkt": "6",
         "current": false
       },
       {
         "rank": 5,
-        "name": "TuS Saxonia Münster IV",
+        "name": "Raesfelder VG",
         "sp": "",
         "s": "2",
         "pkt": "3",
@@ -482,9 +482,9 @@
       },
       {
         "rank": 6,
-        "name": "Raesfelder VG",
+        "name": "TuS Saxonia Münster IV",
         "sp": "",
-        "s": "2",
+        "s": "3",
         "pkt": "3",
         "current": false
       },
