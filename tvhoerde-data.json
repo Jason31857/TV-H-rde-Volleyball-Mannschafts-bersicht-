@@ -376,62 +376,62 @@
       {
         "nr": "Janthal, Hendrik",
         "name": "2009",
-        "pos": "–"
+        "pos": "21"
       },
       {
         "nr": "Kotylo, Mykola",
         "name": "2006",
-        "pos": "–"
+        "pos": "14"
       },
       {
         "nr": "Kukoljac, Andrej",
         "name": "2006",
-        "pos": "–"
+        "pos": "1"
       },
       {
         "nr": "Lalov, Vladimir",
         "name": "2009",
-        "pos": "–"
+        "pos": "9"
       },
       {
         "nr": "Lamotte, Niklas",
         "name": "2010",
-        "pos": "–"
+        "pos": "2"
       },
       {
         "nr": "May, Lewis",
         "name": "2006",
-        "pos": "–"
+        "pos": "22"
       },
       {
         "nr": "Obier-Biesinger, Arthur",
         "name": "2008",
-        "pos": "–"
+        "pos": "7"
       },
       {
         "nr": "Rautenberg, Melvin",
         "name": "2008",
-        "pos": "–"
+        "pos": "33"
       },
       {
         "nr": "Selen, Tanel",
         "name": "2006",
-        "pos": "–"
+        "pos": "8"
       },
       {
         "nr": "Weber-Schmitz, Florian",
         "name": "2004",
-        "pos": "–"
+        "pos": "27"
       },
       {
         "nr": "Weyer, Erik",
         "name": "2004",
-        "pos": "–"
+        "pos": "26"
       },
       {
         "nr": "Zywicki, Davin",
         "name": "2008",
-        "pos": "–"
+        "pos": "24"
       }
     ]
   },
@@ -589,13 +589,58 @@
     "spiele": [],
     "kader": [
       {
-        "nr": "Dunkhorst, Minna Luise",
-        "name": "Trainer",
+        "nr": "Alberrawi, Qusai",
+        "name": "18",
         "pos": "–"
       },
       {
-        "nr": "Not visible",
-        "name": "Trainer",
+        "nr": "Chen, Dongni",
+        "name": "21",
+        "pos": "–"
+      },
+      {
+        "nr": "Fabritz, Colin",
+        "name": "17",
+        "pos": "–"
+      },
+      {
+        "nr": "Goos, Benjamin",
+        "name": "12",
+        "pos": "–"
+      },
+      {
+        "nr": "Haken, Julius",
+        "name": "15",
+        "pos": "–"
+      },
+      {
+        "nr": "Kramer, Henry",
+        "name": "99",
+        "pos": "–"
+      },
+      {
+        "nr": "Loboda, Milian",
+        "name": "29",
+        "pos": "–"
+      },
+      {
+        "nr": "Rodegro, Piet",
+        "name": "16",
+        "pos": "–"
+      },
+      {
+        "nr": "Schumann, Noah",
+        "name": "17",
+        "pos": "–"
+      },
+      {
+        "nr": "Serhiienko, Matvii",
+        "name": "13",
+        "pos": "–"
+      },
+      {
+        "nr": "Voß, Erik",
+        "name": "10",
         "pos": "–"
       }
     ]
