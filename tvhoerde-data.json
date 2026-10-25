@@ -14,14 +14,30 @@
       },
       {
         "rank": 2,
-        "name": "TV Jahn Rheine",
+        "name": "1. VV Holzwickede",
         "sp": "△",
+        "s": "4",
+        "pkt": "9",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "SV Blau-Weiß Aasee II",
+        "sp": "",
+        "s": "4",
+        "pkt": "8",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "TV Jahn Rheine",
+        "sp": "",
         "s": "3",
         "pkt": "7",
         "current": false
       },
       {
-        "rank": 3,
+        "rank": 5,
         "name": "VoR Paderborn II",
         "sp": "",
         "s": "3",
@@ -29,32 +45,16 @@
         "current": false
       },
       {
-        "rank": 4,
-        "name": "1. VV Holzwickede",
-        "sp": "",
-        "s": "3",
-        "pkt": "6",
-        "current": false
-      },
-      {
-        "rank": 5,
-        "name": "SV Blau-Weiß Aasee II",
-        "sp": "",
-        "s": "3",
-        "pkt": "5",
-        "current": false
-      },
-      {
         "rank": 6,
         "name": "SG DJK Delbrück/VfB Schloß Holte",
         "sp": "",
-        "s": "3",
+        "s": "4",
         "pkt": "5",
         "current": false
       },
       {
         "rank": 7,
-        "name": "TSC Gievenbeck II",
+        "name": "RC Sorpesee II",
         "sp": "",
         "s": "3",
         "pkt": "3",
@@ -62,9 +62,9 @@
       },
       {
         "rank": 8,
-        "name": "RC Sorpesee II",
+        "name": "TSC Gievenbeck II",
         "sp": "▽",
-        "s": "3",
+        "s": "4",
         "pkt": "3",
         "current": false
       },
@@ -90,7 +90,7 @@
   },
   "damen3": {
     "league": "Bezirksliga 9 Frauen",
-    "rank": 3,
+    "rank": 4,
     "rankTotal": 8,
     "tabelle": [
       {
@@ -103,14 +103,22 @@
       },
       {
         "rank": 2,
-        "name": "TuS Iserlohn",
+        "name": "TV Kredenbach-Lohe",
         "sp": "△",
+        "s": "4",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 3,
+        "name": "TuS Iserlohn",
+        "sp": "",
         "s": "2",
         "pkt": "5",
         "current": false
       },
       {
-        "rank": 3,
+        "rank": 4,
         "name": "TV Hörde III",
         "sp": "",
         "s": "2",
@@ -118,24 +126,16 @@
         "current": true
       },
       {
-        "rank": 4,
-        "name": "TV Kredenbach-Lohe",
+        "rank": 5,
+        "name": "Letmather TV II",
         "sp": "",
         "s": "3",
         "pkt": "4",
         "current": false
       },
       {
-        "rank": 5,
-        "name": "VSC Dortmund",
-        "sp": "",
-        "s": "2",
-        "pkt": "3",
-        "current": false
-      },
-      {
         "rank": 6,
-        "name": "Letmather TV II",
+        "name": "VSC Dortmund",
         "sp": "",
         "s": "2",
         "pkt": "3",
@@ -145,16 +145,16 @@
         "rank": 7,
         "name": "TV Hoffnung Littfeld",
         "sp": "▽",
-        "s": "3",
-        "pkt": "1",
+        "s": "4",
+        "pkt": "3",
         "current": false
       },
       {
         "rank": 8,
         "name": "VV Schwerte IV",
         "sp": "▼",
-        "s": "1",
-        "pkt": "0",
+        "s": "2",
+        "pkt": "1",
         "current": false
       }
     ],
@@ -287,35 +287,51 @@
   },
   "herren2": {
     "league": "Verbandsliga 3 Männer",
-    "rank": 3,
+    "rank": 5,
     "rankTotal": 10,
     "tabelle": [
       {
         "rank": 1,
         "name": "TuS Saxonia Münster II",
         "sp": "▲",
-        "s": "3",
-        "pkt": "9",
+        "s": "4",
+        "pkt": "12",
         "current": false
       },
       {
         "rank": 2,
-        "name": "TuS Iserlohn",
+        "name": "SG Sendenhorst",
         "sp": "△",
-        "s": "3",
-        "pkt": "6",
+        "s": "4",
+        "pkt": "8",
         "current": false
       },
       {
         "rank": 3,
+        "name": "TuS Meinerzhagen",
+        "sp": "",
+        "s": "4",
+        "pkt": "7",
+        "current": false
+      },
+      {
+        "rank": 4,
+        "name": "TuS Iserlohn",
+        "sp": "",
+        "s": "4",
+        "pkt": "6",
+        "current": false
+      },
+      {
+        "rank": 5,
         "name": "TV Hörde III",
         "sp": "",
-        "s": "3",
+        "s": "4",
         "pkt": "6",
         "current": true
       },
       {
-        "rank": 4,
+        "rank": 6,
         "name": "TB Höntrop",
         "sp": "",
         "s": "3",
@@ -323,32 +339,16 @@
         "current": false
       },
       {
-        "rank": 5,
+        "rank": 7,
         "name": "Hammer SportClub",
         "sp": "",
-        "s": "3",
+        "s": "4",
         "pkt": "5",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "SG Sendenhorst",
-        "sp": "",
-        "s": "3",
-        "pkt": "5",
-        "current": false
-      },
-      {
-        "rank": 7,
-        "name": "TSC Gievenbeck III",
-        "sp": "",
-        "s": "3",
-        "pkt": "4",
         "current": false
       },
       {
         "rank": 8,
-        "name": "TuS Meinerzhagen",
+        "name": "TSC Gievenbeck III",
         "sp": "▽",
         "s": "3",
         "pkt": "4",
@@ -358,15 +358,15 @@
         "rank": 9,
         "name": "TuS Saxonia Münster III",
         "sp": "▼",
-        "s": "3",
-        "pkt": "1",
+        "s": "4",
+        "pkt": "4",
         "current": false
       },
       {
         "rank": 10,
         "name": "TVE Vogelsang",
         "sp": "▼",
-        "s": "3",
+        "s": "4",
         "pkt": "0",
         "current": false
       }
@@ -444,24 +444,24 @@
         "rank": 1,
         "name": "SG Everswinkel-Sendenhorst",
         "sp": "▲",
-        "s": "3",
-        "pkt": "8",
+        "s": "4",
+        "pkt": "11",
         "current": false
       },
       {
         "rank": 2,
-        "name": "SV Blau-Weiß Aasee II",
+        "name": "VC Marl",
         "sp": "△",
-        "s": "3",
-        "pkt": "7",
+        "s": "4",
+        "pkt": "9",
         "current": false
       },
       {
         "rank": 3,
-        "name": "VC Marl",
+        "name": "SV Blau-Weiß Aasee II",
         "sp": "",
         "s": "3",
-        "pkt": "6",
+        "pkt": "7",
         "current": false
       },
       {
@@ -484,7 +484,7 @@
         "rank": 6,
         "name": "TuS Saxonia Münster IV",
         "sp": "",
-        "s": "3",
+        "s": "4",
         "pkt": "3",
         "current": false
       },
@@ -492,7 +492,7 @@
         "rank": 7,
         "name": "Bocholter WSV",
         "sp": "▽",
-        "s": "3",
+        "s": "4",
         "pkt": "3",
         "current": false
       },
