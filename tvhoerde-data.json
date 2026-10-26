@@ -6,34 +6,34 @@
     "tabelle": [
       {
         "rank": 1,
-        "name": "Gütersloher TV",
+        "name": "TV Jahn Rheine",
         "sp": "▲",
-        "s": "3",
-        "pkt": "9",
+        "s": "4",
+        "pkt": "10",
         "current": false
       },
       {
         "rank": 2,
-        "name": "1. VV Holzwickede",
+        "name": "Gütersloher TV",
         "sp": "△",
-        "s": "4",
+        "s": "3",
         "pkt": "9",
         "current": false
       },
       {
         "rank": 3,
-        "name": "SV Blau-Weiß Aasee II",
+        "name": "1. VV Holzwickede",
         "sp": "",
         "s": "4",
-        "pkt": "8",
+        "pkt": "9",
         "current": false
       },
       {
         "rank": 4,
-        "name": "TV Jahn Rheine",
+        "name": "SV Blau-Weiß Aasee II",
         "sp": "",
-        "s": "3",
-        "pkt": "7",
+        "s": "4",
+        "pkt": "8",
         "current": false
       },
       {
@@ -72,7 +72,7 @@
         "rank": 9,
         "name": "Telekom Post SV Bielefeld",
         "sp": "▼",
-        "s": "3",
+        "s": "4",
         "pkt": "1",
         "current": false
       },
