@@ -22,26 +22,26 @@
       },
       {
         "rank": 3,
-        "name": "SV Blau-Weiß Aasee II",
-        "sp": "",
-        "s": "5",
-        "pkt": "10",
-        "current": false
-      },
-      {
-        "rank": 4,
-        "name": "1. VV Holzwickede",
+        "name": "VoR Paderborn II",
         "sp": "",
         "s": "4",
         "pkt": "9",
         "current": false
       },
       {
-        "rank": 5,
-        "name": "VoR Paderborn II",
+        "rank": 4,
+        "name": "1. VV Holzwickede",
         "sp": "",
-        "s": "3",
-        "pkt": "6",
+        "s": "5",
+        "pkt": "9",
+        "current": false
+      },
+      {
+        "rank": 5,
+        "name": "SV Blau-Weiß Aasee II",
+        "sp": "",
+        "s": "4",
+        "pkt": "7",
         "current": false
       },
       {
@@ -64,7 +64,7 @@
         "rank": 8,
         "name": "Telekom Post SV Bielefeld",
         "sp": "▽",
-        "s": "5",
+        "s": "4",
         "pkt": "4",
         "current": false
       },
