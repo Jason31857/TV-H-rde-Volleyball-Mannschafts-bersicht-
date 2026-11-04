@@ -90,7 +90,7 @@
   },
   "damen3": {
     "league": "Bezirksliga 9 Frauen",
-    "rank": 3,
+    "rank": 2,
     "rankTotal": 8,
     "tabelle": [
       {
@@ -103,19 +103,19 @@
       },
       {
         "rank": 2,
-        "name": "TV Kredenbach-Lohe",
+        "name": "TV Hörde III",
         "sp": "△",
-        "s": "5",
-        "pkt": "9",
-        "current": false
+        "s": "4",
+        "pkt": "10",
+        "current": true
       },
       {
         "rank": 3,
-        "name": "TV Hörde III",
+        "name": "TV Kredenbach-Lohe",
         "sp": "",
-        "s": "3",
-        "pkt": "7",
-        "current": true
+        "s": "5",
+        "pkt": "9",
+        "current": false
       },
       {
         "rank": 4,
@@ -137,7 +137,7 @@
         "rank": 6,
         "name": "VSC Dortmund",
         "sp": "",
-        "s": "3",
+        "s": "4",
         "pkt": "3",
         "current": false
       },
@@ -539,6 +539,14 @@
       },
       {
         "rank": 3,
+        "name": "TB Höntrop III",
+        "sp": "",
+        "s": "4",
+        "pkt": "8",
+        "current": false
+      },
+      {
+        "rank": 4,
         "name": "Ruhrvolleys Stockum",
         "sp": "",
         "s": "4",
@@ -546,7 +554,7 @@
         "current": false
       },
       {
-        "rank": 4,
+        "rank": 5,
         "name": "TuS Hattingen",
         "sp": "",
         "s": "4",
@@ -554,18 +562,10 @@
         "current": false
       },
       {
-        "rank": 5,
+        "rank": 6,
         "name": "SG Herne",
         "sp": "",
         "s": "4",
-        "pkt": "5",
-        "current": false
-      },
-      {
-        "rank": 6,
-        "name": "TB Höntrop III",
-        "sp": "",
-        "s": "3",
         "pkt": "5",
         "current": false
       },
@@ -581,7 +581,7 @@
         "rank": 8,
         "name": "VfL Telstar Bochum II",
         "sp": "▼",
-        "s": "3",
+        "s": "4",
         "pkt": "0",
         "current": false
       }
