@@ -703,23 +703,23 @@
   },
   "u20m": {
     "league": "NRW-Liga mU20",
-    "rank": 8,
+    "rank": 9,
     "rankTotal": 9,
     "tabelle": [
       {
         "rank": 1,
         "name": "VV Humann Essen",
         "sp": "▲",
-        "s": "4",
-        "pkt": "8",
+        "s": "6",
+        "pkt": "10",
         "current": false
       },
       {
         "rank": 2,
         "name": "FCJ Köln",
         "sp": "▲",
-        "s": "4",
-        "pkt": "6",
+        "s": "6",
+        "pkt": "10",
         "current": false
       },
       {
@@ -748,6 +748,14 @@
       },
       {
         "rank": 6,
+        "name": "Telekom Post SV Bielefeld",
+        "sp": "",
+        "s": "5",
+        "pkt": "4",
+        "current": false
+      },
+      {
+        "rank": 7,
         "name": "Moerser SC",
         "sp": "",
         "s": "2",
@@ -755,28 +763,20 @@
         "current": false
       },
       {
-        "rank": 7,
-        "name": "Telekom Post SV Bielefeld",
-        "sp": "",
-        "s": "4",
-        "pkt": "2",
-        "current": false
-      },
-      {
         "rank": 8,
-        "name": "TV Hörde",
+        "name": "Rhein-Sieg Volleys",
         "sp": "",
-        "s": "2",
+        "s": "3",
         "pkt": "0",
-        "current": true
+        "current": false
       },
       {
         "rank": 9,
-        "name": "Rhein-Sieg Volleys",
+        "name": "TV Hörde",
         "sp": "",
-        "s": "2",
+        "s": "4",
         "pkt": "0",
-        "current": false
+        "current": true
       }
     ],
     "spiele": [],
