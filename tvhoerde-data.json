@@ -70,18 +70,18 @@
       },
       {
         "rank": 9,
-        "name": "RC Sorpesee II",
+        "name": "TSC Gievenbeck",
         "sp": "▼",
-        "s": "4",
+        "s": "5",
         "pkt": "3",
         "current": false
       },
       {
         "rank": 10,
-        "name": "TSC Gievenbeck",
+        "name": "RC Sorpesee II",
         "sp": "▼",
-        "s": "4",
-        "pkt": "0",
+        "s": "5",
+        "pkt": "3",
         "current": false
       }
     ],
@@ -789,6 +789,14 @@
     "tabelle": [
       {
         "rank": 1,
+        "name": "Telekom Post SV Bielefeld",
+        "sp": "▲",
+        "s": "6",
+        "pkt": "12",
+        "current": false
+      },
+      {
+        "rank": 2,
         "name": "VV Humann Essen",
         "sp": "▲",
         "s": "6",
@@ -796,19 +804,11 @@
         "current": false
       },
       {
-        "rank": 2,
-        "name": "Telekom Post SV Bielefeld",
-        "sp": "▲",
-        "s": "5",
-        "pkt": "10",
-        "current": false
-      },
-      {
         "rank": 3,
         "name": "TV Hörde",
         "sp": "▲",
-        "s": "4",
-        "pkt": "8",
+        "s": "6",
+        "pkt": "10",
         "current": true
       },
       {
@@ -823,31 +823,31 @@
         "rank": 5,
         "name": "SolingenVolleys",
         "sp": "",
-        "s": "5",
-        "pkt": "6",
+        "s": "6",
+        "pkt": "8",
         "current": false
       },
       {
         "rank": 6,
         "name": "1. VC Minden",
         "sp": "",
-        "s": "5",
+        "s": "6",
         "pkt": "4",
         "current": false
       },
       {
         "rank": 7,
-        "name": "TuB Bocholt",
+        "name": "SSF Bonn",
         "sp": "",
-        "s": "5",
-        "pkt": "0",
+        "s": "6",
+        "pkt": "2",
         "current": false
       },
       {
         "rank": 8,
-        "name": "SSF Bonn",
+        "name": "TuB Bocholt",
         "sp": "",
-        "s": "5",
+        "s": "6",
         "pkt": "0",
         "current": false
       },
@@ -855,7 +855,7 @@
         "rank": 9,
         "name": "DJK Tusa 06 Düsseldorf",
         "sp": "",
-        "s": "5",
+        "s": "6",
         "pkt": "0",
         "current": false
       }
