@@ -372,68 +372,7 @@
       }
     ],
     "spiele": [],
-    "kader": [
-      {
-        "nr": "Janthal, Hendrik",
-        "name": "2009",
-        "pos": "21"
-      },
-      {
-        "nr": "Kotylo, Mykola",
-        "name": "2006",
-        "pos": "14"
-      },
-      {
-        "nr": "Kukoljac, Andrej",
-        "name": "2006",
-        "pos": "1"
-      },
-      {
-        "nr": "Lalov, Vladimir",
-        "name": "2009",
-        "pos": "9"
-      },
-      {
-        "nr": "Lamotte, Niklas",
-        "name": "2010",
-        "pos": "2"
-      },
-      {
-        "nr": "May, Lewis",
-        "name": "2006",
-        "pos": "22"
-      },
-      {
-        "nr": "Obier-Biesinger, Arthur",
-        "name": "2008",
-        "pos": "7"
-      },
-      {
-        "nr": "Rautenberg, Melvin",
-        "name": "2008",
-        "pos": "33"
-      },
-      {
-        "nr": "Selen, Tanel",
-        "name": "2006",
-        "pos": "8"
-      },
-      {
-        "nr": "Weber-Schmitz, Florian",
-        "name": "2004",
-        "pos": "27"
-      },
-      {
-        "nr": "Weyer, Erik",
-        "name": "2004",
-        "pos": "26"
-      },
-      {
-        "nr": "Zywicki, Davin",
-        "name": "2008",
-        "pos": "24"
-      }
-    ]
+    "kader": []
   },
   "herren3": {
     "league": "Landesliga 6 Männer",
